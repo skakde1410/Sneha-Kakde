@@ -6,30 +6,35 @@ import {
   BookOpen, 
   PenTool, 
   Music, 
-  Layers, 
   Feather,
-  X
+  Camera,
+  Film,
+  CookingPot,
+  Layers,
+  X 
 } from 'lucide-react';
 
+const BadmintonIcon = (props) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    {...props}
+  >
+    <circle cx="9.5" cy="9.5" r="5.5" />
+    <line x1="13.5" y1="13.5" x2="20" y2="20" />
+    <line x1="9.5" y1="4" x2="9.5" y2="15" />
+    <line x1="4" y1="9.5" x2="15" y2="9.5" />
+    <path d="M16 4l3 3" />
+    <path d="M15 7l2-2" />
+    <circle cx="19" cy="5" r="1.5" />
+  </svg>
+);
+
 const coverflowSlides = [
-  {
-    id: 'writing',
-    category: 'Writing',
-    icon: Feather,
-    title: 'Writing',
-    quote: 'I write – articles, thoughts in Marathi. Writing observations and reflections into stories.',
-    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80',
-    fallback: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80'
-  },
-  {
-    id: 'sketching',
-    category: 'Sketching',
-    icon: PenTool,
-    title: 'Sketching',
-    quote: 'I sketch, illustrate & calligraphy – when an idea feels easier to draw than explain.',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/craft_sketch_book.webp'
-  },
   {
     id: 'reading',
     category: 'Reading',
@@ -40,22 +45,76 @@ const coverflowSlides = [
     fallback: '/assets/archive_storybook_1.webp'
   },
   {
+    id: 'sketching',
+    category: 'Sketching',
+    icon: PenTool,
+    title: 'Sketching',
+    quote: 'I sketch, illustrate & Calligraphy – when an idea feels easier to draw than explain.',
+    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80',
+    fallback: '/assets/craft_sketch_book.webp'
+  },
+  {
     id: 'music',
     category: 'Music',
     icon: Music,
     title: 'Music',
     quote: 'I listen to music & sing – because sometimes a melody says what words cannot.',
     image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80',
-    fallback: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=900&q=80'
+    fallback: '/assets/craft_anchoring.webp'
   },
   {
-    id: 'tactile-forms',
-    category: 'Tactile forms',
+    id: 'writing',
+    category: 'Writing',
+    icon: Feather,
+    title: 'Writing',
+    quote: 'I write – articles, thoughts, and poems in Marathi. Writing helps me turn observations and emotions into stories.',
+    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80',
+    fallback: '/assets/craft_poem.webp'
+  },
+  {
+    id: 'photography',
+    category: 'Photography',
+    icon: Camera,
+    title: 'Photography',
+    quote: 'I photograph – little details, people, places, light, textures, and moments that often go unnoticed.',
+    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80',
+    fallback: '/assets/archive_photography.webp'
+  },
+  {
+    id: 'badminton',
+    category: 'Badminton',
+    icon: BadmintonIcon,
+    title: 'Badminton',
+    quote: 'I play badminton for the energy, focus, and joy of simply playing.',
+    image: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=900&q=80',
+    fallback: '/assets/craft_frame130_09_64ff3721.webp'
+  },
+  {
+    id: 'movies',
+    category: 'Movies',
+    icon: Film,
+    title: 'Movies',
+    quote: 'I watch movies for the stories, characters, scenes, VFX, visual language, moodboards and different worlds they let me step into.',
+    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80',
+    fallback: '/assets/archive_3d_animation.webp'
+  },
+  {
+    id: 'cooking',
+    category: 'Cooking',
+    icon: CookingPot,
+    title: 'Cooking',
+    quote: "I love cooking – experimenting with ingredients, trying new recipes, and turning simple things into something of my own. It reminds me that creativity doesn't always need a canvas or a screen.",
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80',
+    fallback: '/assets/adyam_cover.webp'
+  },
+  {
+    id: 'sculpting',
+    category: 'Sculpting',
     icon: Layers,
-    title: 'Tactile forms',
-    quote: 'Sculpting with POP and clay – refining tactile forms with my hands.',
+    title: 'Sculpting',
+    quote: 'I love sculpting – working with POP and clay, shaping something with my hands and watching an idea slowly take physical form. I enjoy the process of building, carving, refining, and sometimes simply getting my hands messy.',
     image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=80',
-    fallback: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=900&q=80'
+    fallback: '/assets/craft_clay.webp'
   }
 ];
 
