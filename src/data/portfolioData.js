@@ -127,7 +127,7 @@ export const interests = [
     description: "Experimenting with ingredients, trying new recipes, and turning simple things into something flavorful.",
     mindset: "Design is like culinary craft: knowing what to add, and having the restraint to let simplicity shine.",
     category: "Creativity",
-    visual: "/assets/adyam_cover.webp",
+    visual: "/assets/craft_cooking.webp",
     color: "#0284C7",
     quote: "Great craft balances bold flavors with quiet nuance."
   },

@@ -104,8 +104,8 @@ const coverflowSlides = [
     icon: CookingPot,
     title: 'Cooking',
     quote: "I love cooking – experimenting with ingredients, trying new recipes, and turning simple things into something of my own. It reminds me that creativity doesn't always need a canvas or a screen.",
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/adyam_cover.webp'
+    image: '/assets/craft_cooking.webp',
+    fallback: '/assets/craft_cooking.jpg'
   },
   {
     id: 'sculpting',
