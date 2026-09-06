@@ -120,7 +120,7 @@ export default function TypewriterBanner() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full max-w-4xl text-center py-5 px-6 sm:px-8 rounded-xl sm:rounded-2xl border border-neutral-300 hover:border-neutral-400 bg-transparent transition-all flex items-center justify-center min-h-[76px] sm:min-h-[84px] md:min-h-[88px] cursor-pointer select-none"
+        className="w-full max-w-4xl text-center py-2.5 sm:py-3 px-6 sm:px-8 rounded-xl sm:rounded-2xl border border-neutral-300 hover:border-neutral-400 bg-transparent transition-all flex items-center justify-center min-h-[46px] sm:min-h-[52px] cursor-pointer select-none"
       >
         <p className="text-xs sm:text-base md:text-lg lg:text-xl font-bold tracking-tight text-neutral-900 leading-snug sm:leading-relaxed">
           {renderTypedSegments(charIndex)}
