@@ -1,70 +1,84 @@
 # Sneha Kakde — Portfolio Website
 
-A responsive, high-performance portfolio website built for **Sneha Kakde** (Creative Visual Designer & UX Designer at IIT Guwahati) based on the official Figma design system.
+A responsive, high-performance portfolio website built for **Sneha Kakde** (Creative Visual Designer & UX Designer at IIT Guwahati) crafted with React, Vite, Tailwind CSS, and Framer Motion based on the official Figma design system.
+
+🔗 **Repository**: [https://github.com/skakde1410/Sneha-Kakde](https://github.com/skakde1410/Sneha-Kakde)
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- **Pixel-Perfect Figma Design**: Matching layout, typography, exact color tokens, and original high-resolution assets.
-- **Interactive Hero**: Features the custom character mascot with sticker drop-shadow, floating badges, and dynamic typography.
-- **Deep Case Studies Reader**: Full case study modal system for **ChemThread**, **AkshiO (Khelat Shikuya)**, **FinGuide AI**, **Adyam**, and **Tritva (Yoga Studio)**.
-- **Multi-Disciplinary Interests Grid**: 9 custom icon cards highlighting design philosophy and varied creative pursuits.
-- **Studio Experiments Ribbon**: Interactive horizontal carousel showcasing physical sculptures, acrylic canvases, gesture sketches, and published Marathi poetry.
-- **2025 Archive & Contents Showcase**: 7 numbered discipline tabs (Illustration, Graphic Design, Character Concept, Product Design, Photography, 3D Animation, and Miscellaneous).
-- **Impact Footer & Contact System**: Custom digital art lion banner, copy-to-clipboard actions for email/phone, interactive contact modal, and complete social links.
-- **Vercel-Ready**: Pre-configured `vercel.json` and optimized Vite production bundle with zero-config deployment.
+- **Pixel-Perfect Figma Design**: Complete fidelity to layout, typography, exact color tokens, and original high-resolution assets.
+- **Interactive Hero & Character Mascot**: Custom character illustration with sticker drop-shadow, floating badges, and dynamic typography.
+- **Deep Case Studies System**: Rich modal readers for flagship UX and visual design projects:
+  - **ChemThread**: Industrial chemical hazard communication & workflow system.
+  - **AkshiO (Khelat Shikuya)**: Tangible Marathi learning & gamified educational kit for kids.
+  - **FinGuide AI**: Financial advisory interface translating complex data into actionable insights.
+  - **Adyam**: Brand identity, packaging, and digital presence for artisanal goods.
+  - **Tritva (Yoga Studio)**: Brand identity, spatial wayfinding, and digital booking platform.
+- **Off The Grid (3D Coverflow)**: Continuous 3D perspective carousel spanning all 9 personal disciplines:
+  - *Reading, Sketching, Music, Writing, Photography, Badminton, Movies, Cooking, and Sculpting*.
+  - Smooth drag/swipe touch gestures, auto-sliding cadence, keyboard navigation, and synced 9-dot pagination.
+- **Typewriter Quote Banner**: Interactive typewriter banner showcasing creative philosophy with responsive typography.
+- **UNFILTERED Gallery**: Continuous marquee track and full-screen inspection viewer showcasing raw studio experiments, pottery, calligraphy, Marathi poetry, and honors.
+- **2025 Archive & Discipline Tabs**: 7 numbered discipline tabs (Illustration, Graphic Design, Character Concept, Product Design, Photography, 3D Animation, and Miscellaneous).
+- **Impact Footer & Contact System**: Custom digital lion art banner, copy-to-clipboard interactions, direct contact modal, and complete social channels.
+- **Instruction-Free Minimalist UX**: Designed for intuitive user-driven discovery without distracting tooltips or prescriptive labels.
 
 ---
 
-## 🔗 Integrated Links
+## 🛠️ Tech Stack
 
-- **CV / Resume (Google Drive)**: [View Folder](https://drive.google.com/drive/folders/1t-wXXZ5elEwP7FApHsy4C2uadN2GslU7)
-- **Notion (Writings & Thoughts)**: [View Notion](https://amazing-piccolo-3e3.notion.site/Writings-30cd1d702d3c80a8a713c4fce01add6b)
-- **Behance**: [kakdesneha](https://www.behance.net/kakdesneha)
-- **LinkedIn**: [sneha-kakde](https://www.linkedin.com/in/sneha-kakde-9667232ab)
-- **Instagram**: [@blinking_thingss](https://www.instagram.com/blinking_thingss?igsi=NnkyYXF1OTlpcWpk&utm_source=qr)
+- **Framework**: React 18
+- **Build Tool**: Vite 6
+- **Styling**: Tailwind CSS
+- **Animations & Motion**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel (Auto-deploy from `main` branch)
+
+---
+
+## 🔗 Connect & Links
+
+- **Portfolio Repository**: [github.com/skakde1410/Sneha-Kakde](https://github.com/skakde1410/Sneha-Kakde)
+- **Behance**: [behance.net/kakdesneha](https://www.behance.net/kakdesneha)
+- **LinkedIn**: [linkedin.com/in/sneha-kakde-9667232ab](https://www.linkedin.com/in/sneha-kakde-9667232ab)
+- **Instagram**: [@blinking_thingss](https://www.instagram.com/blinking_thingss?igsi=MWVlMzJseG5zNmJ0aA==)
 - **YouTube**: [@ma_thecreativespace](https://youtube.com/@ma_thecreativespace?si=BXQdWavSIxofWyfS)
+- **Notion (Writings & Thoughts)**: [View Notion](https://amazing-piccolo-3e3.notion.site/Writings-30cd1d702d3c80a8a713c4fce01add6b)
+- **CV / Resume (Google Drive)**: [View Folder](https://drive.google.com/drive/folders/1t-wXXZ5elEwP7FApHsy4C2uadN2GslU7)
 
 ---
 
 ## 🚀 Getting Started Locally
 
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+### 1. Clone the repository
+```bash
+git clone https://github.com/skakde1410/Sneha-Kakde.git
+cd Sneha-Kakde
+```
 
-2. **Start the local dev server**:
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5173` in your browser.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-3. **Build for production**:
-   ```bash
-   npm run build
-   ```
+### 3. Start local development server
+```bash
+npm run dev
+```
+The site will be available at `http://localhost:3000`.
+
+### 4. Build for production
+```bash
+npm run build
+```
+Creates an optimized production bundle inside `dist/`.
 
 ---
 
-## 🌐 Deploying to Vercel
+## 🌐 Deployment (Vercel)
 
-### Option 1: Via GitHub (Recommended)
-1. Push this folder to your GitHub repository:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio commit"
-   git branch -M main
-   git remote add origin <your-github-repo-url>
-   git push -u origin main
-   ```
-2. Go to [Vercel Dashboard](https://vercel.com/new).
-3. Select your GitHub repository and click **Deploy**. Vercel will automatically detect the Vite project and build it.
-
-### Option 2: Via Vercel CLI
-```bash
-npx vercel
-```
-Follow the interactive prompts to deploy directly from your terminal.
+This repository is configured for zero-config continuous deployment on **Vercel**:
+1. Every commit pushed to the `main` branch automatically triggers an optimized production build on Vercel.
+2. Route rewrites and single-page routing are handled via `vercel.json`.
