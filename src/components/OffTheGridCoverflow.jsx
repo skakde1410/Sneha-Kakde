@@ -86,8 +86,8 @@ const coverflowSlides = [
     icon: BadmintonIcon,
     title: 'Badminton',
     quote: 'I play badminton for the energy, focus, and joy of simply playing.',
-    image: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/craft_frame130_09_64ff3721.webp'
+    image: '/assets/craft_badminton.webp',
+    fallback: '/assets/craft_badminton.jpg'
   },
   {
     id: 'movies',

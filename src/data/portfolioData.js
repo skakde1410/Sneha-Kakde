@@ -103,7 +103,7 @@ export const interests = [
     description: "For the energy, focus, fast reflexes, court awareness, and the pure joy of simply playing.",
     mindset: "Cultivates split-second decision-making, adaptive composure, and stamina through iterative design cycles.",
     category: "Energy",
-    visual: "/assets/craft_frame130_09_64ff3721.webp",
+    visual: "/assets/craft_badminton.webp",
     color: "#EA580C",
     quote: "Swift reflexes on court translate to agility in problem-solving."
   },
