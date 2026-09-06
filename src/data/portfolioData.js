@@ -79,7 +79,7 @@ export const interests = [
     description: "Articles, thoughts, and poems in Marathi. Writing helps me turn fleeting observations and raw emotions into structured stories.",
     mindset: "Writing sharpens precision in microcopy, narrative coherence, and empathetic user communication.",
     category: "Storytelling",
-    visual: "/assets/craft_poem.webp",
+    visual: "/assets/craft_poem.png",
     color: "#D97706",
     quote: "Language gives shape to unstructured emotions."
   },
@@ -234,7 +234,7 @@ export const craftGallery = [
     id: 13,
     title: "",
     subtitle: "",
-    image: "/assets/craft_poem.webp",
+    image: "/assets/craft_poem.png",
     aspect: "portrait"
   },
   {

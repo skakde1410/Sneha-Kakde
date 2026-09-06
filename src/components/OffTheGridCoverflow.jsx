@@ -69,7 +69,7 @@ const coverflowSlides = [
     title: 'Writing',
     quote: 'I write – articles, thoughts, and poems in Marathi. Writing helps me turn observations and emotions into stories.',
     image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/craft_poem.webp'
+    fallback: '/assets/craft_poem.png'
   },
   {
     id: 'photography',
