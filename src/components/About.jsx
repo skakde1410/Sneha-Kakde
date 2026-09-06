@@ -92,12 +92,12 @@ export default function About({ onSelectCraft }) {
         {/* Typewriter Banner with Modern Rounded Corners */}
         <TypewriterBanner />
 
-        {/* Hands-on Crafts & Studio Photo Automatic Smooth Sliding Carousel */}
+        {/* UNFILTERED - Photo Automatic Smooth Sliding Carousel */}
         <div className="space-y-4 sm:space-y-6 pt-4">
           <div className="flex items-center justify-between">
-            <h4 className="text-base sm:text-xl font-extrabold text-brand-dark flex items-center gap-1.5 sm:gap-2">
+            <h4 className="text-base sm:text-xl font-extrabold text-brand-dark flex items-center gap-1.5 sm:gap-2 tracking-wide uppercase">
               <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink flex-shrink-0" />
-              <span>Studio Experiments, Sculptures & Works</span>
+              <span>UNFILTERED</span>
             </h4>
           </div>
 
@@ -112,18 +112,16 @@ export default function About({ onSelectCraft }) {
                 >
                   <ImageWithSkeleton
                     src={craft.image}
-                    alt={craft.title}
+                    alt="Unfiltered visual"
                     containerClassName="w-full h-full"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-3 sm:p-5 flex flex-col justify-end text-white">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-1 sm:mb-2 self-end">
-                      <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  {/* Overlay on hover (No text information) */}
+                  <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-white/25 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition-transform">
+                      <Eye className="w-5 h-5" />
                     </div>
-                    <h5 className="font-bold text-xs sm:text-sm">{craft.title}</h5>
-                    <p className="text-[10px] sm:text-xs text-gray-300 mt-0.5">{craft.subtitle}</p>
                   </div>
                 </div>
               ))}

@@ -148,260 +148,260 @@ export const interests = [
 export const craftGallery = [
   {
     id: 1,
-    title: "Devanagari Calligraphy Art",
-    subtitle: "Expressive ink strokes and poetry lettering",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_sketch_book.webp",
     aspect: "portrait"
   },
   {
     id: 2,
-    title: "Handwritten Poetry Diary",
-    subtitle: "Personal reflections and Marathi verse writings",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_sculpture.png",
     aspect: "portrait"
   },
   {
     id: 3,
-    title: "Rangoli & Cultural Artistry",
-    subtitle: "Cow and calf floor art with colored sand",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_painting.webp",
     aspect: "portrait"
   },
   {
     id: 4,
-    title: "Reading & Daily Reflections",
-    subtitle: "Exploring perspectives, habits and human behavior",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_wood.webp",
     aspect: "portrait"
   },
   {
     id: 5,
-    title: "Photography & Fleeting Moments",
-    subtitle: "Observing details, people, and visual stories",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_rangoli.webp",
     aspect: "portrait"
   },
   {
     id: 6,
-    title: "Event Anchoring & Stage Hosting",
-    subtitle: "Hosting formal ceremonies and cultural stage programs",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_anchoring.webp",
     aspect: "portrait"
   },
   {
     id: 7,
-    title: "Clay Figurine Sculpting",
-    subtitle: "Tactile modeling with POP & terracotta clay",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_clay.webp",
     aspect: "portrait"
   },
   {
     id: 8,
-    title: "Vibrant Acrylic Canvas",
-    subtitle: "Bold palettes and organic fluid shapes",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_art.png",
     aspect: "portrait"
   },
   {
     id: 9,
-    title: "Character Concept Sketching",
-    subtitle: "Anatomy studies and gesture sketching",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_sketch.png",
     aspect: "portrait"
   },
   {
     id: 10,
-    title: "Digital Environmental Art",
-    subtitle: "Stylized tree form & digital painting study",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_digital.png",
     aspect: "portrait"
   },
   {
     id: 11,
-    title: "Doodle Art on Cylinder",
-    subtitle: "Intricate character line art and hand-painted motifs",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_clay_hands.webp",
     aspect: "portrait"
   },
   {
     id: 12,
-    title: "Published Marathi Articles & Reflections",
-    subtitle: "Reflections on culture, life & society in print",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_cylinder.webp",
     aspect: "portrait"
   },
   {
     id: 13,
-    title: "Published Marathi Poetry",
-    subtitle: "Poem 'मनाच गावं' published in youth magazine",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_poem.webp",
     aspect: "portrait"
   },
   {
     id: 14,
-    title: "Public Speaking & Keynote",
-    subtitle: "Addressing community gatherings and cultural events",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_speech.webp",
     aspect: "portrait"
   },
   {
     id: 15,
-    title: "State Recognition & Honors",
-    subtitle: "Felicitation for leadership on International Women's Day",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_award.webp",
     aspect: "portrait"
   },
   {
     id: 16,
-    title: "Ceramic Pottery & Clay Forms",
-    subtitle: "Hand-thrown clay vessels and tactile craft exploration",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_01_7577f9bd.webp",
     aspect: "landscape"
   },
   {
     id: 17,
-    title: "Architectural Heritage & Cultural Walk",
-    subtitle: "Observing traditional textures, stone carving and monuments",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_02_a69f0523.webp",
     aspect: "landscape"
   },
   {
     id: 18,
-    title: "Traditional Textile Weaving & Draping",
-    subtitle: "Exploring regional textile crafts, drape and looms",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_03_ee5e83bc.webp",
     aspect: "landscape"
   },
   {
     id: 19,
-    title: "Terracotta Sculpture Details",
-    subtitle: "Intricate clay modeling and tactile surface detailing",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_04_09bbc0c8.webp",
     aspect: "portrait"
   },
   {
     id: 20,
-    title: "Studio Craft & Material Study",
-    subtitle: "Hands-on prototyping with natural materials and dyes",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_05_6d9e39dd.webp",
     aspect: "portrait"
   },
   {
     id: 21,
-    title: "Handmade Ceramic Figurines",
-    subtitle: "Whimsical terracotta characters and animal miniatures",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_06_40714337.webp",
     aspect: "portrait"
   },
   {
     id: 22,
-    title: "Hand-carved Wooden Craft Artifacts",
-    subtitle: "Wood carving textures and traditional geometric motifs",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_07_cf784d39.webp",
     aspect: "portrait"
   },
   {
     id: 23,
-    title: "Cultural Folk Art & Pattern Study",
-    subtitle: "Indigenous ornamentation, folk rhythm and motifs",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_08_7f019dae.webp",
     aspect: "landscape"
   },
   {
     id: 24,
-    title: "Handmade Paper & Ink Studies",
-    subtitle: "Organic fiber paper crafting and calligraphy marks",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_09_64ff3721.webp",
     aspect: "portrait"
   },
   {
     id: 25,
-    title: "Fine Arts Exhibition Showcase",
-    subtitle: "Display of curated paintings, mixed media and sculptures",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_10_859ddc94.webp",
     aspect: "landscape"
   },
   {
     id: 26,
-    title: "Hand-painted Floral Patterns",
-    subtitle: "Botanical motifs and decorative gouache strokes",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_11_420bdb12.webp",
     aspect: "portrait"
   },
   {
     id: 27,
-    title: "Experimental Printmaking & Linocut",
-    subtitle: "Block prints, negative space and rhythmic ink textures",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_12_42890e47.webp",
     aspect: "portrait"
   },
   {
     id: 28,
-    title: "Artisan Workshop & Craft Mentorship",
-    subtitle: "Learning traditional techniques from master craftspeople",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_13_b100709f.webp",
     aspect: "portrait"
   },
   {
     id: 29,
-    title: "Vintage Bookbinding & Leather Craft",
-    subtitle: "Hand-stitched leather journals, folios and diaries",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_14_603d0cee.webp",
     aspect: "portrait"
   },
   {
     id: 30,
-    title: "Natural Pigment & Color Extraction",
-    subtitle: "Exploring earth ochres, botanical stains and pigments",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_15_6ae309e0.webp",
     aspect: "portrait"
   },
   {
     id: 31,
-    title: "Public Art Installation & Murals",
-    subtitle: "Large-scale community wall painting and visual storytelling",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_16_50a9129d.webp",
     aspect: "landscape"
   },
   {
     id: 32,
-    title: "Handmade Jewelry & Terracotta Beads",
-    subtitle: "Wearable micro-sculptures and fired clay beads",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_18_d55a4701.webp",
     aspect: "portrait"
   },
   {
     id: 33,
-    title: "Community Art Circle & Sketchwalk",
-    subtitle: "Live plein-air sketching and creative storytelling",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_19_55f6b731.webp",
     aspect: "portrait"
   },
   {
     id: 34,
-    title: "Monsoon Life & Street Vignettes",
-    subtitle: "Documentary photo series capturing everyday moments",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_20_4d95d07d.webp",
     aspect: "landscape"
   },
   {
     id: 35,
-    title: "Stage Production & Set Visuals",
-    subtitle: "Atmospheric lighting, stage compositions and scenography",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_21_c9fdeec7.webp",
     aspect: "landscape"
   },
   {
     id: 36,
-    title: "Traditional Brass Metalware Craft",
-    subtitle: "Etched metalware, bell metal craft and patina studies",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_22_5783f979.webp",
     aspect: "portrait"
   },
   {
     id: 37,
-    title: "Creative Workshop & Student Dialogue",
-    subtitle: "Facilitating interactive visual design and craft discussions",
+    title: "",
+    subtitle: "",
     image: "/assets/craft_frame130_23_3be4cad5.webp",
     aspect: "landscape"
   }
