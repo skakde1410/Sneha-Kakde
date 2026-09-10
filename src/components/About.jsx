@@ -57,9 +57,9 @@ export default function About({ onSelectCraft }) {
       // Keep scrolling automatically whenever user is NOT actively dragging/touching/wheeling
       if (!isDraggingRef.current && !isTouchingRef.current && !isWheelingRef.current) {
         if (el) {
-          // Normalize to ~0.85px per 16ms for smooth constant motion
-          const delta = (elapsed / 16.667) * 0.85;
-          el.scrollLeft += Math.max(0.4, Math.min(delta, 3));
+          // Normalize to ~1.75px per 16ms for crisp, faster automatic motion
+          const delta = (elapsed / 16.667) * 1.75;
+          el.scrollLeft += Math.max(0.8, Math.min(delta, 5));
 
           const batchWidth = el.scrollWidth / 3;
           if (batchWidth > 0) {
