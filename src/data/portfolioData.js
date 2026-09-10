@@ -241,8 +241,8 @@ export const craftGallery = [
     id: 14,
     title: "",
     subtitle: "",
-    image: "/assets/craft_speech.webp",
-    aspect: "portrait"
+    image: "/assets/craft_speech.jpg",
+    aspect: "landscape"
   },
   {
     id: 15,
