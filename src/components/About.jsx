@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo, craftGallery } from '../data/portfolioData';
 import { Sparkles, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -7,157 +7,177 @@ import OffTheGridCoverflow from './OffTheGridCoverflow';
 import TypewriterBanner from './TypewriterBanner';
 
 export default function About({ onSelectCraft }) {
+  // Triple duplicated gallery to allow smooth bidirectional infinite scrolling
+  const duplicatedGallery = [...craftGallery, ...craftGallery, ...craftGallery];
   const scrollRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
   const isDraggingRef = useRef(false);
+  const isTouchingRef = useRef(false);
   const startXRef = useRef(0);
-  const scrollLeftRef = useRef(0);
-  const hasDraggedRef = useRef(false);
-  const animationFrameRef = useRef(null);
-  const resumeTimerRef = useRef(null);
+  const scrollLeftStartRef = useRef(0);
+  const hasMovedRef = useRef(false);
+  const animFrameRef = useRef(null);
+  const lastTimeRef = useRef(performance.now());
+  const wheelTimeoutRef = useRef(null);
+  const isWheelingRef = useRef(false);
 
-  // Triple the gallery for an ultra-smooth continuous infinite loop
-  const infiniteGallery = [...craftGallery, ...craftGallery, ...craftGallery];
-
-  // Initialize scroll position midway so user can drag in either direction immediately
+  // Initialize scroll position in the center batch so user can scroll left or right immediately
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    const initScroll = () => {
-      if (el.scrollWidth > el.clientWidth && el.scrollLeft === 0) {
-        el.scrollLeft = el.scrollWidth / 3;
+
+    const initPos = () => {
+      if (el.scrollWidth > 0) {
+        const batchWidth = el.scrollWidth / 3;
+        if (el.scrollLeft === 0) {
+          el.scrollLeft = batchWidth;
+        }
       }
     };
-    initScroll();
-    const timer = setTimeout(initScroll, 150);
-    return () => clearTimeout(timer);
+
+    const t = setTimeout(initPos, 100);
+    window.addEventListener('resize', initPos);
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener('resize', initPos);
+    };
   }, []);
 
-  // Butter-smooth continuous auto-scroll loop (pauses when user hovers or interacts)
+  // Continuous auto-sliding that KEEPS SCROLLING AUTOMATICALLY (never stopped by mere hover)
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
 
-    let lastTime = performance.now();
+    lastTimeRef.current = performance.now();
 
-    const step = (now) => {
-      const delta = now - lastTime;
-      lastTime = now;
+    const tick = (now) => {
+      const elapsed = now - lastTimeRef.current;
+      lastTimeRef.current = now;
 
-      if (!isPaused && !isDraggingRef.current && el) {
-        el.scrollLeft += delta * 0.032;
+      // Keep scrolling automatically whenever user is NOT actively dragging/touching/wheeling
+      if (!isDraggingRef.current && !isTouchingRef.current && !isWheelingRef.current) {
+        if (el) {
+          // Normalize to ~0.85px per 16ms for smooth constant motion
+          const delta = (elapsed / 16.667) * 0.85;
+          el.scrollLeft += Math.max(0.4, Math.min(delta, 3));
 
-        const oneThird = el.scrollWidth / 3;
-        if (oneThird > 0) {
-          if (el.scrollLeft >= oneThird * 2) {
-            el.scrollLeft -= oneThird;
-          } else if (el.scrollLeft <= 5) {
-            el.scrollLeft += oneThird;
+          const batchWidth = el.scrollWidth / 3;
+          if (batchWidth > 0) {
+            if (el.scrollLeft >= batchWidth * 2) {
+              el.scrollLeft -= batchWidth;
+            } else if (el.scrollLeft <= 0) {
+              el.scrollLeft += batchWidth;
+            }
           }
         }
       }
 
-      animationFrameRef.current = requestAnimationFrame(step);
+      animFrameRef.current = requestAnimationFrame(tick);
     };
 
-    animationFrameRef.current = requestAnimationFrame(step);
+    animFrameRef.current = requestAnimationFrame(tick);
     return () => {
-      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
     };
-  }, [isPaused]);
+  }, []);
 
-  // Pause helper with auto-resume after user finishes interacting
-  const scheduleResume = (delay = 2000) => {
-    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
-    resumeTimerRef.current = setTimeout(() => {
-      if (!isDraggingRef.current) {
-        setIsPaused(false);
+  // Handle wrap-around on native scroll (touch or trackpad)
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const batchWidth = el.scrollWidth / 3;
+    if (batchWidth > 0) {
+      if (el.scrollLeft >= batchWidth * 2) {
+        el.scrollLeft -= batchWidth;
+      } else if (el.scrollLeft <= 5) {
+        el.scrollLeft += batchWidth;
       }
-    }, delay);
-  };
+    }
+  }, []);
 
-  // Mouse drag handlers
+  // Global Mouse Drag Listeners so dragging is smooth and reliable even outside element
+  useEffect(() => {
+    const handleGlobalMouseMove = (e) => {
+      if (!isDraggingRef.current) return;
+      const el = scrollRef.current;
+      if (!el) return;
+      const diff = e.pageX - startXRef.current;
+      if (Math.abs(diff) > 4) {
+        hasMovedRef.current = true;
+      }
+      el.scrollLeft = scrollLeftStartRef.current - diff;
+
+      // Handle infinite wrap-around during active drag
+      const batchWidth = el.scrollWidth / 3;
+      if (batchWidth > 0) {
+        if (el.scrollLeft >= batchWidth * 2) {
+          el.scrollLeft -= batchWidth;
+          scrollLeftStartRef.current -= batchWidth;
+        } else if (el.scrollLeft <= 0) {
+          el.scrollLeft += batchWidth;
+          scrollLeftStartRef.current += batchWidth;
+        }
+      }
+    };
+
+    const handleGlobalMouseUp = () => {
+      if (isDraggingRef.current) {
+        isDraggingRef.current = false;
+        setIsDragging(false);
+        lastTimeRef.current = performance.now(); // reset time so auto-scroll resumes immediately without a jump
+        setTimeout(() => {
+          hasMovedRef.current = false;
+        }, 80);
+      }
+    };
+
+    window.addEventListener('mousemove', handleGlobalMouseMove);
+    window.addEventListener('mouseup', handleGlobalMouseUp);
+    return () => {
+      window.removeEventListener('mousemove', handleGlobalMouseMove);
+      window.removeEventListener('mouseup', handleGlobalMouseUp);
+    };
+  }, []);
+
+  // Mouse Drag Start
   const handleMouseDown = (e) => {
+    if (e.button !== 0) return; // only left click
     const el = scrollRef.current;
     if (!el) return;
     isDraggingRef.current = true;
-    hasDraggedRef.current = false;
-    startXRef.current = e.pageX - el.offsetLeft;
-    scrollLeftRef.current = el.scrollLeft;
-    setIsPaused(true);
-    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    setIsDragging(true);
+    hasMovedRef.current = false;
+    startXRef.current = e.pageX;
+    scrollLeftStartRef.current = el.scrollLeft;
   };
 
-  const handleMouseMove = (e) => {
-    if (!isDraggingRef.current) return;
-    const el = scrollRef.current;
-    if (!el) return;
-    e.preventDefault();
-    const x = e.pageX - el.offsetLeft;
-    const walk = (x - startXRef.current) * 1.6;
-    if (Math.abs(x - startXRef.current) > 6) {
-      hasDraggedRef.current = true;
-    }
-    el.scrollLeft = scrollLeftRef.current - walk;
-
-    // Seamless wrap during manual drag
-    const oneThird = el.scrollWidth / 3;
-    if (oneThird > 0) {
-      if (el.scrollLeft >= oneThird * 2) {
-        el.scrollLeft -= oneThird;
-        scrollLeftRef.current -= oneThird;
-      } else if (el.scrollLeft <= 10) {
-        el.scrollLeft += oneThird;
-        scrollLeftRef.current += oneThird;
-      }
-    }
-  };
-
-  const handleMouseUpOrLeave = () => {
-    if (isDraggingRef.current) {
-      isDraggingRef.current = false;
-      scheduleResume(2000);
-    }
-  };
-
-  // Touch swipe handlers
+  // Touch Handlers for Mobile
   const handleTouchStart = () => {
-    setIsPaused(true);
-    hasDraggedRef.current = false;
-    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
-  };
-
-  const handleTouchMove = () => {
-    hasDraggedRef.current = true;
+    isTouchingRef.current = true;
   };
 
   const handleTouchEnd = () => {
-    scheduleResume(2500);
+    isTouchingRef.current = false;
+    lastTimeRef.current = performance.now();
   };
 
-  // Chevron arrow navigation
-  const scrollPrev = () => {
+  // Trackpad / Wheel scroll listener
+  const handleWheel = () => {
+    isWheelingRef.current = true;
+    if (wheelTimeoutRef.current) clearTimeout(wheelTimeoutRef.current);
+    wheelTimeoutRef.current = setTimeout(() => {
+      isWheelingRef.current = false;
+      lastTimeRef.current = performance.now();
+    }, 180);
+  };
+
+  // Manual Step Buttons
+  const scrollStep = (direction) => {
     const el = scrollRef.current;
     if (!el) return;
-    setIsPaused(true);
-    el.scrollBy({ left: -320, behavior: 'smooth' });
-    scheduleResume(3000);
-  };
-
-  const scrollNext = () => {
-    const el = scrollRef.current;
-    if (!el) return;
-    setIsPaused(true);
-    el.scrollBy({ left: 320, behavior: 'smooth' });
-    scheduleResume(3000);
-  };
-
-  const handleCardClick = (craft) => {
-    if (hasDraggedRef.current) {
-      hasDraggedRef.current = false;
-      return;
-    }
-    onSelectCraft(craft);
+    const amount = direction === 'left' ? -340 : 340;
+    el.scrollBy({ left: amount, behavior: 'smooth' });
+    lastTimeRef.current = performance.now();
   };
 
   return (
@@ -243,7 +263,7 @@ export default function About({ onSelectCraft }) {
         {/* Typewriter Banner with Modern Rounded Corners */}
         <TypewriterBanner />
 
-        {/* UNFILTERED - Photo Carousel (Auto-sliding + Drag, Swipe & Arrow Navigation) */}
+        {/* UNFILTERED - Photo Automatic Smooth Sliding Carousel with Full Manual Scroll & Drag Controls */}
         <div className="space-y-4 sm:space-y-6 pt-4">
           <div className="flex items-center justify-between">
             <h4 className="text-base sm:text-xl font-extrabold text-brand-dark flex items-center gap-1.5 sm:gap-2 tracking-wide uppercase">
@@ -251,51 +271,47 @@ export default function About({ onSelectCraft }) {
               <span>UNFILTERED</span>
             </h4>
 
-            {/* Navigation Arrows for User to Move Track */}
-            <div className="flex items-center gap-1.5 sm:gap-2">
+            {/* Manual Left / Right Scroll Step Buttons */}
+            <div className="flex items-center gap-2">
               <button
-                onClick={scrollPrev}
+                onClick={() => scrollStep('left')}
                 aria-label="Previous photos"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/95 border border-neutral-200/90 shadow-sm hover:shadow-md flex items-center justify-center text-neutral-700 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 border border-neutral-200 flex items-center justify-center text-neutral-700 hover:text-black transition-all active:scale-95 cursor-pointer shadow-sm"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
-                onClick={scrollNext}
+                onClick={() => scrollStep('right')}
                 aria-label="Next photos"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/95 border border-neutral-200/90 shadow-sm hover:shadow-md flex items-center justify-center text-neutral-700 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 border border-neutral-200 flex items-center justify-center text-neutral-700 hover:text-black transition-all active:scale-95 cursor-pointer shadow-sm"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           </div>
 
-          {/* Smooth Auto-sliding & User Interactive Drag/Swipe Track */}
+          {/* Smooth Scrollable & Drag Track */}
           <div
             ref={scrollRef}
             onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUpOrLeave}
-            onMouseLeave={handleMouseUpOrLeave}
             onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-            onMouseEnter={() => setIsPaused(true)}
-            onWheel={() => {
-              setIsPaused(true);
-              scheduleResume(2000);
-            }}
-            className="relative overflow-x-auto py-2 -mx-4 sm:-mx-8 px-4 sm:px-8 select-none cursor-grab active:cursor-grabbing hide-scrollbar scroll-smooth overscroll-x-contain"
-            style={{
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none'
-            }}
+            onScroll={handleScroll}
+            onWheel={handleWheel}
+            className={`relative overflow-x-auto hide-scrollbar py-2 -mx-4 sm:-mx-8 px-4 sm:px-8 select-none ${
+              isDragging ? 'cursor-grabbing' : 'cursor-grab'
+            }`}
+            style={{ WebkitOverflowScrolling: 'touch' }}
           >
             <div className="flex gap-4 sm:gap-6 w-max">
-              {infiniteGallery.map((craft, idx) => (
+              {duplicatedGallery.map((craft, idx) => (
                 <div
                   key={`${craft.id}-${idx}`}
-                  onClick={() => handleCardClick(craft)}
+                  onClick={() => {
+                    if (!hasMovedRef.current) {
+                      onSelectCraft(craft);
+                    }
+                  }}
                   className="flex-shrink-0 w-56 sm:w-64 aspect-[3/4] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-gray-200 cursor-pointer relative group bg-gray-100 transition-all duration-300 hover:scale-[1.03]"
                 >
                   <ImageWithSkeleton
@@ -303,6 +319,7 @@ export default function About({ onSelectCraft }) {
                     alt="Unfiltered visual"
                     containerClassName="w-full h-full pointer-events-none select-none"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none select-none"
+                    draggable={false}
                   />
                   
                   {/* Overlay on hover (No text information) */}
