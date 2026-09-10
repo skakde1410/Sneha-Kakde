@@ -3,7 +3,7 @@ export const personalInfo = {
   initials: "SK",
   title: "Creative Visual Designer | UX Designer",
   institution: "IIT Guwahati",
-  heroBio: "I design meaningful digital experiences by combining visual communication, UX research, interaction design, and branding. My work focuses on solving real-world problems through human-centered design.",
+  heroBio: "I’m curious about people, their stories, and the many ways we see the world. I connect, listen, question, and explore - turning human insights into meaningful ideas and using visual design and storytelling to bring them to life.",
   extendedBio: [
     "A multidisciplinary designer crafting experiences across visual design, UX, storytelling, and creative exploration.",
     "Beyond the screen, I explore, document, question, and immerse myself in the richness of human behavior. I'm captivated by the discipline, composure, resilience, leadership, and sense of duty embodied by pilots and officers in the Army, Navy, and Air Force — qualities that shape how I think about responsibility, teamwork, and decision-making.",
