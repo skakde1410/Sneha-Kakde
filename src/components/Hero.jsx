@@ -110,9 +110,9 @@ export default function Hero({ onOpenContact }) {
 
           {/* Role Subtitle */}
           <h2 className="text-base sm:text-xl font-bold text-gray-700 mb-4 sm:mb-6 tracking-tight flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <span>Creative Visual Designer</span>
+            <span>Visual Designer</span>
             <span className="text-brand-pink">•</span>
-            <span>UX Designer</span>
+            <span>UX Researcher & Strategist</span>
           </h2>
 
           {/* Description */}
