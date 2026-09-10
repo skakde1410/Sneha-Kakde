@@ -167,6 +167,14 @@
   will-change: transform;
 }
 
+.animate-banner-scroll {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 80s linear infinite;
+  will-change: transform;
+}
+
+
 /* Pause animation seamlessly in-place without resetting transform */
 .marquee-container:hover .animate-marquee-interests,
 .marquee-container:hover .animate-marquee-crafts,

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
-import { Menu, X, ArrowUpRight, ArrowLeft, Sparkles, Mail } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sparkles, Mail } from 'lucide-react';
 
 export default function Navbar({ currentView, onNavigate, onOpenContact }) {
   const [scrolled, setScrolled] = useState(false);
@@ -62,8 +62,14 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
     }
   };
 
+  const isDarkNav = currentView === 'archive';
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-2.5 sm:py-3 shadow-sm' : 'bg-transparent py-3.5 sm:py-5'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? (isDarkNav ? 'glass-dark py-2.5 sm:py-3 shadow-md' : 'glass-nav py-2.5 sm:py-3 shadow-sm') 
+        : 'bg-transparent py-3.5 sm:py-5'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
         {/* Logo */}
@@ -79,7 +85,9 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
           }}
           className="group flex items-center gap-1.5 sm:gap-2 focus:outline-none cursor-pointer"
         >
-          <span className="font-extrabold text-2xl sm:text-3xl tracking-tight text-brand-dark group-hover:text-brand-pink transition-colors">
+          <span className={`font-extrabold text-2xl sm:text-3xl tracking-tight transition-colors ${
+            isDarkNav ? 'text-white group-hover:text-brand-pink' : 'text-brand-dark group-hover:text-brand-pink'
+          }`}>
             {personalInfo.initials}
           </span>
           <span className="w-2 h-2 rounded-full bg-brand-pink group-hover:scale-125 transition-transform" />
@@ -92,7 +100,9 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
               key={link.name}
               href={link.href}
               onClick={(e) => handleLinkClick(e, link.href)}
-              className="text-sm font-medium text-gray-700 hover:text-brand-pink transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-pink hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+              className={`text-sm font-medium transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-pink hover:after:w-full after:transition-all after:duration-300 cursor-pointer ${
+                isDarkNav ? 'text-white hover:text-brand-pink' : 'text-gray-700 hover:text-brand-pink'
+              }`}
             >
               {link.name}
             </a>
@@ -101,15 +111,7 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
 
         {/* Action Buttons (Desktop) */}
         <div className="hidden md:flex items-center gap-3">
-          {currentView !== 'home' ? (
-            <button
-              onClick={() => onNavigate('home')}
-              className="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-gray-800 bg-gray-100 hover:bg-gray-200 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back to Home</span>
-            </button>
-          ) : (
+          {currentView === 'home' ? (
             <button
               onClick={() => onNavigate('archive')}
               className="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-brand-dark hover:bg-black rounded-full transition-all hover:shadow-lg hover:scale-105 active:scale-95 group cursor-pointer"
@@ -118,20 +120,20 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
               <span>View 2025 Archive</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-gray-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
+          ) : (
+            <button
+              onClick={() => onNavigate('home')}
+              className="inline-flex items-center gap-1.5 bg-black hover:bg-neutral-900 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-xl transition-all hover:scale-105 active:scale-95 group cursor-pointer border border-neutral-800 whitespace-nowrap"
+            >
+              <span>View New Portfolio</span>
+              <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-neutral-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </button>
           )}
         </div>
 
         {/* Mobile Action Pill + Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-2">
-          {currentView !== 'home' ? (
-            <button
-              onClick={() => onNavigate('home')}
-              className="flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-gray-800 bg-gray-100 rounded-full cursor-pointer"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Home</span>
-            </button>
-          ) : (
+          {currentView === 'home' ? (
             <button
               onClick={() => onNavigate('archive')}
               className="flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-white bg-brand-dark rounded-full cursor-pointer"
@@ -139,11 +141,23 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
               <Sparkles className="w-3 h-3 text-yellow-400" />
               <span>2025 Archive</span>
             </button>
+          ) : (
+            <button
+              onClick={() => onNavigate('home')}
+              className="flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-white bg-black rounded-full cursor-pointer border border-neutral-800"
+            >
+              <span>New Portfolio</span>
+              <ArrowUpRight className="w-3 h-3 text-neutral-300" />
+            </button>
           )}
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl text-gray-700 hover:text-brand-pink hover:bg-gray-100 focus:outline-none transition-colors"
+            className={`p-2 rounded-xl focus:outline-none transition-colors ${
+              isDarkNav 
+                ? 'text-white hover:text-brand-pink hover:bg-white/10' 
+                : 'text-gray-700 hover:text-brand-pink hover:bg-gray-100'
+            }`}
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -159,7 +173,7 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="md:hidden glass-nav border-b border-gray-200/80 px-5 sm:px-6 py-5 shadow-lg overflow-hidden"
+            className={`md:hidden ${isDarkNav ? 'glass-dark border-neutral-800' : 'glass-nav border-gray-200/80'} border-b px-5 sm:px-6 py-5 shadow-lg overflow-hidden`}
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
@@ -167,10 +181,10 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  className="text-base font-semibold text-gray-800 hover:text-brand-pink transition-colors py-2.5 px-3 rounded-lg hover:bg-gray-50 flex items-center justify-between cursor-pointer"
+                  className={`text-base font-semibold ${isDarkNav ? 'text-white hover:text-brand-pink hover:bg-white/5' : 'text-gray-800 hover:text-brand-pink hover:bg-gray-50'} transition-colors py-2.5 px-3 rounded-lg flex items-center justify-between cursor-pointer`}
                 >
                   <span>{link.name}</span>
-                  <span className="text-gray-400 text-xs">→</span>
+                  <span className={`${isDarkNav ? 'text-neutral-400' : 'text-gray-400'} text-xs`}>→</span>
                 </a>
               ))}
               

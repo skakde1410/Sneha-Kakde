@@ -79,7 +79,7 @@ export default function CategoryShowcase({ onSelectImage }) {
   };
 
   return (
-    <div className="w-full max-w-[1450px] mx-auto px-1 sm:px-6 lg:px-8 space-y-6 sm:space-y-10">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-10">
       
       {/* Contents Card Container (Matching Figma Frame 66:884) */}
       <div className="bg-[#F5F3ED] rounded-xl sm:rounded-3xl p-3 sm:p-7 lg:p-9 border border-stone-200/80 shadow-md relative overflow-hidden">
