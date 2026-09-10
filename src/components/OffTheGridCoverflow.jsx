@@ -41,8 +41,8 @@ const coverflowSlides = [
     icon: BookOpen,
     title: 'Reading',
     quote: 'I read – because every book gives me another perspective.',
-    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/archive_storybook_1.webp'
+    image: '/assets/illustration_reading.jpg',
+    fallback: '/assets/illustration_reading.jpg'
   },
   {
     id: 'sketching',
@@ -50,8 +50,8 @@ const coverflowSlides = [
     icon: PenTool,
     title: 'Sketching',
     quote: 'I sketch, illustrate & Calligraphy – when an idea feels easier to draw than explain.',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/craft_sketch_book.webp'
+    image: '/assets/illustration_sketching.jpg',
+    fallback: '/assets/illustration_sketching.jpg'
   },
   {
     id: 'music',
@@ -59,8 +59,8 @@ const coverflowSlides = [
     icon: Music,
     title: 'Music',
     quote: 'I listen to music & sing – because sometimes a melody says what words cannot.',
-    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/craft_anchoring.webp'
+    image: '/assets/illustration_music.jpg',
+    fallback: '/assets/illustration_music.jpg'
   },
   {
     id: 'writing',
@@ -68,8 +68,8 @@ const coverflowSlides = [
     icon: Feather,
     title: 'Writing',
     quote: 'I write – articles, thoughts, and poems in Marathi. Writing helps me turn observations and emotions into stories.',
-    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/craft_poem_vertical.jpg'
+    image: '/assets/illustration_writing.jpg',
+    fallback: '/assets/illustration_writing.jpg'
   },
   {
     id: 'photography',
@@ -77,8 +77,8 @@ const coverflowSlides = [
     icon: Camera,
     title: 'Photography',
     quote: 'I photograph – little details, people, places, light, textures, and moments that often go unnoticed.',
-    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/archive_photography.webp'
+    image: '/assets/illustration_photography.jpg',
+    fallback: '/assets/illustration_photography.jpg'
   },
   {
     id: 'badminton',
@@ -86,8 +86,8 @@ const coverflowSlides = [
     icon: BadmintonIcon,
     title: 'Badminton',
     quote: 'I play badminton for the energy, focus, and joy of simply playing.',
-    image: '/assets/craft_badminton.webp',
-    fallback: '/assets/craft_badminton.jpg'
+    image: '/assets/illustration_badminton.jpg',
+    fallback: '/assets/illustration_badminton.jpg'
   },
   {
     id: 'movies',
@@ -95,8 +95,8 @@ const coverflowSlides = [
     icon: Film,
     title: 'Movies',
     quote: 'I watch movies for the stories, characters, scenes, VFX, visual language, moodboards and different worlds they let me step into.',
-    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/archive_3d_animation.webp'
+    image: '/assets/illustration_movies.jpg',
+    fallback: '/assets/illustration_movies.jpg'
   },
   {
     id: 'cooking',
@@ -104,8 +104,8 @@ const coverflowSlides = [
     icon: CookingPot,
     title: 'Cooking',
     quote: "I love cooking – experimenting with ingredients, trying new recipes, and turning simple things into something of my own. It reminds me that creativity doesn't always need a canvas or a screen.",
-    image: '/assets/craft_cooking.webp',
-    fallback: '/assets/craft_cooking.jpg'
+    image: '/assets/illustration_cooking.jpg',
+    fallback: '/assets/illustration_cooking.jpg'
   },
   {
     id: 'sculpting',
@@ -113,8 +113,8 @@ const coverflowSlides = [
     icon: Layers,
     title: 'Sculpting',
     quote: 'I love sculpting – working with POP and clay, shaping something with my hands and watching an idea slowly take physical form. I enjoy the process of building, carving, refining, and sometimes simply getting my hands messy.',
-    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=80',
-    fallback: '/assets/craft_clay.webp'
+    image: '/assets/illustration_sculpting.jpg',
+    fallback: '/assets/illustration_sculpting.jpg'
   }
 ];
 
