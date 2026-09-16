@@ -20,6 +20,12 @@ export default function About({ onSelectCraft }) {
   const lastTimeRef = useRef(performance.now());
   const wheelTimeoutRef = useRef(null);
   const isWheelingRef = useRef(false);
+  const isSteppingRef = useRef(false);
+  const stepAnimRef = useRef(null);
+  const stepTargetRef = useRef(0);
+  const stepStartPosRef = useRef(0);
+  const stepStartTimeRef = useRef(0);
+  const stepDurationRef = useRef(320);
 
   // Initialize scroll position in the center batch so user can scroll left or right immediately
   useEffect(() => {
@@ -54,8 +60,8 @@ export default function About({ onSelectCraft }) {
       const elapsed = now - lastTimeRef.current;
       lastTimeRef.current = now;
 
-      // Keep scrolling automatically whenever user is NOT actively dragging/touching/wheeling
-      if (!isDraggingRef.current && !isTouchingRef.current && !isWheelingRef.current) {
+      // Keep scrolling automatically whenever user is NOT actively dragging/touching/wheeling/stepping
+      if (!isDraggingRef.current && !isTouchingRef.current && !isWheelingRef.current && !isSteppingRef.current) {
         if (el) {
           // Normalize to ~1.75px per 16ms for crisp, faster automatic motion
           const delta = (elapsed / 16.667) * 1.75;
@@ -78,6 +84,7 @@ export default function About({ onSelectCraft }) {
     animFrameRef.current = requestAnimationFrame(tick);
     return () => {
       if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+      if (stepAnimRef.current) cancelAnimationFrame(stepAnimRef.current);
     };
   }, []);
 
@@ -144,6 +151,8 @@ export default function About({ onSelectCraft }) {
     if (e.button !== 0) return; // only left click
     const el = scrollRef.current;
     if (!el) return;
+    if (stepAnimRef.current) cancelAnimationFrame(stepAnimRef.current);
+    isSteppingRef.current = false;
     isDraggingRef.current = true;
     setIsDragging(true);
     hasMovedRef.current = false;
@@ -153,6 +162,8 @@ export default function About({ onSelectCraft }) {
 
   // Touch Handlers for Mobile
   const handleTouchStart = () => {
+    if (stepAnimRef.current) cancelAnimationFrame(stepAnimRef.current);
+    isSteppingRef.current = false;
     isTouchingRef.current = true;
   };
 
@@ -163,6 +174,8 @@ export default function About({ onSelectCraft }) {
 
   // Trackpad / Wheel scroll listener
   const handleWheel = () => {
+    if (stepAnimRef.current) cancelAnimationFrame(stepAnimRef.current);
+    isSteppingRef.current = false;
     isWheelingRef.current = true;
     if (wheelTimeoutRef.current) clearTimeout(wheelTimeoutRef.current);
     wheelTimeoutRef.current = setTimeout(() => {
@@ -171,13 +184,66 @@ export default function About({ onSelectCraft }) {
     }, 180);
   };
 
-  // Manual Step Buttons
+  // Manual Left / Right Step Buttons
   const scrollStep = (direction) => {
     const el = scrollRef.current;
     if (!el) return;
-    const amount = direction === 'left' ? -340 : 340;
-    el.scrollBy({ left: amount, behavior: 'smooth' });
-    lastTimeRef.current = performance.now();
+
+    // Dynamically calculate single card advance (card width + gap)
+    let cardStep = 280;
+    const firstCard = el.querySelector('.flex-shrink-0');
+    if (firstCard) {
+      const parent = firstCard.parentElement;
+      const gap = parent ? parseFloat(window.getComputedStyle(parent).gap || '24') || 24 : 24;
+      cardStep = firstCard.offsetWidth + gap;
+    }
+
+    const delta = direction === 'left' ? -cardStep : cardStep;
+    const batchWidth = el.scrollWidth / 3;
+
+    // If already in the middle of a step, accumulate target to allow smooth rapid clicking
+    const base = isSteppingRef.current ? stepTargetRef.current : el.scrollLeft;
+    stepTargetRef.current = base + delta;
+    stepStartPosRef.current = el.scrollLeft;
+    stepStartTimeRef.current = performance.now();
+    stepDurationRef.current = 320; // responsive, smooth 320ms glide
+
+    isSteppingRef.current = true;
+    if (stepAnimRef.current) cancelAnimationFrame(stepAnimRef.current);
+
+    const animateStep = (now) => {
+      const elapsed = now - stepStartTimeRef.current;
+      const progress = Math.min(elapsed / stepDurationRef.current, 1);
+      // Smooth cubic ease-out
+      const ease = 1 - Math.pow(1 - progress, 3);
+
+      el.scrollLeft = stepStartPosRef.current + (stepTargetRef.current - stepStartPosRef.current) * ease;
+
+      // Handle infinite wrap-around seamlessly during the step
+      if (batchWidth > 0) {
+        if (el.scrollLeft >= batchWidth * 2) {
+          el.scrollLeft -= batchWidth;
+          stepStartPosPos(batchWidth);
+        } else if (el.scrollLeft <= 5) {
+          el.scrollLeft += batchWidth;
+          stepStartPosPos(-batchWidth);
+        }
+      }
+
+      if (progress < 1) {
+        stepAnimRef.current = requestAnimationFrame(animateStep);
+      } else {
+        isSteppingRef.current = false;
+        lastTimeRef.current = performance.now(); // reset timer so continuous auto-scroll resumes cleanly
+      }
+    };
+
+    function stepStartPosPos(shift) {
+      stepStartPosRef.current -= shift;
+      stepTargetRef.current -= shift;
+    }
+
+    stepAnimRef.current = requestAnimationFrame(animateStep);
   };
 
   return (
@@ -274,16 +340,26 @@ export default function About({ onSelectCraft }) {
             {/* Manual Left / Right Scroll Step Buttons */}
             <div className="flex items-center gap-2">
               <button
-                onClick={() => scrollStep('left')}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  scrollStep('left');
+                }}
                 aria-label="Previous photos"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 border border-neutral-200 flex items-center justify-center text-neutral-700 hover:text-black transition-all active:scale-95 cursor-pointer shadow-sm"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 border border-neutral-200 flex items-center justify-center text-neutral-700 hover:text-black transition-all hover:scale-105 active:scale-90 cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-pink/30"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
-                onClick={() => scrollStep('right')}
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  scrollStep('right');
+                }}
                 aria-label="Next photos"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 border border-neutral-200 flex items-center justify-center text-neutral-700 hover:text-black transition-all active:scale-95 cursor-pointer shadow-sm"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 border border-neutral-200 flex items-center justify-center text-neutral-700 hover:text-black transition-all hover:scale-105 active:scale-90 cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-pink/30"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
