@@ -329,12 +329,13 @@ export default function About({ onSelectCraft }) {
         {/* Typewriter Banner with Modern Rounded Corners */}
         <TypewriterBanner />
 
-        {/* UNFILTERED - Photo Automatic Smooth Sliding Carousel with Full Manual Scroll & Drag Controls */}
-        <div className="space-y-4 sm:space-y-6 pt-4">
+        {/* Studio / UNFILTERED - Photo Automatic Smooth Sliding Carousel with Full Manual Scroll & Drag Controls */}
+        <div id="studio" className="space-y-4 sm:space-y-6 pt-4 scroll-mt-24 relative">
+          <span id="unfiltered" className="sr-only">Studio UNFILTERED</span>
           <div className="flex items-center justify-between">
             <h4 className="text-base sm:text-xl font-extrabold text-brand-dark flex items-center gap-1.5 sm:gap-2 tracking-wide uppercase">
               <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink flex-shrink-0" />
-              <span>UNFILTERED</span>
+              <span>Studio &middot; UNFILTERED</span>
             </h4>
 
             {/* Manual Left / Right Scroll Step Buttons */}

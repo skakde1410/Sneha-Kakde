@@ -15,7 +15,7 @@ const getViewFromHash = () => {
   const hash = window.location.hash;
   if (hash === '#archive') return 'archive';
   if (hash === '#404') return '404';
-  if (!hash || hash === '#' || hash === '#home' || hash.startsWith('#about') || hash.startsWith('#work') || hash.startsWith('#interests') || hash.startsWith('#contact') || hash.startsWith('#hero') || hash.startsWith('#craft') || hash.startsWith('#projects')) {
+  if (!hash || hash === '#' || hash === '#home' || hash.startsWith('#about') || hash.startsWith('#work') || hash.startsWith('#interests') || hash.startsWith('#studio') || hash.startsWith('#unfiltered') || hash.startsWith('#contact') || hash.startsWith('#hero') || hash.startsWith('#craft') || hash.startsWith('#projects')) {
     return 'home';
   }
   return '404';
