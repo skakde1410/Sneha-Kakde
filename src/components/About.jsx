@@ -275,7 +275,7 @@ export default function About({ onSelectCraft }) {
             <div className="relative group max-w-[280px] sm:max-w-sm w-full">
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-4 border-white ring-1 ring-gray-200">
                 <ImageWithSkeleton
-                  src="/assets/sneha_profile.webp"
+                  src="/assets/sneha_profile.jpg"
                   alt="Sneha Kakde"
                   containerClassName="w-full h-auto"
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
