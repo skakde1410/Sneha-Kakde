@@ -48,7 +48,7 @@ export default function Projects() {
                   alt={project.title}
                   loading="lazy"
                   containerClassName="w-full h-full"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className={`w-full h-full object-cover ${project.objectPosition || 'object-center'} group-hover:scale-105 transition-transform duration-700 ease-out`}
                 />
 
                 {/* Subtle Gradient Overlay for Text Legibility */}

@@ -622,54 +622,56 @@ export const featuredProjects = [
     }
   },
   {
-    id: "tritva",
-    title: "Tritva",
-    tagline: "Yoga Studio Visual Identity & Branding",
-    category: "Graphic Design",
-    duration: "1 month",
-    summary: "Developed a cohesive visual identity through competitor research, visual analysis, logo development, typography, colour selection, and brand applications across stationery and merchandise.",
-    behanceLink: "https://www.behance.net/gallery/255105741/Tritva",
-    coverImage: "/assets/tritva_cover.webp",
-    accentColor: "#E67E22",
-    tags: ["Graphic Design", "Brand Identity", "Typography", "Merchandise"],
+    id: "miscellaneous",
+    title: "Miscellaneous",
+    tagline: "Multidisciplinary Visual Arts, Matte Paintings & Crafts",
+    category: "Visual Arts",
+    duration: "Collection",
+    summary: "A curated collection of creative explorations spanning surreal digital matte paintings, concept art, Sanskrit calligraphy mandalas, terracotta clay pottery, and portraiture.",
+    behanceLink: "https://www.behance.net/kakdesneha",
+    coverImage: "/assets/misc_1.png",
+    objectPosition: "object-top",
+    accentColor: "#E64A19",
+    tags: ["Digital Art", "Matte Painting", "Calligraphy", "Sculpting", "Concept Art"],
     metrics: [
-      { label: "Duration", value: "1 Month" },
-      { label: "Domain", value: "Yoga & Wellness" },
-      { label: "Scope", value: "Identity & Merchandise" }
+      { label: "Mediums", value: "Digital & Clay" },
+      { label: "Domain", value: "Visual Arts & Crafts" },
+      { label: "Scope", value: "Creative Showcase" }
     ],
     details: {
-      abstract: "Tritva is a yoga studio visual identity developed to deliver a calm, welcoming, and trustworthy sanctuary for wellness seekers. Centered on 'harmony in motion', the identity fuses traditional roots with sophisticated modern design across signage, stationery, and lifestyle merchandise.",
-      problemStatement: "The local wellness market's most engaging brands are visually cluttered, driving away beginners seeking clarity. Tritva needed an identity that establishes a minimalistic, welcoming, and trustworthy presence fusing traditional roots with modern sophistication.",
+      abstract: "A multidisciplinary anthology of artistic explorations by Sneha Kakde, blending traditional handcrafts with modern digital concept art. Features surreal photo-manipulation matte paintings, Sanskrit calligraphy mandalas, terracotta pottery, Marathi poetry, and expressive portraiture.",
+      problemStatement: "Bridging tactile physical artistry and imaginative digital storytelling into a cohesive personal body of work celebrating cultural roots, nature, and speculative environments.",
       challenges: [
         {
-          title: "Market Clutter & Intimidation",
-          desc: "Existing yoga studios often use heavy, complex religious imagery that feels unapproachable to beginners."
+          title: "Medium Translation",
+          desc: "Translating tactile sensibilities from clay sculpting and ink calligraphy into high-resolution digital canvas workflows."
         },
         {
-          title: "Balance of Strength & Fluidity",
-          desc: "Capturing both the rooted discipline of asana practice and the serene flow of breath in a single mark."
+          title: "Atmospheric Depth & Worldbuilding",
+          desc: "Creating cinematic scale, volumetric lighting, and emotional mood in speculative matte paintings."
         },
         {
-          title: "Cross-Medium Material Application",
-          desc: "Ensuring the mark renders cleanly on textured yoga mats, engraved wood signs, ceramics, water bottles, and fabric."
+          title: "Cultural & Linguistic Integration",
+          desc: "Infusing sacred Sanskrit verses and Marathi poetic rhythms into modern visual art compositions."
         }
       ],
       solutions: [
         {
-          title: "1. Parvatasana (Mountain Pose) Monogram",
-          desc: "Symbol represents the Parvatasana pose, embodying stability, strength, and groundedness — standing tall yet rooted, balanced in motion."
+          title: "1. Surreal Matte Painting & Worldbuilding",
+          desc: "Crafted cinematic visual narratives including the mountain waterfall spirit, desert pilgrim, cosmic wave portal, and tranquil seascapes."
         },
         {
-          title: "2. The Essence of Three (Tritva Philosophy)",
-          desc: "Reflects the harmonious balance of mind, body, and breath through flowing organic geometry and warm earthy ochres."
+          title: "2. Sanskrit Calligraphy & Sacred Mandalas",
+          desc: "Hand-inked intricate circular Devanagari calligraphy mandalas fusing ancient mantras with geometric balance."
         },
         {
-          title: "3. End-to-End Lifestyle Merchandise",
-          desc: "Designed studio signage, business cards, instructor lanyards, yoga mats, stainless steel flasks, and ceramic mugs."
+          title: "3. Terracotta Pottery & Expressive Sculptures",
+          desc: "Wheel-thrown clay pots, handmade ceramic vessels, and hand-sculpted clay figurines exploring tactile human form."
         }
       ],
       gallery: [
-        { url: "/assets/tritva_cover.webp", caption: "Tritva Visual Identity System, Ideation & Merchandise Mockups" }
+        { url: "/assets/misc_1.png", caption: "Digital Matte Paintings, Concept Art & Studio Studies" },
+        { url: "/assets/archive_miscellaneous.webp", caption: "Calligraphy Mandalas, Terracotta Pottery & Character Sketches" }
       ]
     }
   }

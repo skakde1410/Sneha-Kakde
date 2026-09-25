@@ -15,7 +15,7 @@ A responsive, high-performance portfolio website built for **Sneha Kakde** (Crea
   - **AkshiO (Khelat Shikuya)**: Tangible Marathi learning & gamified educational kit for kids.
   - **FinGuide AI**: Financial advisory interface translating complex data into actionable insights.
   - **Adyam**: Brand identity, packaging, and digital presence for artisanal goods.
-  - **Tritva (Yoga Studio)**: Brand identity, spatial wayfinding, and digital booking platform.
+  - **Miscellaneous**: Multidisciplinary creative showcase spanning digital matte paintings, Sanskrit calligraphy mandalas, and terracotta pottery.
 - **Off The Grid (3D Coverflow)**: Continuous 3D perspective carousel spanning all 9 personal disciplines:
   - *Reading, Sketching, Music, Writing, Photography, Badminton, Movies, Cooking, and Sculpting*.
   - Smooth drag/swipe touch gestures, auto-sliding cadence, keyboard navigation, and synced 9-dot pagination.
