@@ -420,13 +420,6 @@ export const craftGallery = [
     aspect: "portrait"
   },
   {
-    id: 23,
-    title: "",
-    subtitle: "",
-    image: "/assets/craft_frame130_08_7f019dae.webp",
-    aspect: "landscape"
-  },
-  {
     id: 24,
     title: "",
     subtitle: "",
