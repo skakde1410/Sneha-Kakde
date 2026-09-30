@@ -147,6 +147,125 @@ export const interests = [
 
 export const craftGallery = [
   {
+    id: 115,
+    title: "THiCK Custom Display Lettering",
+    subtitle: "",
+    image: "/assets/craft_thick_typography.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 116,
+    title: "Surya Flame & Solar Art",
+    subtitle: "",
+    image: "/assets/craft_surya_sun_painting.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 117,
+    title: "Radha Krishna Canvas in Studio",
+    subtitle: "",
+    image: "/assets/craft_radha_krishna_studio.jpg",
+    aspect: "landscape"
+  },
+  {
+    id: 110,
+    title: "ZBrush Demon Beast Sculpt",
+    subtitle: "",
+    image: "/assets/craft_zbrush_beast_sculpt.jpg",
+    aspect: "landscape"
+  },
+  {
+    id: 111,
+    title: "ZBrush Torso & Muscle Anatomy Study",
+    subtitle: "",
+    image: "/assets/craft_zbrush_anatomy_study.jpg",
+    aspect: "landscape"
+  },
+  {
+    id: 112,
+    title: "ZBrush Goblin Creature Head Sculpt",
+    subtitle: "",
+    image: "/assets/craft_zbrush_creature_head.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 113,
+    title: "Substance Painter Beast Texturing",
+    subtitle: "",
+    image: "/assets/craft_substance_beast_texture.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 114,
+    title: "ZBrush Sci-Fi Mech & Cyborg Model",
+    subtitle: "",
+    image: "/assets/craft_zbrush_mech_character.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 105,
+    title: "Framed Artworks Exhibition",
+    subtitle: "",
+    image: "/assets/craft_framed_gallery.jpg",
+    aspect: "landscape"
+  },
+  {
+    id: 106,
+    title: "Framed Paintings Collection",
+    subtitle: "",
+    image: "/assets/craft_framed_artworks.jpg",
+    aspect: "landscape"
+  },
+  {
+    id: 107,
+    title: "Village Temple & Bullock Cart Painting",
+    subtitle: "",
+    image: "/assets/craft_village_temple_painting.jpg",
+    aspect: "landscape"
+  },
+  {
+    id: 108,
+    title: "Marathi Poetry & Watercolor Board",
+    subtitle: "",
+    image: "/assets/craft_marathi_poetry_board.jpg",
+    aspect: "landscape"
+  },
+  {
+    id: 109,
+    title: "Gentleman Portrait Study",
+    subtitle: "",
+    image: "/assets/craft_portrait_study.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 101,
+    title: "द Wah! Capsule",
+    subtitle: "",
+    image: "/assets/craft_dawah_capsule.png",
+    aspect: "portrait"
+  },
+  {
+    id: 102,
+    title: "Buffalo in the Forest Painting",
+    subtitle: "",
+    image: "/assets/craft_buffalo_painting.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 103,
+    title: "Wild Life Time Lettering",
+    subtitle: "",
+    image: "/assets/craft_wild_life_time.jpg",
+    aspect: "landscape"
+  },
+  {
+    id: 104,
+    title: "Botanical Seeds Linocut Print",
+    subtitle: "",
+    image: "/assets/craft_botanical_print.jpg",
+    aspect: "portrait"
+  },
+  {
     id: 1,
     title: "",
     subtitle: "",
