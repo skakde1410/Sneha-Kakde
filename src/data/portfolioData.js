@@ -409,6 +409,62 @@ export const craftGallery = [
 
 export const featuredProjects = [
   {
+    id: "product-design-lantern",
+    title: "Product Design",
+    tagline: "Lattice Octa Lantern — Geometric Lighting & Industrial Design",
+    category: "Product Design",
+    duration: "4 weeks",
+    summary: "Investigated the structural and aesthetic potential of an Archimedean truncated cube, deconstructing 14-faceted geometry into a parametric 3D-printed woven lattice lantern inspired by traditional Indian bangles.",
+    behanceLink: "https://www.behance.net/gallery/247294495/Lattice-Octa-Lantern",
+    coverImage: "/assets/lantern_cover_01.jpg",
+    accentColor: "#D97706",
+    tags: ["Product Design", "Parametric 3D", "Lighting Design", "Archimedean Geometry", "Rapid Prototyping"],
+    metrics: [
+      { label: "Geometry", value: "Truncated Cube" },
+      { label: "Inspiration", value: "Traditional Bangles" },
+      { label: "Fabrication", value: "3D Print & Workshop" }
+    ],
+    details: {
+      abstract: "Lattice Octa Lantern is an exploration of form and light, investigating the structural and aesthetic potential of an Archimedean truncated cube. By deconstructing its 14-faceted volume into elemental vertices, edges, and woven bars, the project reimagines traditional Indian bangles into a contemporary parametric pendant lantern that casts intricate radial shadowscapes.",
+      problemStatement: "To transform an abstract polyhedral mathematical volume—the Truncated Cube—into a functional, emotionally resonant product without losing its geometric purity or structural integrity.",
+      challenges: [
+        {
+          title: "Geometric Deconstruction",
+          desc: "Isolating the 8 triangular and 6 octagonal faces of the truncated cube into continuous interlocking bar edges without structural collapse."
+        },
+        {
+          title: "Parametric Twist & Void Balance",
+          desc: "Balancing the spiral twist angle in Blender CAD to maximize radial light diffusion while ensuring adequate thermal and physical airflow."
+        },
+        {
+          title: "3D Print & Support Extraction",
+          desc: "Overcoming fragile support structures during high-density additive manufacturing and manual post-processing in the workshop."
+        }
+      ],
+      solutions: [
+        {
+          title: "1. Archimedean Edge Tessellation",
+          desc: "Substituted solid planar faces with parametric edge bars, converting a heavy mathematical solid into an airy, woven lattice."
+        },
+        {
+          title: "2. Cultural Form Synthesis",
+          desc: "Synthesized the repetitive circular geometry of Indian bangles with parametric twists, producing organic, breathing curves."
+        },
+        {
+          title: "3. Radial Shadow Projection",
+          desc: "Engineered voids to cast dramatic radial starburst light and shadow patterns onto walls and dining surfaces."
+        }
+      ],
+      gallery: [
+        { url: "/assets/lantern_cover_01.jpg", caption: "Lattice Octa Lantern — Geometric Pendant Lighting Presentation" },
+        { url: "/assets/lantern_sketches.jpg", caption: "Form Exploration, Tessellation & Radial Geometry Sketches" },
+        { url: "/assets/lantern_3d_cad.jpg", caption: "Parametric 3D CAD Exploration in Blender" },
+        { url: "/assets/lantern_workshop.jpg", caption: "Additive Fabrication & Support Extraction in the Workshop" },
+        { url: "/assets/lantern_radiance.jpg", caption: "The Completed Radiance — Ambient Glow & Shadow Play" }
+      ]
+    }
+  },
+  {
     id: "chemthread",
     title: "ChemThread",
     tagline: "Cross-Grade Chemistry Learning Dashboard",
