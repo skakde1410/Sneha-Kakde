@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { archiveCategories } from '../data/portfolioData';
-import { BookOpen, Play, ArrowUpRight } from 'lucide-react';
+import { Play, ArrowUpRight } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 
 const categoryStyles = {
@@ -65,7 +65,6 @@ const categoryStyles = {
 
 export default function CategoryShowcase({ onSelectImage }) {
   const [activeCategory, setActiveCategory] = useState(archiveCategories[0].id);
-  const [activeStorybookIndex, setActiveStorybookIndex] = useState(0);
 
   const currentCategory = archiveCategories.find(c => c.id === activeCategory) || archiveCategories[0];
   const activeStyle = categoryStyles[currentCategory.id] || categoryStyles.illustration;
@@ -171,77 +170,27 @@ export default function CategoryShowcase({ onSelectImage }) {
 
           {/* SPECIFIC VIEW FOR CATEGORY 01: ILLUSTRATION (Storybook 01 & Storybook 02) */}
           {currentCategory.id === 'illustration' && currentCategory.storybooks ? (
-            <div className="space-y-4 sm:space-y-8">
-              {/* Storybook Switcher Pills */}
-              <div className="flex flex-wrap items-center gap-2 sm:gap-3 px-1 sm:px-0">
-                {currentCategory.storybooks.map((sb, idx) => (
-                  <button
-                    key={sb.id}
-                    onClick={() => setActiveStorybookIndex(idx)}
-                    className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
-                      activeStorybookIndex === idx
-                        ? 'bg-[#E6004C] text-white shadow-lg scale-105'
-                        : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
-                    }`}
-                  >
-                    <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    <span>{sb.title}</span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Active Storybook High-Resolution Master Board */}
-              {(() => {
-                const activeSb = currentCategory.storybooks[activeStorybookIndex] || currentCategory.storybooks[0];
-                return (
-                  <div className="space-y-3 sm:space-y-4">
-                    <div className="px-1 sm:px-0">
-                      <h4 className="text-sm sm:text-lg font-extrabold text-neutral-900">{activeSb.title}</h4>
-                      <p className="text-[11px] sm:text-sm text-neutral-500">{activeSb.subtitle}</p>
-                    </div>
-
-                    <div
-                      onClick={() => handleOpenBoard(activeSb.title, activeSb.subtitle, activeSb.image)}
-                      className="relative w-full rounded-lg sm:rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200/80 shadow-md group cursor-zoom-in transition-all duration-300 hover:border-brand-pink/50 hover:shadow-2xl"
-                    >
-                      <ImageWithSkeleton
-                        src={activeSb.image}
-                        alt={activeSb.title}
-                        loading="eager"
-                        className="w-full h-auto object-contain block select-none"
-                      />
-                    </div>
-
-                    {/* Also display the other storybook below for immediate complete discovery */}
-                    <div className="pt-4 sm:pt-8 border-t border-stone-200">
-                      <div className="mb-2 sm:mb-4 px-1 sm:px-0">
-                        <h4 className="text-sm sm:text-lg font-extrabold text-neutral-900">
-                          {currentCategory.storybooks[1 - activeStorybookIndex]?.title}
-                        </h4>
-                        <p className="text-[11px] sm:text-sm text-neutral-500">
-                          {currentCategory.storybooks[1 - activeStorybookIndex]?.subtitle}
-                        </p>
-                      </div>
-
-                      <div
-                        onClick={() => {
-                          const other = currentCategory.storybooks[1 - activeStorybookIndex];
-                          handleOpenBoard(other.title, other.subtitle, other.image);
-                        }}
-                        className="relative w-full rounded-lg sm:rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200/80 shadow-md group cursor-zoom-in transition-all duration-300 hover:border-brand-pink/50 hover:shadow-2xl"
-                      >
-                        <ImageWithSkeleton
-                          src={currentCategory.storybooks[1 - activeStorybookIndex]?.image}
-                          alt={currentCategory.storybooks[1 - activeStorybookIndex]?.title}
-                          loading="lazy"
-                          className="w-full h-auto object-contain block select-none"
-                        />
-                      </div>
-                    </div>
-
+            <div className="space-y-6 sm:space-y-10">
+              {currentCategory.storybooks.map((sb, idx) => (
+                <div key={sb.id} className={`space-y-3 sm:space-y-4 ${idx > 0 ? 'pt-6 sm:pt-10 border-t border-stone-200' : ''}`}>
+                  <div className="px-1 sm:px-0">
+                    <h4 className="text-sm sm:text-lg font-extrabold text-neutral-900">{sb.title}</h4>
+                    <p className="text-[11px] sm:text-sm text-neutral-500">{sb.subtitle}</p>
                   </div>
-                );
-              })()}
+
+                  <div
+                    onClick={() => handleOpenBoard(sb.title, sb.subtitle, sb.image)}
+                    className="relative w-full rounded-lg sm:rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200/80 shadow-md group cursor-zoom-in transition-all duration-300 hover:border-brand-pink/50 hover:shadow-2xl"
+                  >
+                    <ImageWithSkeleton
+                      src={sb.image}
+                      alt={sb.title}
+                      loading={idx === 0 ? "eager" : "lazy"}
+                      className="w-full h-auto object-contain block select-none"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           ) : (
             /* ALL OTHER CATEGORIES (02 - 07): FULL RESOLUTION MASTER BOARD */
