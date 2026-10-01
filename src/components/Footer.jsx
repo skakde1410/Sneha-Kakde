@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
-import { ArrowUpRight, Mail, Phone, Heart, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Mail, Phone, Heart } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 
 export default function Footer({ onOpenContact, onNavigate }) {

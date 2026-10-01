@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo, craftGallery } from '../data/portfolioData';
-import { Sparkles, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 import OffTheGridCoverflow from './OffTheGridCoverflow';
 import TypewriterBanner from './TypewriterBanner';
@@ -333,8 +333,7 @@ export default function About({ onSelectCraft }) {
         <div id="studio" className="space-y-4 sm:space-y-6 pt-4 scroll-mt-24 relative">
           <span id="unfiltered" className="sr-only">Studio UNFILTERED</span>
           <div className="flex items-center justify-between">
-            <h4 className="text-base sm:text-xl font-extrabold text-brand-dark flex items-center gap-1.5 sm:gap-2 tracking-wide uppercase">
-              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink flex-shrink-0" />
+            <h4 className="text-base sm:text-xl font-extrabold text-brand-dark tracking-wide uppercase">
               <span>Studio &middot; UNFILTERED</span>
             </h4>
 

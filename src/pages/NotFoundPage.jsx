@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Home, Sparkles, FolderArchive, Mail, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, Home, FolderArchive, Mail, ArrowUpRight } from 'lucide-react';
 
 export default function NotFoundPage({ onBackToHome, onOpenContact, onNavigateToArchive }) {
   useEffect(() => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Mail, Phone, Copy, Check, Send, Sparkles } from 'lucide-react';
+import { X, Mail, Phone, Copy, Check, Send } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function ContactModal({ isOpen, onClose }) {
@@ -56,8 +56,7 @@ export default function ContactModal({ isOpen, onClose }) {
               <X className="w-5 h-5" />
             </button>
             
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-pink-300 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2 sm:mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-pink-300 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2 sm:mb-3">
               <span>Let's Connect</span>
             </div>
 

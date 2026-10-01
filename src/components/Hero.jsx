@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
-import { ArrowUpRight, ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowUpRight, ArrowDown } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 import mascotImg from '../assets/mascot.webp';
 
@@ -93,8 +93,7 @@ export default function Hero({ onOpenContact }) {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 self-start px-3 sm:px-3.5 py-1 rounded-full bg-pink-50 border border-pink-100 text-brand-pink text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-4 sm:mb-6">
-            <Sparkles className="w-3.5 h-3.5 text-brand-pink" />
+          <div className="inline-flex items-center self-start px-3 sm:px-3.5 py-1 rounded-full bg-pink-50 border border-pink-100 text-brand-pink text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-4 sm:mb-6">
             <span>Design Portfolio 2026</span>
           </div>
 
