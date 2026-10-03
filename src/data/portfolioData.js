@@ -147,6 +147,41 @@ export const interests = [
 
 export const craftGallery = [
   {
+    id: 121,
+    title: "Bamboo Craft & Weaving Process",
+    subtitle: "Artisan Field Immersion",
+    image: "/assets/craft_bamboo_weaving_artisan.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 122,
+    title: "Bamboo Mat Weaving & Craft Immersion",
+    subtitle: "Traditional Workshop",
+    image: "/assets/craft_bamboo_mat_weaving.jpg",
+    aspect: "landscape"
+  },
+  {
+    id: 123,
+    title: "Field Ethnography & Rural Life Photography",
+    subtitle: "Village Contextual Inquiry",
+    image: "/assets/craft_field_photography_camera_1.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 124,
+    title: "Candid Village Portraiture & Contextual Inquiry",
+    subtitle: "Visual Ethnography Study",
+    image: "/assets/craft_field_photography_camera_2.jpg",
+    aspect: "portrait"
+  },
+  {
+    id: 125,
+    title: "Artisan Courtyard & Traditional Bamboo Framework",
+    subtitle: "Hands-on Material Exploration",
+    image: "/assets/craft_artisan_courtyard_workshop.jpg",
+    aspect: "portrait"
+  },
+  {
     id: 115,
     title: "THiCK Custom Display Lettering",
     subtitle: "",

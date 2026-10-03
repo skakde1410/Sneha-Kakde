@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn, ZoomOut, RotateCcw, Maximize, Minimize2 } from 'lucide-react';
+import { X, Maximize, Minimize2 } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 
 export default function CraftGalleryModal({ item, onClose }) {
   const [scale, setScale] = useState(1);
-  const [viewMode, setViewMode] = useState('fit-width'); // 'fit-width' or 'fit-screen'
+  const [viewMode, setViewMode] = useState('fit-screen'); // 'fit-screen' or 'fit-width'
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const dragStartRef = useRef({ x: 0, y: 0 });
@@ -19,7 +19,7 @@ export default function CraftGalleryModal({ item, onClose }) {
     if (item) {
       document.body.style.overflow = 'hidden';
       setScale(1);
-      setViewMode('fit-width');
+      setViewMode('fit-screen');
       setPosition({ x: 0, y: 0 });
       if (containerRef.current) {
         containerRef.current.scrollTop = 0;
@@ -235,43 +235,8 @@ export default function CraftGalleryModal({ item, onClose }) {
             </button>
           </div>
 
-          {/* Floating Zoom Controls & Close Button */}
+          {/* Close Button */}
           <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
-            <div className="flex items-center gap-0.5 sm:gap-1 bg-neutral-900/90 border border-neutral-700/80 rounded-full px-1.5 sm:px-2 py-0.5 sm:py-1 shadow-xl backdrop-blur-md">
-              <button
-                onClick={handleZoomOut}
-                disabled={scale <= 1}
-                className="p-1 sm:p-1.5 rounded-full hover:bg-neutral-800 text-neutral-300 disabled:opacity-35 disabled:hover:bg-transparent transition-colors cursor-pointer"
-                title="Zoom Out (-)"
-              >
-                <ZoomOut className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              </button>
-              
-              <span className="text-[10px] sm:text-xs font-mono font-bold px-1 sm:px-2 text-neutral-200 min-w-[34px] sm:min-w-[44px] text-center">
-                {Math.round(scale * 100)}%
-              </span>
-
-              <button
-                onClick={handleZoomIn}
-                disabled={scale >= 4}
-                className="p-1 sm:p-1.5 rounded-full hover:bg-neutral-800 text-neutral-300 disabled:opacity-35 disabled:hover:bg-transparent transition-colors cursor-pointer"
-                title="Zoom In (+)"
-              >
-                <ZoomIn className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              </button>
-
-              {scale > 1 && (
-                <button
-                  onClick={handleResetZoom}
-                  className="p-1 sm:p-1.5 rounded-full hover:bg-neutral-800 text-pink-400 transition-colors ml-0.5 sm:ml-1 border-l border-neutral-700 pl-1 sm:pl-2 cursor-pointer"
-                  title="Reset Zoom (0)"
-                >
-                  <RotateCcw className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                </button>
-              )}
-            </div>
-
-            {/* Close Button */}
             <button
               onClick={onClose}
               className="p-1.5 sm:p-2.5 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white border border-neutral-700 transition-all hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
