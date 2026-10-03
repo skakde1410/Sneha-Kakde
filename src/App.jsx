@@ -84,7 +84,7 @@ export default function App() {
               onOpenContact={() => setIsContactOpen(true)} 
             />
             
-            <Projects />
+            <Projects onSelectImage={(item) => setSelectedCraft(item)} />
 
             <About 
               onSelectCraft={(craft) => setSelectedCraft(craft)} 

@@ -212,7 +212,7 @@ export default function CraftGalleryModal({ item, onClose }) {
           {/* Badge & Mode Info */}
           <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
             <div className="inline-flex items-center px-2.5 sm:px-3 py-1 rounded-full bg-pink-500/20 border border-pink-500/30 text-pink-400 text-[10px] sm:text-xs font-bold uppercase tracking-wider whitespace-nowrap">
-              <span>UNFILTERED</span>
+              <span>{item?.badge || item?.category || 'UNFILTERED'}</span>
             </div>
 
             {/* Mode Switcher Pill */}

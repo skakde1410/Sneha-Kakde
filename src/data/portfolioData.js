@@ -770,6 +770,159 @@ export const productDesignProjects = [
   }
 ];
 
+export const rawProjects = [
+  {
+    id: "raw-sketches",
+    title: "Sketches",
+    tagline: "Observational Drawings, Anatomy & Conceptual Studies",
+    category: "Visual Journal",
+    section: "sketches",
+    duration: "Collection",
+    summary: "Raw sketchbook explorations, live anatomical studies, rapid ideation doodles, and traditional pen-and-ink character visualizations.",
+    behanceLink: "https://www.behance.net/kakdesneha",
+    coverImage: "/assets/sketch_study_detective_pipe.jpg",
+    accentColor: "#E67E22",
+    tags: ["Sketches", "Observational Drawing", "Anatomy Studies", "Character Concept"],
+    gallery: [
+      {
+        id: "raw-sketch-1",
+        title: "Character Study — Pipe Smoker & Bowler Hat",
+        subtitle: "Graphite Study on Kraft Sketchbook",
+        image: "/assets/sketch_study_detective_pipe.jpg",
+        badge: "Sketches",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-sketch-2",
+        title: "Surreal Study — Butterfly Eyes & Avian Forms",
+        subtitle: "Imaginative Creature & Mask Explorations",
+        image: "/assets/sketch_study_butterfly_surreal.jpg",
+        badge: "Sketches",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-sketch-3",
+        title: "Gesture & Metaphor — Crow & Water Submersion",
+        subtitle: "Tonal Hatching & Emotional Flow",
+        image: "/assets/sketch_study_raven_water.jpg",
+        badge: "Sketches",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-sketch-4",
+        title: "Figure & Expression — Bearded Elders & Perched Youth",
+        subtitle: "Live Sketchbook Study (29 Sept)",
+        image: "/assets/sketch_study_bearded_elders.jpg",
+        badge: "Sketches",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-sketch-5",
+        title: "Anatomy & Gesture — Ram Horns & Posture Studies",
+        subtitle: "Cross-hatching, Form & Musculature",
+        image: "/assets/sketch_study_ram_gesture.jpg",
+        badge: "Sketches",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-sketch-6",
+        title: "Portrait of Dr. S. Jaishankar",
+        subtitle: "Digital Painting & Portrait Study",
+        image: "/assets/sketch_digital_portrait_jaishankar.jpg",
+        badge: "Sketches",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-sketch-7",
+        title: "Wild Elephant Study",
+        subtitle: "Graphite on Kraft Paper",
+        image: "/assets/sketch_study_elephant_kraft.jpg",
+        badge: "Sketches",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-sketch-8",
+        title: "Observational Study — Figure, Rabbit & Rooster",
+        subtitle: "Form, Texture & Gesture Studies",
+        image: "/assets/sketch_study_rabbit_rooster_face.jpg",
+        badge: "Sketches",
+        aspect: "portrait"
+      }
+    ]
+  },
+  {
+    id: "raw-photography",
+    title: "Photography",
+    tagline: "Visual Ethnography & Rural Life Moments",
+    category: "Visual Journal",
+    section: "photography",
+    duration: "Collection",
+    summary: "Candid ethnographic frames, rural moments, macro details, and cultural portraiture capturing human behavior, daily rituals, and lived environments.",
+    behanceLink: "https://www.behance.net/kakdesneha",
+    coverImage: "/assets/photo_lake_fishermen_boat.jpg",
+    accentColor: "#8E44AD",
+    tags: ["Photography", "Visual Ethnography", "Rural Contexts", "Candid Portraiture"],
+    gallery: [
+      {
+        id: "raw-photo-1",
+        title: "Lake Serenity & Traditional Boatmen",
+        subtitle: "Morning Light & Open Water Reflection",
+        image: "/assets/photo_lake_fishermen_boat.jpg",
+        badge: "Photography",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-photo-2",
+        title: "Vendor Under Incandescent Glow",
+        subtitle: "Quiet Night Market Moment",
+        image: "/assets/photo_night_market_vendor_bulb.jpg",
+        badge: "Photography",
+        aspect: "landscape"
+      },
+      {
+        id: "raw-photo-3",
+        title: "Night Market Fresh Catch",
+        subtitle: "Glistening Textures & Ambient Warmth",
+        image: "/assets/photo_night_market_fish_macro.jpg",
+        badge: "Photography",
+        aspect: "landscape"
+      },
+      {
+        id: "raw-photo-4",
+        title: "Canoe by the Water Meadow",
+        subtitle: "Lush Greens & Still Waters",
+        image: "/assets/photo_canoe_stream_foliage.jpg",
+        badge: "Photography",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-photo-5",
+        title: "Golden Hour Avenue",
+        subtitle: "Sunset Silhouette & Tree Canopy",
+        image: "/assets/photo_sunset_cyclist_road.jpg",
+        badge: "Photography",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-photo-6",
+        title: "Sacred Stone Architecture",
+        subtitle: "Heritage Temple & Carved Sanctuaries",
+        image: "/assets/photo_ancient_stone_temple.jpg",
+        badge: "Photography",
+        aspect: "portrait"
+      },
+      {
+        id: "raw-photo-7",
+        title: "The Village Road",
+        subtitle: "Monochrome Portrait & Daily Rhythm",
+        image: "/assets/photo_rural_bicyclist_bw.jpg",
+        badge: "Photography",
+        aspect: "portrait"
+      }
+    ]
+  }
+];
+
 export const featuredProjects = [
   ...productDesignProjects,
   {
@@ -880,7 +1033,8 @@ export const featuredProjects = [
         { url: "/assets/tritva_cover.webp", caption: "Tritva Visual Identity System, Ideation & Merchandise Mockups" }
       ]
     }
-  }
+  },
+  ...rawProjects
 ];
 
 export const archiveCategories = [
