@@ -614,7 +614,7 @@ export const productDesignProjects = [
     category: "Product Design",
     duration: "Ongoing",
     summary: "Designing a multi-user digital platform for Cerebral Palsy rehabilitation to track AFO usage, movement and adherence, while developing accessible UX/UI, visual identity, and communication systems to improve collaboration between families and healthcare professionals.",
-    behanceLink: "https://www.behance.net/kakdesneha",
+    behanceLink: "https://www.behance.net/gallery/255106477/CP-Rehabilitation-Monitoring-Platform",
     coverImage: "/assets/cp_rehab_cover.png",
     accentColor: "#0284C7",
     tags: ["Product Design", "Visual Design", "Accessibility", "Healthcare Tech", "AFO Tracking"],

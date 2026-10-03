@@ -13,7 +13,7 @@ A responsive, high-performance portfolio website built for **Sneha Kakde** (Crea
 - **Deep Case Studies System**: Rich modal readers for flagship UX and visual design projects:
   - **ChemThread**: Industrial chemical hazard communication & workflow system.
   - **ZORO (Learn in your way)**: Offline-first multi-user English learning ecosystem connecting student app, parent mode, and teacher dashboard.
-  - **FinGuide AI**: Financial advisory interface translating complex data into actionable insights.
+  - **CP Rehabilitation Monitoring Platform**: Pediatric digital health telemetry, accessible UX/UI, and AFO adherence tracking.
   - **Adyam**: Brand identity, packaging, and digital presence for artisanal goods.
   - **Tritva**: Yoga studio visual identity, logo philosophy, merchandise, and stationery system.
 - **Off The Grid (3D Coverflow)**: Continuous 3D perspective carousel spanning all 9 personal disciplines:
