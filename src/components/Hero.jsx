@@ -92,11 +92,6 @@ export default function Hero({ onOpenContact }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         >
-          {/* Badge */}
-          <div className="inline-flex items-center self-start px-3 sm:px-3.5 py-1 rounded-full bg-pink-50 border border-pink-100 text-brand-pink text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-4 sm:mb-6">
-            <span>Design Portfolio 2026</span>
-          </div>
-
           {/* Main Headline with Typewriter Effect */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-3 sm:mb-4 min-h-[3em] sm:min-h-[2.4em]">
             Hi,<br />

@@ -519,18 +519,175 @@ export const craftGallery = [
   }
 ];
 
-export const featuredProjects = [
+export const productDesignProjects = [
+  {
+    id: "zoro",
+    title: "ZORO",
+    tagline: "Learn in your way • Multi-User English Learning Ecosystem",
+    category: "Product Design",
+    duration: "Ongoing",
+    summary: "Designed an offline multi-user learning ecosystem integrating student app, parent mode and teacher dashboard through user research, user flows, information architecture and a five-level LSRW learning journey.",
+    behanceLink: "https://www.behance.net/gallery/255105131/AkshiO-Multi-User-English-Learning-Ecosystem?platform=direct",
+    coverImage: "/assets/zoro_cover.jpg",
+    accentColor: "#2563EB",
+    tags: ["Product Design", "EdTech Ecosystem", "LSRW Journey", "Offline-First"],
+    metrics: [
+      { label: "Status", value: "Ongoing" },
+      { label: "Touchpoints", value: "Student, Parent & Teacher" },
+      { label: "Pedagogy", value: "5-Level LSRW Journey" }
+    ],
+    details: {
+      abstract: "ZORO (Learn in your way) is a multi-user English learning ecosystem tailored for schools with limited digital access. Designed through in-depth user research and information architecture, it seamlessly connects a student app, parent mode, and teacher dashboard along a structured 5-level Listening, Speaking, Reading, and Writing (LSRW) journey.",
+      problemStatement: "Over 60% of rural primary schools lack digital infrastructure and up to 20% operate with a single teacher. Students experience severe language transfer anxiety and lack opportunities for oral English practice (< 5 min per student/month).",
+      challenges: [
+        {
+          title: "Language Transfer Anxiety",
+          desc: "Students feel shy speaking English in front of peers, fearing ridicule and punishment."
+        },
+        {
+          title: "Resource & Power Constraints",
+          desc: "Unstable electricity and zero internet require an ultra-low power, offline-first Bluetooth sync mechanism."
+        },
+        {
+          title: "Multi-Grade Teaching Burden",
+          desc: "Single teachers managing up to 45 students across 3 grade levels require self-guided gamified stations."
+        }
+      ],
+      solutions: [
+        {
+          title: "5-Level LSRW Progressive Journey",
+          desc: "Scaffolds English learning from listening and speech recognition to phonetic reading and interactive writing exercises."
+        },
+        {
+          title: "Multi-User Triad Integration",
+          desc: "Unifies the student gamified experience, parent engagement mode, and an intuitive offline educator dashboard."
+        },
+        {
+          title: "Bilingual Audio-Visual Scaffolding",
+          desc: "Integrates vernacular prompts with relatable cultural stories so learners build confidence naturally."
+        }
+      ],
+      gallery: [
+        { url: "/assets/zoro_cover.jpg", caption: "ZORO — Learn in your way: Ecosystem Architecture & Visual Identity" }
+      ]
+    }
+  },
+  {
+    id: "cp-rehab-platform",
+    title: "CP Rehabilitation Monitoring Platform",
+    tagline: "UX/UI & Visual Design",
+    category: "Product Design",
+    duration: "Ongoing",
+    summary: "Designing a multi-user digital platform for Cerebral Palsy rehabilitation to track AFO usage, movement and adherence, while developing accessible UX/UI, visual identity, and communication systems to improve collaboration between families and healthcare professionals.",
+    behanceLink: "https://www.behance.net/kakdesneha",
+    coverImage: "/assets/cp_rehab_cover.png",
+    accentColor: "#0284C7",
+    tags: ["Product Design", "Visual Design", "Accessibility", "Healthcare Tech", "AFO Tracking"],
+    metrics: [
+      { label: "Status", value: "Ongoing" },
+      { label: "Focus", value: "Pediatric CP Rehab" },
+      { label: "Ecosystem", value: "Families & Clinicians" }
+    ],
+    details: {
+      abstract: "CP Rehabilitation Monitoring Platform is a multi-user digital health ecosystem designed for Cerebral Palsy rehabilitation. It tracks Ankle-Foot Orthosis (AFO) usage, physical movement, and therapy adherence while establishing an inclusive UX/UI, visual identity, and communication system to bridge the gap between families, caregivers, and multidisciplinary healthcare teams.",
+      problemStatement: "Children with Cerebral Palsy rely on Ankle-Foot Orthoses (AFOs) for gait correction and mobility, but adherence tracking is predominantly reliant on subjective recall. Families experience wear-schedule fatigue and lack clarity on progress, while clinicians have minimal visibility into real-world adherence between quarterly consultations.",
+      challenges: [
+        {
+          title: "Wear-Time Compliance & Fatigue",
+          desc: "Sustaining daily recommended AFO wear hours is difficult for children and stressful for parents without motivating milestone tracking."
+        },
+        {
+          title: "Fragmented Clinical Feedback Loop",
+          desc: "Clinicians, physiotherapists, and orthotists operate in silos without shared daily movement metrics or longitudinal adherence trends."
+        },
+        {
+          title: "Accessible Triad Interface",
+          desc: "The platform must accommodate disparate user personas: intuitive, low-stress tracking for busy caregivers alongside deep clinical data telemetry for specialists."
+        }
+      ],
+      solutions: [
+        {
+          title: "1. Real-Time AFO Adherence Dashboard",
+          desc: "Automates wear-time tracking with clear daily progress rings, gait session logs, and active movement milestones."
+        },
+        {
+          title: "2. Triad Collaboration & Note Sharing",
+          desc: "Enables shared therapy logs, routine exercise videos, and direct asynchronous communication between parents and clinical specialists."
+        },
+        {
+          title: "3. Accessible & Compassionate Visual Identity",
+          desc: "Employs calm, high-contrast healthcare visual language, pediatric-friendly motivational badges, and stress-free notification systems."
+        }
+      ],
+      gallery: [
+        { url: "/assets/cp_rehab_cover.png", caption: "CP Rehabilitation Monitoring Platform — Pediatric UX/UI Dashboard & Mobile App" }
+      ]
+    }
+  },
+  {
+    id: "chemthread",
+    title: "ChemThread",
+    tagline: "Cross-Grade Chemistry Learning Dashboard",
+    category: "Product Design",
+    duration: "1 month",
+    summary: "Connected fragmented Class 6-10 chemistry content through information architecture, concept mapping, and progressive learning pathways.",
+    behanceLink: "https://www.behance.net/gallery/255106251/ChemThread-Cross-Grade-Chemistry-Learning-Dashboard",
+    coverImage: "/assets/chemthread_mockup.webp",
+    accentColor: "#059669",
+    tags: ["Product Design", "Information Architecture", "Concept Mapping", "Learning Pathways"],
+    metrics: [
+      { label: "Duration", value: "1 Month" },
+      { label: "Target Audience", value: "Classes 6–10" },
+      { label: "Pedagogy Shift", value: "Concept Mapping" }
+    ],
+    details: {
+      abstract: "Why does chemistry feel like an insurmountable wall to so many bright students? This case study investigates systemic design failures in the science curriculum and introduces concept mapping, progressive learning pathways, and visual scaffolding turning confusing chemical formulas into masterable mental models.",
+      problemStatement: "Chemistry textbooks present concepts as isolated, text-heavy chapters with little visual continuity, scattered syllabus sequencing, and no cross-grade connections — forcing students to mentally rebuild foundational knowledge every year without tools to recall or differentiate.",
+      challenges: [
+        {
+          title: "Information Silos",
+          desc: "Chapters are taught as discrete units with no bridging between grades, creating massive cognitive fatigue."
+        },
+        {
+          title: "Text-Heavy Scaffolding",
+          desc: "Abstract concepts like matter, bonding, and allotropy are defined through dense text rather than structural visual models."
+        },
+        {
+          title: "The Symbolic Barrier",
+          desc: "Introducing symbols like 'C' or 'CO₂' before concrete physical utility disconnects sensory learners from reality."
+        }
+      ],
+      solutions: [
+        {
+          title: "1. The Outside-In Strategy (From Coal to Carbon)",
+          desc: "Flips the traditional Micro-to-Macro approach. Starts with real-world objects students touch (coal, solar panels), explains their role in everyday life, and introduces the symbol 'C' only after utility is internalized."
+        },
+        {
+          title: "2. Visual Physical Models (The 4-Handed Rule)",
+          desc: "Introduces LEGO-like logic where Carbon is a friendly character with 4 hands always looking to bond. Explains why rigid 3D bonding creates Diamond while sliding flat sheets create Graphite."
+        },
+        {
+          title: "3. Macro-Perspective GPS Map",
+          desc: "A visible 'Family Tree' of organic compounds with a 'Pathways to Basics' feature, letting students zoom out and trace prerequisites whenever they encounter complex naming rules."
+        }
+      ],
+      gallery: [
+        { url: "/assets/chemthread_mockup.webp", caption: "ChemThread Interactive Platform Interface" },
+        { url: "/assets/chemthread_laptop.webp", caption: "Visual Scaffolding Workspace on Laptop" }
+      ]
+    }
+  },
   {
     id: "product-design-lantern",
-    title: "Product Design",
-    tagline: "Lattice Octa Lantern — Geometric Lighting & Industrial Design",
+    title: "Lattice Octa Lantern",
+    tagline: "Geometric Lighting & Industrial Design",
     category: "Product Design",
     duration: "4 weeks",
     summary: "Investigated the structural and aesthetic potential of an Archimedean truncated cube, deconstructing 14-faceted geometry into a parametric 3D-printed woven lattice lantern inspired by traditional Indian bangles.",
     behanceLink: "https://www.behance.net/gallery/247294495/Lattice-Octa-Lantern",
     coverImage: "/assets/lantern_cover_01.jpg",
     accentColor: "#D97706",
-    tags: ["Product Design", "Parametric 3D", "Lighting Design", "Archimedean Geometry", "Rapid Prototyping"],
+    tags: ["Product Design", "Physical Product Design", "Parametric 3D", "Lighting Design", "Archimedean Geometry", "Rapid Prototyping"],
     metrics: [
       { label: "Geometry", value: "Truncated Cube" },
       { label: "Inspiration", value: "Traditional Bangles" },
@@ -575,175 +732,22 @@ export const featuredProjects = [
         { url: "/assets/lantern_radiance.jpg", caption: "The Completed Radiance — Ambient Glow & Shadow Play" }
       ]
     }
-  },
-  {
-    id: "chemthread",
-    title: "ChemThread",
-    tagline: "Cross-Grade Chemistry Learning Dashboard",
-    category: "UI/UX Design",
-    duration: "1 month",
-    summary: "Connected fragmented Class 6-10 chemistry content through information architecture, concept mapping, and progressive learning pathways.",
-    behanceLink: "https://www.behance.net/gallery/255106251/ChemThread-Cross-Grade-Chemistry-Learning-Dashboard",
-    coverImage: "/assets/chemthread_mockup.webp",
-    accentColor: "#059669",
-    tags: ["UI/UX Design", "Information Architecture", "Concept Mapping", "Learning Pathways"],
-    metrics: [
-      { label: "Duration", value: "1 Month" },
-      { label: "Target Audience", value: "Classes 6–10" },
-      { label: "Pedagogy Shift", value: "Concept Mapping" }
-    ],
-    details: {
-      abstract: "Why does chemistry feel like an insurmountable wall to so many bright students? This case study investigates systemic design failures in the science curriculum and introduces concept mapping, progressive learning pathways, and visual scaffolding turning confusing chemical formulas into masterable mental models.",
-      problemStatement: "Chemistry textbooks present concepts as isolated, text-heavy chapters with little visual continuity, scattered syllabus sequencing, and no cross-grade connections — forcing students to mentally rebuild foundational knowledge every year without tools to recall or differentiate.",
-      challenges: [
-        {
-          title: "Information Silos",
-          desc: "Chapters are taught as discrete units with no bridging between grades, creating massive cognitive fatigue."
-        },
-        {
-          title: "Text-Heavy Scaffolding",
-          desc: "Abstract concepts like matter, bonding, and allotropy are defined through dense text rather than structural visual models."
-        },
-        {
-          title: "The Symbolic Barrier",
-          desc: "Introducing symbols like 'C' or 'CO₂' before concrete physical utility disconnects sensory learners from reality."
-        }
-      ],
-      solutions: [
-        {
-          title: "1. The Outside-In Strategy (From Coal to Carbon)",
-          desc: "Flips the traditional Micro-to-Macro approach. Starts with real-world objects students touch (coal, solar panels), explains their role in everyday life, and introduces the symbol 'C' only after utility is internalized."
-        },
-        {
-          title: "2. Visual Physical Models (The 4-Handed Rule)",
-          desc: "Introduces LEGO-like logic where Carbon is a friendly character with 4 hands always looking to bond. Explains why rigid 3D bonding creates Diamond while sliding flat sheets create Graphite."
-        },
-        {
-          title: "3. Macro-Perspective GPS Map",
-          desc: "A visible 'Family Tree' of organic compounds with a 'Pathways to Basics' feature, letting students zoom out and trace prerequisites whenever they encounter complex naming rules."
-        }
-      ],
-      gallery: [
-        { url: "/assets/chemthread_mockup.webp", caption: "ChemThread Interactive Platform Interface" },
-        { url: "/assets/chemthread_laptop.webp", caption: "Visual Scaffolding Workspace on Laptop" }
-      ]
-    }
-  },
-  {
-    id: "akshio-english",
-    title: "AkshiO — Khelat Shikuya",
-    tagline: "Multi-User English Learning Ecosystem",
-    category: "UI/UX Design",
-    duration: "4 months",
-    summary: "Designed an offline multi-user learning ecosystem integrating student app, parent mode and teacher dashboard through user research, user flows, information architecture and a five-level LSRW learning journey.",
-    behanceLink: "https://www.behance.net/gallery/255105131/AkshiO-Multi-User-English-Learning-Ecosystem?platform=direct",
-    coverImage: "/assets/storybook.webp",
-    accentColor: "#E6004C",
-    tags: ["UI/UX Design", "LSRW Journey", "EdTech Ecosystem", "Offline-First"],
-    metrics: [
-      { label: "Duration", value: "4 Months" },
-      { label: "Touchpoints", value: "Student, Parent & Teacher" },
-      { label: "Pedagogy", value: "5-Level LSRW Journey" }
-    ],
-    details: {
-      abstract: "AkshiO: Khelat Shikuya is a multi-user English learning ecosystem tailored for schools with limited digital access. Designed through in-depth user research and information architecture, it seamlessly connects a student app, parent mode, and teacher dashboard along a structured 5-level Listening, Speaking, Reading, and Writing (LSRW) journey.",
-      problemStatement: "Over 60% of rural primary schools lack digital infrastructure and up to 20% operate with a single teacher. Students experience severe language transfer anxiety and lack opportunities for oral English practice (< 5 min per student/month).",
-      challenges: [
-        {
-          title: "Language Transfer Anxiety",
-          desc: "Students feel shy speaking English in front of peers, fearing ridicule and punishment."
-        },
-        {
-          title: "Resource & Power Constraints",
-          desc: "Unstable electricity and zero internet require an ultra-low power, offline-first Bluetooth sync mechanism."
-        },
-        {
-          title: "Multi-Grade Teaching Burden",
-          desc: "Single teachers managing up to 45 students across 3 grade levels require self-guided gamified stations."
-        }
-      ],
-      solutions: [
-        {
-          title: "5-Level LSRW Progressive Journey",
-          desc: "Scaffolds English learning from listening and speech recognition to phonetic reading and interactive writing exercises."
-        },
-        {
-          title: "Multi-User Triad Integration",
-          desc: "Unifies the student gamified experience, parent engagement mode, and an intuitive offline educator dashboard."
-        },
-        {
-          title: "Bilingual Audio-Visual Scaffolding",
-          desc: "Integrates vernacular prompts with relatable cultural stories so learners build confidence naturally."
-        }
-      ],
-      gallery: [
-        { url: "/assets/storybook.webp", caption: "AkshiO Illustrated Interactive Storybook and Device Ecosystem" }
-      ]
-    }
-  },
-  {
-    id: "cp-rehab-platform",
-    title: "CP Rehabilitation Monitoring Platform",
-    tagline: "UX/UI & Visual Design",
-    category: "UX/UI Design",
-    duration: "Ongoing",
-    summary: "Designing a multi-user digital platform for Cerebral Palsy rehabilitation to track AFO usage, movement and adherence, while developing accessible UX/UI, visual identity, and communication systems to improve collaboration between families and healthcare professionals.",
-    behanceLink: "https://www.behance.net/kakdesneha",
-    coverImage: "/assets/cp_rehab_cover.png",
-    accentColor: "#0284C7",
-    tags: ["UX/UI Design", "Visual Design", "Accessibility", "Healthcare Tech", "AFO Tracking"],
-    metrics: [
-      { label: "Status", value: "Ongoing" },
-      { label: "Focus", value: "Pediatric CP Rehab" },
-      { label: "Ecosystem", value: "Families & Clinicians" }
-    ],
-    details: {
-      abstract: "CP Rehabilitation Monitoring Platform is a multi-user digital health ecosystem designed for Cerebral Palsy rehabilitation. It tracks Ankle-Foot Orthosis (AFO) usage, physical movement, and therapy adherence while establishing an inclusive UX/UI, visual identity, and communication system to bridge the gap between families, caregivers, and multidisciplinary healthcare teams.",
-      problemStatement: "Children with Cerebral Palsy rely on Ankle-Foot Orthoses (AFOs) for gait correction and mobility, but adherence tracking is predominantly reliant on subjective recall. Families experience wear-schedule fatigue and lack clarity on progress, while clinicians have minimal visibility into real-world adherence between quarterly consultations.",
-      challenges: [
-        {
-          title: "Wear-Time Compliance & Fatigue",
-          desc: "Sustaining daily recommended AFO wear hours is difficult for children and stressful for parents without motivating milestone tracking."
-        },
-        {
-          title: "Fragmented Clinical Feedback Loop",
-          desc: "Clinicians, physiotherapists, and orthotists operate in silos without shared daily movement metrics or longitudinal adherence trends."
-        },
-        {
-          title: "Accessible Triad Interface",
-          desc: "The platform must accommodate disparate user personas: intuitive, low-stress tracking for busy caregivers alongside deep clinical data telemetry for specialists."
-        }
-      ],
-      solutions: [
-        {
-          title: "1. Real-Time AFO Adherence Dashboard",
-          desc: "Automates wear-time tracking with clear daily progress rings, gait session logs, and active movement milestones."
-        },
-        {
-          title: "2. Triad Collaboration & Note Sharing",
-          desc: "Enables shared therapy logs, routine exercise videos, and direct asynchronous communication between parents and clinical specialists."
-        },
-        {
-          title: "3. Accessible & Compassionate Visual Identity",
-          desc: "Employs calm, high-contrast healthcare visual language, pediatric-friendly motivational badges, and stress-free notification systems."
-        }
-      ],
-      gallery: [
-        { url: "/assets/cp_rehab_cover.png", caption: "CP Rehabilitation Monitoring Platform — Pediatric UX/UI Dashboard & Mobile App" }
-      ]
-    }
-  },
+  }
+];
+
+export const featuredProjects = [
+  ...productDesignProjects,
   {
     id: "adyam-branding",
     title: "Adyam",
     tagline: "Maharashtrian Brand Identity & Packaging",
-    category: "Visual Design",
+    category: "Branding",
     duration: "1 month",
     summary: "Built a Maharashtrian-rooted fresh-food brand inspired by “Old is Gold,” combining brand identity, packaging, and mascot design.",
     behanceLink: "https://www.behance.net/gallery/253428839/Adyam-Branding?platform=direct",
     coverImage: "/assets/adyam_cover.webp",
     accentColor: "#D97706",
-    tags: ["Visual Design", "Brand Identity", "Packaging", "Mascot Design"],
+    tags: ["Branding", "Brand Identity", "Packaging", "Mascot Design"],
     metrics: [
       { label: "Duration", value: "1 Month" },
       { label: "Inspiration", value: "Old is Gold" },
@@ -790,56 +794,55 @@ export const featuredProjects = [
     }
   },
   {
-    id: "miscellaneous",
-    title: "Miscellaneous",
-    tagline: "Multidisciplinary Visual Arts, Matte Paintings & Crafts",
-    category: "Visual Arts",
-    duration: "Collection",
-    summary: "A curated collection of creative explorations spanning surreal digital matte paintings, concept art, Sanskrit calligraphy mandalas, terracotta clay pottery, and portraiture.",
-    behanceLink: "https://www.behance.net/kakdesneha",
-    coverImage: "/assets/misc_1.png",
-    objectPosition: "object-top",
-    accentColor: "#E64A19",
-    tags: ["Digital Art", "Matte Painting", "Calligraphy", "Sculpting", "Concept Art"],
+    id: "tritva",
+    title: "Tritva",
+    tagline: "Yoga Studio Visual Identity & Branding",
+    category: "Branding",
+    duration: "1 month",
+    summary: "Developed a cohesive visual identity through competitor research, visual analysis, logo development, typography, colour selection, and brand applications across stationery and merchandise.",
+    behanceLink: "https://www.behance.net/gallery/255105741/Tritva",
+    coverImage: "/assets/tritva_cover.webp",
+    accentColor: "#E67E22",
+    tags: ["Branding", "Brand Identity", "Typography", "Merchandise"],
     metrics: [
-      { label: "Mediums", value: "Digital & Clay" },
-      { label: "Domain", value: "Visual Arts & Crafts" },
-      { label: "Scope", value: "Creative Showcase" }
+      { label: "Duration", value: "1 Month" },
+      { label: "Domain", value: "Yoga & Wellness" },
+      { label: "Scope", value: "Identity & Merchandise" }
     ],
     details: {
-      abstract: "A multidisciplinary anthology of artistic explorations by Sneha Kakde, blending traditional handcrafts with modern digital concept art. Features surreal photo-manipulation matte paintings, Sanskrit calligraphy mandalas, terracotta pottery, Marathi poetry, and expressive portraiture.",
-      problemStatement: "Bridging tactile physical artistry and imaginative digital storytelling into a cohesive personal body of work celebrating cultural roots, nature, and speculative environments.",
+      abstract: "Tritva is a yoga studio visual identity developed to deliver a calm, welcoming, and trustworthy sanctuary for wellness seekers. Centered on 'harmony in motion', the identity fuses traditional roots with sophisticated modern design across signage, stationery, and lifestyle merchandise.",
+      problemStatement: "The local wellness market's most engaging brands are visually cluttered, driving away beginners seeking clarity. Tritva needed an identity that establishes a minimalistic, welcoming, and trustworthy presence fusing traditional roots with modern sophistication.",
       challenges: [
         {
-          title: "Medium Translation",
-          desc: "Translating tactile sensibilities from clay sculpting and ink calligraphy into high-resolution digital canvas workflows."
+          title: "Market Clutter & Intimidation",
+          desc: "Existing yoga studios often use heavy, complex religious imagery that feels unapproachable to beginners."
         },
         {
-          title: "Atmospheric Depth & Worldbuilding",
-          desc: "Creating cinematic scale, volumetric lighting, and emotional mood in speculative matte paintings."
+          title: "Balance of Strength & Fluidity",
+          desc: "Capturing both the rooted discipline of asana practice and the serene flow of breath in a single mark."
         },
         {
-          title: "Cultural & Linguistic Integration",
-          desc: "Infusing sacred Sanskrit verses and Marathi poetic rhythms into modern visual art compositions."
+          title: "Cross-Medium Material Application",
+          desc: "Ensuring the mark renders cleanly on textured yoga mats, engraved wood signs, ceramics, water bottles, and fabric."
         }
       ],
       solutions: [
         {
-          title: "1. Surreal Matte Painting & Worldbuilding",
-          desc: "Crafted cinematic visual narratives including the mountain waterfall spirit, desert pilgrim, cosmic wave portal, and tranquil seascapes."
+          title: "1. Parvatasana (Mountain Pose) Monogram",
+          desc: "Symbol represents the Parvatasana pose, embodying stability, strength, and groundedness — standing tall yet rooted, balanced in motion."
         },
         {
-          title: "2. Sanskrit Calligraphy & Sacred Mandalas",
-          desc: "Hand-inked intricate circular Devanagari calligraphy mandalas fusing ancient mantras with geometric balance."
+          title: "2. The Essence of Three (Tritva Philosophy)",
+          desc: "Reflects the harmonious balance of mind, body, and breath through flowing organic geometry and warm earthy ochres."
         },
         {
-          title: "3. Terracotta Pottery & Expressive Sculptures",
-          desc: "Wheel-thrown clay pots, handmade ceramic vessels, and hand-sculpted clay figurines exploring tactile human form."
+          title: "3. End-to-End Lifestyle Merchandise",
+          desc: "Designed studio signage, business cards, instructor lanyards, yoga mats, stainless steel flasks, and ceramic mugs."
         }
       ],
       gallery: [
-        { url: "/assets/misc_1.png", caption: "Digital Matte Paintings, Concept Art & Studio Studies" },
-        { url: "/assets/archive_miscellaneous.webp", caption: "Calligraphy Mandalas, Terracotta Pottery & Character Sketches" }
+        { url: "/assets/tritva_board.png", caption: "Tritva — Harmony in Motion: Brand Presentation Board" },
+        { url: "/assets/tritva_cover.webp", caption: "Tritva Visual Identity System, Ideation & Merchandise Mockups" }
       ]
     }
   }

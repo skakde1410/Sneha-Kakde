@@ -12,10 +12,10 @@ A responsive, high-performance portfolio website built for **Sneha Kakde** (Crea
 - **Interactive Hero & Character Mascot**: Custom character illustration with sticker drop-shadow, floating badges, and dynamic typography.
 - **Deep Case Studies System**: Rich modal readers for flagship UX and visual design projects:
   - **ChemThread**: Industrial chemical hazard communication & workflow system.
-  - **AkshiO (Khelat Shikuya)**: Tangible Marathi learning & gamified educational kit for kids.
+  - **ZORO (Learn in your way)**: Offline-first multi-user English learning ecosystem connecting student app, parent mode, and teacher dashboard.
   - **FinGuide AI**: Financial advisory interface translating complex data into actionable insights.
   - **Adyam**: Brand identity, packaging, and digital presence for artisanal goods.
-  - **Miscellaneous**: Multidisciplinary creative showcase spanning digital matte paintings, Sanskrit calligraphy mandalas, and terracotta pottery.
+  - **Tritva**: Yoga studio visual identity, logo philosophy, merchandise, and stationery system.
 - **Off The Grid (3D Coverflow)**: Continuous 3D perspective carousel spanning all 9 personal disciplines:
   - *Reading, Sketching, Music, Writing, Photography, Badminton, Movies, Cooking, and Sculpting*.
   - Smooth drag/swipe touch gestures, auto-sliding cadence, keyboard navigation, and synced 9-dot pagination.

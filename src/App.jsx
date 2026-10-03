@@ -6,6 +6,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import ArchivePage from './pages/ArchivePage';
 import NotFoundPage from './pages/NotFoundPage';
+import ProductDesignPage from './pages/ProductDesignPage';
 import CaseStudyModal from './components/CaseStudyModal';
 import ContactModal from './components/ContactModal';
 import CraftGalleryModal from './components/CraftGalleryModal';
@@ -14,6 +15,7 @@ import { ArrowUp } from 'lucide-react';
 const getViewFromHash = () => {
   const hash = window.location.hash;
   if (hash === '#archive') return 'archive';
+  if (hash === '#product-design') return 'product-design';
   if (hash === '#404') return '404';
   if (!hash || hash === '#' || hash === '#home' || hash.startsWith('#about') || hash.startsWith('#work') || hash.startsWith('#interests') || hash.startsWith('#studio') || hash.startsWith('#unfiltered') || hash.startsWith('#contact') || hash.startsWith('#hero') || hash.startsWith('#craft') || hash.startsWith('#projects')) {
     return 'home';
@@ -50,6 +52,8 @@ export default function App() {
     setCurrentView(view);
     if (view === 'archive') {
       window.location.hash = 'archive';
+    } else if (view === 'product-design') {
+      window.location.hash = 'product-design';
     } else if (view === '404') {
       window.location.hash = '404';
     } else {
@@ -86,6 +90,12 @@ export default function App() {
               onSelectCraft={(craft) => setSelectedCraft(craft)} 
             />
           </>
+        )}
+        {currentView === 'product-design' && (
+          <ProductDesignPage 
+            onBackToHome={() => navigateTo('home')}
+            onOpenContact={() => setIsContactOpen(true)}
+          />
         )}
         {currentView === 'archive' && (
           <ArchivePage 
