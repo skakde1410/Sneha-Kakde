@@ -715,6 +715,50 @@ export const productDesignProjects = [
         { url: "/assets/sway_screens.jpg", caption: "End-to-End User Flows — Chores, Expense Telemetry, Group Chat & AI Assistant" }
       ]
     }
+  },
+  {
+    id: "vidarbh-lokdarpan",
+    title: "Vidarbh Lokdarpan",
+    tagline: "Regional Publication & Visual Cultural Documentation",
+    category: "Product Design",
+    duration: "Publication",
+    summary: "Documented cultural narratives, community milestones, and grassroots leadership through regional print editorial design and visual storytelling in Vidarbha, Maharashtra.",
+    behanceLink: "https://www.behance.net/kakdesneha",
+    coverImage: "/assets/craft_frame130_16_50a9129d.webp",
+    accentColor: "#DC2626",
+    tags: ["Product Design", "Publication", "Editorial Design", "Visual Storytelling", "Cultural Heritage"],
+    metrics: [
+      { label: "Medium", value: "Print & Editorial" },
+      { label: "Region", value: "Vidarbha, MH" },
+      { label: "Focus", value: "Community Stories" }
+    ],
+    details: {
+      abstract: "Vidarbh Lokdarpan is an editorial publication and visual documentation initiative rooted in the cultural landscape of Vidarbha, Maharashtra. It captures local governance, grassroots artistic milestones, and community stories through authentic Marathi typography, layout architecture, and visual ethnography.",
+      problemStatement: "Regional news and cultural reporting often suffer from fragmented typographic hierarchies and visual clutter, diminishing the dignity of community achievements and grassroots narratives.",
+      challenges: [
+        {
+          title: "Editorial Hierarchy & Marathi Typography",
+          desc: "Balancing dense bilingual headlines with authentic Devanagari editorial pacing and clarity."
+        },
+        {
+          title: "Grassroots Photojournalism",
+          desc: "Highlighting regional personalities, artists, and community leaders with authentic documentary imagery."
+        }
+      ],
+      solutions: [
+        {
+          title: "1. Clean Editorial Grid System",
+          desc: "Structured multi-column newsprint layout optimized for rapid readability across regional demographics."
+        },
+        {
+          title: "2. Cultural Storytelling Feature",
+          desc: "Special feature spreads honoring local creators, educators, and social contributors."
+        }
+      ],
+      gallery: [
+        { url: "/assets/craft_frame130_16_50a9129d.webp", caption: "Vidarbh Lokdarpan — Editorial Feature & Community Felicitation" }
+      ]
+    }
   }
 ];
 
@@ -779,50 +823,6 @@ export const visualDesignProjects = [
         { url: "/assets/adyam_packaging_chaas_lassi.jpg", caption: "Dairy SKU Packaging — Sadgi Lassi, Vanilla Lassi & Masant Masala Chaas Cups" },
         { url: "/assets/adyam_mobile_app_stationery.jpg", caption: "Digital Campaign, Mobile App UI & Brand Stationery Suite" },
         { url: "/assets/adyam_alchemist_bonus.jpg", caption: "Featured Publication Design — 'The Alchemist' Book Cover Redesign Showcase" }
-      ]
-    }
-  },
-  {
-    id: "vidarbh-lokdarpan",
-    title: "Vidarbh Lokdarpan",
-    tagline: "Regional Publication & Visual Cultural Documentation",
-    category: "Visual Design",
-    duration: "Publication",
-    summary: "Documented cultural narratives, community milestones, and grassroots leadership through regional print editorial design and visual storytelling in Vidarbha, Maharashtra.",
-    behanceLink: "https://www.behance.net/kakdesneha",
-    coverImage: "/assets/craft_frame130_16_50a9129d.webp",
-    accentColor: "#DC2626",
-    tags: ["Visual Design", "Publication", "Editorial Design", "Visual Storytelling", "Cultural Heritage"],
-    metrics: [
-      { label: "Medium", value: "Print & Editorial" },
-      { label: "Region", value: "Vidarbha, MH" },
-      { label: "Focus", value: "Community Stories" }
-    ],
-    details: {
-      abstract: "Vidarbh Lokdarpan is an editorial publication and visual documentation initiative rooted in the cultural landscape of Vidarbha, Maharashtra. It captures local governance, grassroots artistic milestones, and community stories through authentic Marathi typography, layout architecture, and visual ethnography.",
-      problemStatement: "Regional news and cultural reporting often suffer from fragmented typographic hierarchies and visual clutter, diminishing the dignity of community achievements and grassroots narratives.",
-      challenges: [
-        {
-          title: "Editorial Hierarchy & Marathi Typography",
-          desc: "Balancing dense bilingual headlines with authentic Devanagari editorial pacing and clarity."
-        },
-        {
-          title: "Grassroots Photojournalism",
-          desc: "Highlighting regional personalities, artists, and community leaders with authentic documentary imagery."
-        }
-      ],
-      solutions: [
-        {
-          title: "1. Clean Editorial Grid System",
-          desc: "Structured multi-column newsprint layout optimized for rapid readability across regional demographics."
-        },
-        {
-          title: "2. Cultural Storytelling Feature",
-          desc: "Special feature spreads honoring local creators, educators, and social contributors."
-        }
-      ],
-      gallery: [
-        { url: "/assets/craft_frame130_16_50a9129d.webp", caption: "Vidarbh Lokdarpan — Editorial Feature & Community Felicitation" }
       ]
     }
   }
