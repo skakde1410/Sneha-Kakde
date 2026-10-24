@@ -28,7 +28,7 @@ export default function ProductDesignPage({ onBackToHome, onOpenContact }) {
               <span>Dedicated Collection</span>
             </span>
             <span className="text-xs font-semibold text-slate-400">
-              4 Flagship Works
+              {productDesignProjects.length} Flagship Works
             </span>
           </div>
 
@@ -37,22 +37,22 @@ export default function ProductDesignPage({ onBackToHome, onOpenContact }) {
           </h1>
           
           <p className="text-slate-300 max-w-2xl text-sm sm:text-base lg:text-lg leading-relaxed mb-8">
-            An integrated suite of digital product ecosystems, pediatric healthcare telemetry, offline-first learning platforms, and parametric physical industrial design.
+            An integrated suite of pediatric healthcare telemetry, parametric industrial lighting, and biomimetic 3D-printed circular footwear.
           </p>
 
           {/* Quick Highlight Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl pt-6 border-t border-slate-800/80">
             <div className="bg-slate-900/60 p-3 sm:p-4 rounded-xl border border-slate-800">
-              <div className="text-xs text-slate-400 font-medium">Digital Platforms</div>
-              <div className="text-lg sm:text-xl font-bold text-white mt-0.5">3 Works</div>
-            </div>
-            <div className="bg-slate-900/60 p-3 sm:p-4 rounded-xl border border-slate-800">
-              <div className="text-xs text-slate-400 font-medium">Physical Design</div>
+              <div className="text-xs text-slate-400 font-medium">Healthcare UX</div>
               <div className="text-lg sm:text-xl font-bold text-white mt-0.5">1 Work</div>
             </div>
             <div className="bg-slate-900/60 p-3 sm:p-4 rounded-xl border border-slate-800">
+              <div className="text-xs text-slate-400 font-medium">Physical & 3D</div>
+              <div className="text-lg sm:text-xl font-bold text-white mt-0.5">2 Works</div>
+            </div>
+            <div className="bg-slate-900/60 p-3 sm:p-4 rounded-xl border border-slate-800">
               <div className="text-xs text-slate-400 font-medium">Active Research</div>
-              <div className="text-lg sm:text-xl font-bold text-emerald-400 mt-0.5">2 Ongoing</div>
+              <div className="text-lg sm:text-xl font-bold text-emerald-400 mt-0.5">1 Ongoing</div>
             </div>
             <div className="bg-slate-900/60 p-3 sm:p-4 rounded-xl border border-slate-800">
               <div className="text-xs text-slate-400 font-medium">Institution</div>

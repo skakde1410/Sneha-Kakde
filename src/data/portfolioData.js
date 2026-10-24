@@ -556,61 +556,9 @@ export const craftGallery = [
 
 export const productDesignProjects = [
   {
-    id: "zoro",
-    title: "ZORO",
-    tagline: "Learn in your way • Multi-User English Learning Ecosystem",
-    category: "Product Design",
-    duration: "Ongoing",
-    summary: "Designed an offline multi-user learning ecosystem integrating student app, parent mode and teacher dashboard through user research, user flows, information architecture and a five-level LSRW learning journey.",
-    behanceLink: "https://www.behance.net/gallery/255105131/AkshiO-Multi-User-English-Learning-Ecosystem?platform=direct",
-    coverImage: "/assets/zoro_cover.jpg",
-    accentColor: "#2563EB",
-    tags: ["Product Design", "EdTech Ecosystem", "LSRW Journey", "Offline-First"],
-    metrics: [
-      { label: "Status", value: "Ongoing" },
-      { label: "Touchpoints", value: "Student, Parent & Teacher" },
-      { label: "Pedagogy", value: "5-Level LSRW Journey" }
-    ],
-    details: {
-      abstract: "ZORO (Learn in your way) is a multi-user English learning ecosystem tailored for schools with limited digital access. Designed through in-depth user research and information architecture, it seamlessly connects a student app, parent mode, and teacher dashboard along a structured 5-level Listening, Speaking, Reading, and Writing (LSRW) journey.",
-      problemStatement: "Over 60% of rural primary schools lack digital infrastructure and up to 20% operate with a single teacher. Students experience severe language transfer anxiety and lack opportunities for oral English practice (< 5 min per student/month).",
-      challenges: [
-        {
-          title: "Language Transfer Anxiety",
-          desc: "Students feel shy speaking English in front of peers, fearing ridicule and punishment."
-        },
-        {
-          title: "Resource & Power Constraints",
-          desc: "Unstable electricity and zero internet require an ultra-low power, offline-first Bluetooth sync mechanism."
-        },
-        {
-          title: "Multi-Grade Teaching Burden",
-          desc: "Single teachers managing up to 45 students across 3 grade levels require self-guided gamified stations."
-        }
-      ],
-      solutions: [
-        {
-          title: "5-Level LSRW Progressive Journey",
-          desc: "Scaffolds English learning from listening and speech recognition to phonetic reading and interactive writing exercises."
-        },
-        {
-          title: "Multi-User Triad Integration",
-          desc: "Unifies the student gamified experience, parent engagement mode, and an intuitive offline educator dashboard."
-        },
-        {
-          title: "Bilingual Audio-Visual Scaffolding",
-          desc: "Integrates vernacular prompts with relatable cultural stories so learners build confidence naturally."
-        }
-      ],
-      gallery: [
-        { url: "/assets/zoro_cover.jpg", caption: "ZORO — Learn in your way: Ecosystem Architecture & Visual Identity" }
-      ]
-    }
-  },
-  {
     id: "cp-rehab-platform",
     title: "CP Rehabilitation Monitoring Platform",
-    tagline: "UX/UI & Visual Design",
+    tagline: "UX/UI & Visual Design • Pediatric Healthcare Telemetry",
     category: "Product Design",
     duration: "Ongoing",
     summary: "Designing a multi-user digital platform for Cerebral Palsy rehabilitation to track AFO usage, movement and adherence, while developing accessible UX/UI, visual identity, and communication systems to improve collaboration between families and healthcare professionals.",
@@ -660,62 +608,9 @@ export const productDesignProjects = [
     }
   },
   {
-    id: "chemthread",
-    title: "ChemThread",
-    tagline: "Cross-Grade Chemistry Learning Dashboard",
-    category: "Product Design",
-    duration: "1 month",
-    summary: "Connected fragmented Class 6-10 chemistry content through information architecture, concept mapping, and progressive learning pathways.",
-    behanceLink: "https://www.behance.net/gallery/255106251/ChemThread-Cross-Grade-Chemistry-Learning-Dashboard",
-    coverImage: "/assets/chemthread_mockup.webp",
-    accentColor: "#059669",
-    tags: ["Product Design", "Information Architecture", "Concept Mapping", "Learning Pathways"],
-    metrics: [
-      { label: "Duration", value: "1 Month" },
-      { label: "Target Audience", value: "Classes 6–10" },
-      { label: "Pedagogy Shift", value: "Concept Mapping" }
-    ],
-    details: {
-      abstract: "Why does chemistry feel like an insurmountable wall to so many bright students? This case study investigates systemic design failures in the science curriculum and introduces concept mapping, progressive learning pathways, and visual scaffolding turning confusing chemical formulas into masterable mental models.",
-      problemStatement: "Chemistry textbooks present concepts as isolated, text-heavy chapters with little visual continuity, scattered syllabus sequencing, and no cross-grade connections — forcing students to mentally rebuild foundational knowledge every year without tools to recall or differentiate.",
-      challenges: [
-        {
-          title: "Information Silos",
-          desc: "Chapters are taught as discrete units with no bridging between grades, creating massive cognitive fatigue."
-        },
-        {
-          title: "Text-Heavy Scaffolding",
-          desc: "Abstract concepts like matter, bonding, and allotropy are defined through dense text rather than structural visual models."
-        },
-        {
-          title: "The Symbolic Barrier",
-          desc: "Introducing symbols like 'C' or 'CO₂' before concrete physical utility disconnects sensory learners from reality."
-        }
-      ],
-      solutions: [
-        {
-          title: "1. The Outside-In Strategy (From Coal to Carbon)",
-          desc: "Flips the traditional Micro-to-Macro approach. Starts with real-world objects students touch (coal, solar panels), explains their role in everyday life, and introduces the symbol 'C' only after utility is internalized."
-        },
-        {
-          title: "2. Visual Physical Models (The 4-Handed Rule)",
-          desc: "Introduces LEGO-like logic where Carbon is a friendly character with 4 hands always looking to bond. Explains why rigid 3D bonding creates Diamond while sliding flat sheets create Graphite."
-        },
-        {
-          title: "3. Macro-Perspective GPS Map",
-          desc: "A visible 'Family Tree' of organic compounds with a 'Pathways to Basics' feature, letting students zoom out and trace prerequisites whenever they encounter complex naming rules."
-        }
-      ],
-      gallery: [
-        { url: "/assets/chemthread_mockup.webp", caption: "ChemThread Interactive Platform Interface" },
-        { url: "/assets/chemthread_laptop.webp", caption: "Visual Scaffolding Workspace on Laptop" }
-      ]
-    }
-  },
-  {
     id: "product-design-lantern",
     title: "Lattice Octa Lantern",
-    tagline: "Geometric Lighting & Industrial Design",
+    tagline: "Parametric Lighting & Industrial Design",
     category: "Product Design",
     duration: "4 weeks",
     summary: "Investigated the structural and aesthetic potential of an Archimedean truncated cube, deconstructing 14-faceted geometry into a parametric 3D-printed woven lattice lantern inspired by traditional Indian bangles.",
@@ -767,37 +662,74 @@ export const productDesignProjects = [
         { url: "/assets/lantern_radiance.jpg", caption: "The Completed Radiance — Ambient Glow & Shadow Play" }
       ]
     }
+  },
+  {
+    id: "lotus-embrace",
+    title: "Lotus Embrace",
+    tagline: "Sustainable 3D-Printed Footwear • Urban Monkey x Kyodrius",
+    category: "Product Design",
+    duration: "Concept",
+    summary: "Designed a biomimetic 3D-printed sneaker concept inspired by the blooming geometry of the sacred lotus for the Urban Monkey & Kyodrius Young Blood design initiative, blending parametric cushioning, zero-waste additive manufacturing, and streetwear aesthetics.",
+    behanceLink: "https://www.behance.net/kakdesneha",
+    coverImage: "/assets/lotus_embrace_sneaker.jpg",
+    accentColor: "#9333EA",
+    tags: ["Product Design", "Footwear Design", "3D Printing", "Parametric", "Biomimicry"],
+    metrics: [
+      { label: "Initiative", value: "Kyodrius Young Blood" },
+      { label: "Brand Partner", value: "Urban Monkey" },
+      { label: "Fabrication", value: "Parametric 3D Printing" }
+    ],
+    details: {
+      abstract: "Lotus Embrace is a sustainable 3D-printed sneaker concept inspired by the layered blooming geometry of the sacred lotus flower. Designed for the Urban Monkey & Kyodrius Young Blood Awards, it explores how computational lattice design, circular TPU materials, and generative aesthetics can eliminate adhesive toxins and post-consumer footwear waste.",
+      problemStatement: "Conventional sneaker manufacturing relies on complex multi-material assemblies bonded with toxic adhesives, making disassembly and recycling near impossible while contributing to millions of tons of landfill waste.",
+      challenges: [
+        {
+          title: "Monolithic Zero-Waste Construction",
+          desc: "Creating a high-performance shoe from a single recyclable polymer without toxic glues or stitching."
+        },
+        {
+          title: "Biomimetic Cushioning Gradient",
+          desc: "Engineering variable density lattice cushioning that replicates natural foot strike mechanics inspired by lotus petal architecture."
+        },
+        {
+          title: "Streetwear Culture & Modern Silhouette",
+          desc: "Balancing high-fashion statement aesthetics with ergonomic daily comfort and urban versatility."
+        }
+      ],
+      solutions: [
+        {
+          title: "1. Parametric Blooming Outsole",
+          desc: "Computational voronoi lattices distribute impact forces radially from heel to toe, mimicking petal flexion."
+        },
+        {
+          title: "2. Single-Material Circular TPU",
+          desc: "Crafted entirely from 100% recyclable thermoplastic polyurethane, allowing end-of-life regrinding and remanufacturing."
+        },
+        {
+          title: "3. Striking Streetwear Packaging & Campaign",
+          desc: "Complementary packaging and visual poster campaigns tailored for contemporary sneakerhead culture."
+        }
+      ],
+      gallery: [
+        { url: "/assets/lotus_embrace_sneaker.jpg", caption: "Lotus Embrace — 3D-Printed Parametric Sneaker Concept & Streetwear Campaign" },
+        { url: "/assets/lotus_embrace_cover.jpg", caption: "Concept Architecture & Colorways" }
+      ]
+    }
   }
 ];
 
-export const visualJournalProject = {
-  id: "visual-journal",
-  title: "Visual Journal",
-  tagline: "Observational Drawings, Anatomy & Visual Ethnography",
-  category: "Visual Journal",
-  duration: "Collection",
-  summary: "A curated visual archive exploring live anatomical studies, rapid ideation sketches, character drawings, and candid ethnographic moments.",
-  behanceLink: "https://www.behance.net/gallery/256689743/Visual-Journal",
-  coverImage: "/assets/sketch_study_detective_pipe.jpg",
-  accentColor: "#E67E22",
-  tags: ["Visual Journal", "Sketches", "Photography", "Observational Drawing", "Visual Ethnography"]
-};
-
-export const rawProjects = [visualJournalProject];
-
-export const featuredProjects = [
-  ...productDesignProjects,
+export const visualDesignProjects = [
   {
     id: "adyam-branding",
-    title: "Adyam — Branding & Visual Identity",
+    title: "Adyam",
     tagline: "Maharashtrian Dairy Brand Identity, Packaging & Mascot System",
-    category: "Branding",
+    category: "Visual Design",
     duration: "1 month",
     summary: "Maharashtrian dairy brand developed under Swapnapurti Food Pvt. Ltd. (Gadchandur), reviving traditional fresh-food values through the 'Old is Gold' philosophy, bespoke mascot design, packaging architecture, and digital delivery systems.",
     behanceLink: "https://www.behance.net/gallery/253428839/Adyam-Branding-Visual-Identity",
     coverImage: "/assets/adyam_hero_banner.jpg",
     accentColor: "#D97706",
-    tags: ["Branding", "Brand Identity", "Packaging", "Mascot Design", "Publication Design"],
+    tags: ["Visual Design", "Branding", "Packaging", "Mascot Design", "Publication"],
     metrics: [
       { label: "Parent Company", value: "Swapnapurti Food" },
       { label: "Philosophy", value: "Old is Gold" },
@@ -851,59 +783,228 @@ export const featuredProjects = [
     }
   },
   {
-    id: "tritva",
-    title: "Tritva",
-    tagline: "Yoga Studio Visual Identity & Branding",
-    category: "Branding",
-    duration: "1 month",
-    summary: "Developed a cohesive visual identity through competitor research, visual analysis, logo development, typography, colour selection, and brand applications across stationery and merchandise.",
-    behanceLink: "https://www.behance.net/gallery/255105741/Tritva",
-    coverImage: "/assets/tritva_cover.webp",
-    accentColor: "#E67E22",
-    tags: ["Branding", "Brand Identity", "Typography", "Merchandise"],
+    id: "vidarbh-lokdarpan",
+    title: "Vidarbh Lokdarpan",
+    tagline: "Regional Publication & Visual Cultural Documentation",
+    category: "Visual Design",
+    duration: "Publication",
+    summary: "Documented cultural narratives, community milestones, and grassroots leadership through regional print editorial design and visual storytelling in Vidarbha, Maharashtra.",
+    behanceLink: "https://www.behance.net/kakdesneha",
+    coverImage: "/assets/craft_frame130_16_50a9129d.webp",
+    accentColor: "#DC2626",
+    tags: ["Visual Design", "Publication", "Editorial Design", "Visual Storytelling", "Cultural Heritage"],
     metrics: [
-      { label: "Duration", value: "1 Month" },
-      { label: "Domain", value: "Yoga & Wellness" },
-      { label: "Scope", value: "Identity & Merchandise" }
+      { label: "Medium", value: "Print & Editorial" },
+      { label: "Region", value: "Vidarbha, MH" },
+      { label: "Focus", value: "Community Stories" }
     ],
     details: {
-      abstract: "Tritva is a yoga studio visual identity developed to deliver a calm, welcoming, and trustworthy sanctuary for wellness seekers. Centered on 'harmony in motion', the identity fuses traditional roots with sophisticated modern design across signage, stationery, and lifestyle merchandise.",
-      problemStatement: "The local wellness market's most engaging brands are visually cluttered, driving away beginners seeking clarity. Tritva needed an identity that establishes a minimalistic, welcoming, and trustworthy presence fusing traditional roots with modern sophistication.",
+      abstract: "Vidarbh Lokdarpan is an editorial publication and visual documentation initiative rooted in the cultural landscape of Vidarbha, Maharashtra. It captures local governance, grassroots artistic milestones, and community stories through authentic Marathi typography, layout architecture, and visual ethnography.",
+      problemStatement: "Regional news and cultural reporting often suffer from fragmented typographic hierarchies and visual clutter, diminishing the dignity of community achievements and grassroots narratives.",
       challenges: [
         {
-          title: "Market Clutter & Intimidation",
-          desc: "Existing yoga studios often use heavy, complex religious imagery that feels unapproachable to beginners."
+          title: "Editorial Hierarchy & Marathi Typography",
+          desc: "Balancing dense bilingual headlines with authentic Devanagari editorial pacing and clarity."
         },
         {
-          title: "Balance of Strength & Fluidity",
-          desc: "Capturing both the rooted discipline of asana practice and the serene flow of breath in a single mark."
-        },
-        {
-          title: "Cross-Medium Material Application",
-          desc: "Ensuring the mark renders cleanly on textured yoga mats, engraved wood signs, ceramics, water bottles, and fabric."
+          title: "Grassroots Photojournalism",
+          desc: "Highlighting regional personalities, artists, and community leaders with authentic documentary imagery."
         }
       ],
       solutions: [
         {
-          title: "1. Parvatasana (Mountain Pose) Monogram",
-          desc: "Symbol represents the Parvatasana pose, embodying stability, strength, and groundedness — standing tall yet rooted, balanced in motion."
+          title: "1. Clean Editorial Grid System",
+          desc: "Structured multi-column newsprint layout optimized for rapid readability across regional demographics."
         },
         {
-          title: "2. The Essence of Three (Tritva Philosophy)",
-          desc: "Reflects the harmonious balance of mind, body, and breath through flowing organic geometry and warm earthy ochres."
-        },
-        {
-          title: "3. End-to-End Lifestyle Merchandise",
-          desc: "Designed studio signage, business cards, instructor lanyards, yoga mats, stainless steel flasks, and ceramic mugs."
+          title: "2. Cultural Storytelling Feature",
+          desc: "Special feature spreads honoring local creators, educators, and social contributors."
         }
       ],
       gallery: [
-        { url: "/assets/tritva_board.png", caption: "Tritva — Harmony in Motion: Brand Presentation Board" },
-        { url: "/assets/tritva_cover.webp", caption: "Tritva Visual Identity System, Ideation & Merchandise Mockups" }
+        { url: "/assets/craft_frame130_16_50a9129d.webp", caption: "Vidarbh Lokdarpan — Editorial Feature & Community Felicitation" }
+      ]
+    }
+  }
+];
+
+export const visualJournalProjects = [
+  {
+    id: "sketches",
+    title: "Sketches",
+    tagline: "Observational Drawings, Anatomy & Character Studies",
+    category: "Visual Journal",
+    duration: "Archive",
+    summary: "A curated visual archive exploring live anatomical studies, rapid ideation sketches, character drawings, and ink gestures capturing raw human expression.",
+    behanceLink: "https://www.behance.net/gallery/256689743/Visual-Journal",
+    coverImage: "/assets/sketch_study_detective_pipe.jpg",
+    accentColor: "#E6004C",
+    tags: ["Visual Journal", "Observational Drawing", "Anatomy", "Character Art", "Ink Studies"],
+    metrics: [
+      { label: "Medium", value: "Ink & Graphite" },
+      { label: "Focus", value: "Anatomy & Emotion" },
+      { label: "Practice", value: "Daily Sketching" }
+    ],
+    details: {
+      abstract: "Observational sketching is my way of thinking with a pen in hand. This visual journal gathers life drawings, anatomical proportions, expressive character studies, and gesture explorations that form the intuitive foundation for all my digital design work.",
+      problemStatement: "Digital tools can detach designers from raw visceral observation. Daily analog sketching bridges abstract thoughts into concrete forms through hand-eye coordination.",
+      challenges: [
+        {
+          title: "Capturing Fleeting Expression",
+          desc: "Committing spontaneous human gesture and emotion in rapid ink strokes without undo buttons."
+        },
+        {
+          title: "Anatomical Precision",
+          desc: "Studying muscle groups, facial planes, and posture to inform dynamic character and product form-giving."
+        }
+      ],
+      solutions: [
+        {
+          title: "1. Rapid Gesture Sessions",
+          desc: "Timed 2-minute and 5-minute studies emphasizing gesture, weight, and visual balance."
+        },
+        {
+          title: "2. Cross-Medium Experimentation",
+          desc: "Combining ink wash, micron pens, kraft paper, and digital tablets to explore diverse mark-making."
+        }
+      ],
+      gallery: [
+        { url: "/assets/sketch_study_detective_pipe.jpg", caption: "Detective Character Study — Micron Ink & Cross-hatching" },
+        { url: "/assets/sketch_study_bearded_elders.jpg", caption: "Elderly Portraits & Facial Anatomy Studies" },
+        { url: "/assets/sketch_study_elephant_kraft.jpg", caption: "Wildlife & Creature Gesture Study on Kraft Paper" }
       ]
     }
   },
-  ...rawProjects
+  {
+    id: "photography",
+    title: "Photography",
+    tagline: "Visual Ethnography, Rural Light & Fleeting Moments",
+    category: "Visual Journal",
+    duration: "Ongoing",
+    summary: "Visual ethnography and street photography across rural Maharashtra and diverse Indian landscapes, focusing on natural light, fleeting human interactions, and architectural textures.",
+    behanceLink: "https://www.behance.net/gallery/256689743/Visual-Journal",
+    coverImage: "/assets/photo_ancient_stone_temple.jpg",
+    accentColor: "#059669",
+    tags: ["Visual Journal", "Photography", "Visual Ethnography", "Light & Shadow", "Documentary"],
+    metrics: [
+      { label: "Genre", value: "Visual Ethnography" },
+      { label: "Subject", value: "People, Light & Heritage" },
+      { label: "Approach", value: "Candid & Contextual" }
+    ],
+    details: {
+      abstract: "Photography trains my eye for visual hierarchy, lighting contrast, and human context. Through visual ethnography in rural villages, vibrant markets, and quiet ancient temples, I document the unscripted moments that remind us why human-centered design matters.",
+      problemStatement: "In a fast-paced world, designers often overlook the quiet, subtle nuances of how people genuinely interact with their environments, tools, and community rituals.",
+      challenges: [
+        {
+          title: "Unobtrusive Documentation",
+          desc: "Earning trust in rural spaces to photograph authentic candid moments without disrupting natural rhythm."
+        },
+        {
+          title: "Natural Light Mastery",
+          desc: "Harnessing dawn, dusk, and harsh afternoon contrast to create evocative visual narratives."
+        }
+      ],
+      solutions: [
+        {
+          title: "1. Contextual Inquiry Framing",
+          desc: "Photographing artisans, farmers, and daily laborers within their full physical context and tools."
+        },
+        {
+          title: "2. Light, Form & Texture Exploration",
+          desc: "Framing ancient temple stone, monsoon water surfaces, and village pathways with cinematic visual pacing."
+        }
+      ],
+      gallery: [
+        { url: "/assets/photo_ancient_stone_temple.jpg", caption: "Ancient Stone Temple — Light, Shadow & Sacred Geometry" },
+        { url: "/assets/photo_lake_fishermen_boat.jpg", caption: "Dawn on the Water — Fishermen in Fog" },
+        { url: "/assets/photo_sunset_cyclist_road.jpg", caption: "Golden Hour Rural Horizon — Cyclist at Dusk" }
+      ]
+    }
+  }
+];
+
+export const projectGroups = [
+  {
+    id: "product-design",
+    title: "Product Design",
+    subtitle: "Healthcare telemetry, parametric industrial design & biomimetic concepts",
+    projects: productDesignProjects
+  },
+  {
+    id: "visual-design",
+    title: "Visual Design",
+    subtitle: "Regional brand identity, mascot systems & editorial publications",
+    projects: visualDesignProjects
+  },
+  {
+    id: "visual-journal",
+    title: "Visual Journal",
+    subtitle: "Observational drawing, anatomy studies & ethnographic photography",
+    projects: visualJournalProjects
+  }
+];
+
+export const visualJournalProject = visualJournalProjects[0];
+export const rawProjects = visualJournalProjects;
+
+export const tritvaProject = {
+  id: "tritva",
+  title: "Tritva",
+  tagline: "Yoga Studio Visual Identity & Branding",
+  category: "Visual Design",
+  duration: "1 month",
+  summary: "Developed a cohesive visual identity through competitor research, visual analysis, logo development, typography, colour selection, and brand applications across stationery and merchandise.",
+  behanceLink: "https://www.behance.net/gallery/255105741/Tritva",
+  coverImage: "/assets/tritva_cover.webp",
+  accentColor: "#E67E22",
+  tags: ["Visual Design", "Branding", "Brand Identity", "Typography", "Merchandise"],
+  metrics: [
+    { label: "Duration", value: "1 Month" },
+    { label: "Domain", value: "Yoga & Wellness" },
+    { label: "Scope", value: "Identity & Merchandise" }
+  ],
+  details: {
+    abstract: "Tritva is a yoga studio visual identity developed to deliver a calm, welcoming, and trustworthy sanctuary for wellness seekers. Centered on 'harmony in motion', the identity fuses traditional roots with sophisticated modern design across signage, stationery, and lifestyle merchandise.",
+    problemStatement: "The local wellness market's most engaging brands are visually cluttered, driving away beginners seeking clarity. Tritva needed an identity that establishes a minimalistic, welcoming, and trustworthy presence fusing traditional roots with modern sophistication.",
+    challenges: [
+      {
+        title: "Market Clutter & Intimidation",
+        desc: "Existing yoga studios often use heavy, complex religious imagery that feels unapproachable to beginners."
+      },
+      {
+        title: "Balance of Strength & Fluidity",
+        desc: "Capturing both the rooted discipline of asana practice and the serene flow of breath in a single mark."
+      },
+      {
+        title: "Cross-Medium Material Application",
+        desc: "Ensuring the mark renders cleanly on textured yoga mats, engraved wood signs, ceramics, water bottles, and fabric."
+      }
+    ],
+    solutions: [
+      {
+        title: "1. Parvatasana (Mountain Pose) Monogram",
+        desc: "Symbol represents the Parvatasana pose, embodying stability, strength, and groundedness — standing tall yet rooted, balanced in motion."
+      },
+      {
+        title: "2. The Essence of Three (Tritva Philosophy)",
+        desc: "Reflects the harmonious balance of mind, body, and breath through flowing organic geometry and warm earthy ochres."
+      },
+      {
+        title: "3. End-to-End Lifestyle Merchandise",
+        desc: "Designed studio signage, business cards, instructor lanyards, yoga mats, stainless steel flasks, and ceramic mugs."
+      }
+    ],
+    gallery: [
+      { url: "/assets/tritva_board.png", caption: "Tritva — Harmony in Motion: Brand Presentation Board" },
+      { url: "/assets/tritva_cover.webp", caption: "Tritva Visual Identity System, Ideation & Merchandise Mockups" }
+    ]
+  }
+};
+
+export const featuredProjects = [
+  ...productDesignProjects,
+  ...visualDesignProjects,
+  ...visualJournalProjects
 ];
 
 export const archiveCategories = [
