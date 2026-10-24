@@ -664,55 +664,55 @@ export const productDesignProjects = [
     }
   },
   {
-    id: "lotus-embrace",
-    title: "Lotus Embrace",
-    tagline: "Sustainable 3D-Printed Footwear • Urban Monkey x Kyodrius",
+    id: "sway",
+    title: "SWAY",
+    tagline: "Different Rhythm. One Home. • Shared-Living Mobile Experience",
     category: "Product Design",
-    duration: "Concept",
-    summary: "Designed a biomimetic 3D-printed sneaker concept inspired by the blooming geometry of the sacred lotus for the Urban Monkey & Kyodrius Young Blood design initiative, blending parametric cushioning, zero-waste additive manufacturing, and streetwear aesthetics.",
-    behanceLink: "https://www.behance.net/kakdesneha",
-    coverImage: "/assets/lotus_embrace_sneaker.jpg",
-    accentColor: "#9333EA",
-    tags: ["Product Design", "Footwear Design", "3D Printing", "Parametric", "Biomimicry"],
+    duration: "4 days",
+    summary: "Designed a shared-living mobile ecosystem for young professionals in rented flats to fairly coordinate chores, split expenses, and communicate boundaries without awkward confrontation or keeping score.",
+    behanceLink: "https://www.behance.net/gallery/257406273/SWAY-Different-Rhythm-One-Home",
+    coverImage: "/assets/sway_cover.jpg",
+    accentColor: "#6366F1",
+    tags: ["Product Design", "UX/UI Design", "Shared Living", "InfoEdge Task", "Mobile Ecosystem"],
     metrics: [
-      { label: "Initiative", value: "Kyodrius Young Blood" },
-      { label: "Brand Partner", value: "Urban Monkey" },
-      { label: "Fabrication", value: "Parametric 3D Printing" }
+      { label: "Design Task", value: "InfoEdge Design Task" },
+      { label: "Duration", value: "4 Days" },
+      { label: "Domain", value: "Shared Living & Fintech" }
     ],
     details: {
-      abstract: "Lotus Embrace is a sustainable 3D-printed sneaker concept inspired by the layered blooming geometry of the sacred lotus flower. Designed for the Urban Monkey & Kyodrius Young Blood Awards, it explores how computational lattice design, circular TPU materials, and generative aesthetics can eliminate adhesive toxins and post-consumer footwear waste.",
-      problemStatement: "Conventional sneaker manufacturing relies on complex multi-material assemblies bonded with toxic adhesives, making disassembly and recycling near impossible while contributing to millions of tons of landfill waste.",
+      abstract: "SWAY (Different Rhythm. One Home) is a product design case study exploring how young professionals living together in shared rented flats can navigate household friction. Designed for an InfoEdge design task, SWAY creates transparent accountability across chores, supplies, and shared expenses without making flatmates feel monitored, judged, or reduced to a score.",
+      problemStatement: "Young professionals in shared rented flats struggle to split expenses, chores, and household supplies fairly. Tracking contributions across WhatsApp, mental notes, and spreadsheets leads to forgotten payments, overlooked effort, and unclear responsibilities. Raising imbalances feels awkward, so small issues go unresolved and grow into resentment.",
       challenges: [
         {
-          title: "Monolithic Zero-Waste Construction",
-          desc: "Creating a high-performance shoe from a single recyclable polymer without toxic glues or stitching."
+          title: "The Social Cost of Reminders",
+          desc: "Asking friends and flatmates for money or pointing out undone chores is socially awkward and strains interpersonal relationships."
         },
         {
-          title: "Biomimetic Cushioning Gradient",
-          desc: "Engineering variable density lattice cushioning that replicates natural foot strike mechanics inspired by lotus petal architecture."
+          title: "Invisible Labour & Resentment",
+          desc: "Household contributions—like buying groceries or cleaning common spaces—often go unnoticed, leading to unequal perceived effort."
         },
         {
-          title: "Streetwear Culture & Modern Silhouette",
-          desc: "Balancing high-fashion statement aesthetics with ergonomic daily comfort and urban versatility."
+          title: "Renegotiation When Availability Changes",
+          desc: "Static schedules break when someone works late or travels, creating resentment when work remains uncovered."
         }
       ],
       solutions: [
         {
-          title: "1. Parametric Blooming Outsole",
-          desc: "Computational voronoi lattices distribute impact forces radially from heel to toe, mimicking petal flexion."
+          title: "1. Shared Home Board with Dynamic Rhythm Indicator",
+          desc: "Provides a holistic weekly household pulse ('Things feel in rhythm') keeping shared spends and chores visible without penalizing anyone."
         },
         {
-          title: "2. Single-Material Circular TPU",
-          desc: "Crafted entirely from 100% recyclable thermoplastic polyurethane, allowing end-of-life regrinding and remanufacturing."
+          title: "2. Frictionless Expense & Grocery Splitting",
+          desc: "Centralizes household spends, gas cylinder refills, and shared groceries with auto-balancing and friendly settlement prompts."
         },
         {
-          title: "3. Striking Streetwear Packaging & Campaign",
-          desc: "Complementary packaging and visual poster campaigns tailored for contemporary sneakerhead culture."
+          title: "3. Auto-Arrange Chores & Flexible Trade-offs",
+          desc: "Empowers flatmates to mark availability, auto-rebalance household chores, and communicate boundaries respectfully."
         }
       ],
       gallery: [
-        { url: "/assets/lotus_embrace_sneaker.jpg", caption: "Lotus Embrace — 3D-Printed Parametric Sneaker Concept & Streetwear Campaign" },
-        { url: "/assets/lotus_embrace_cover.jpg", caption: "Concept Architecture & Colorways" }
+        { url: "/assets/sway_cover.jpg", caption: "SWAY — Different Rhythm. One Home: Onboarding & Shared Home Board" },
+        { url: "/assets/sway_screens.jpg", caption: "End-to-End User Flows — Chores, Expense Telemetry, Group Chat & AI Assistant" }
       ]
     }
   }

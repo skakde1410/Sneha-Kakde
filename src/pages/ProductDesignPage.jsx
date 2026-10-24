@@ -37,18 +37,18 @@ export default function ProductDesignPage({ onBackToHome, onOpenContact }) {
           </h1>
           
           <p className="text-slate-300 max-w-2xl text-sm sm:text-base lg:text-lg leading-relaxed mb-8">
-            An integrated suite of pediatric healthcare telemetry, parametric industrial lighting, and biomimetic 3D-printed circular footwear.
+            An integrated suite of digital product ecosystems, shared-living mobile platforms, pediatric healthcare telemetry, and parametric industrial lighting design.
           </p>
 
           {/* Quick Highlight Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl pt-6 border-t border-slate-800/80">
             <div className="bg-slate-900/60 p-3 sm:p-4 rounded-xl border border-slate-800">
-              <div className="text-xs text-slate-400 font-medium">Healthcare UX</div>
-              <div className="text-lg sm:text-xl font-bold text-white mt-0.5">1 Work</div>
+              <div className="text-xs text-slate-400 font-medium">Digital Platforms</div>
+              <div className="text-lg sm:text-xl font-bold text-white mt-0.5">2 Works</div>
             </div>
             <div className="bg-slate-900/60 p-3 sm:p-4 rounded-xl border border-slate-800">
-              <div className="text-xs text-slate-400 font-medium">Physical & 3D</div>
-              <div className="text-lg sm:text-xl font-bold text-white mt-0.5">2 Works</div>
+              <div className="text-xs text-slate-400 font-medium">Physical Design</div>
+              <div className="text-lg sm:text-xl font-bold text-white mt-0.5">1 Work</div>
             </div>
             <div className="bg-slate-900/60 p-3 sm:p-4 rounded-xl border border-slate-800">
               <div className="text-xs text-slate-400 font-medium">Active Research</div>
