@@ -724,7 +724,7 @@ export const productDesignProjects = [
     duration: "Publication",
     summary: "Documented cultural narratives, community milestones, and grassroots leadership through regional print editorial design and visual storytelling in Vidarbha, Maharashtra.",
     behanceLink: "https://www.behance.net/kakdesneha",
-    coverImage: "/assets/craft_frame130_16_50a9129d.webp",
+    coverImage: "/assets/vidarbh_lokdarpan_cover.jpg",
     accentColor: "#DC2626",
     tags: ["Product Design", "Publication", "Editorial Design", "Visual Storytelling", "Cultural Heritage"],
     metrics: [
