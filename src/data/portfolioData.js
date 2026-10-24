@@ -789,57 +789,64 @@ export const featuredProjects = [
   ...productDesignProjects,
   {
     id: "adyam-branding",
-    title: "Adyam",
-    tagline: "Maharashtrian Brand Identity & Packaging",
+    title: "Adyam — Branding & Visual Identity",
+    tagline: "Maharashtrian Dairy Brand Identity, Packaging & Mascot System",
     category: "Branding",
     duration: "1 month",
-    summary: "Built a Maharashtrian-rooted fresh-food brand inspired by “Old is Gold,” combining brand identity, packaging, and mascot design.",
-    behanceLink: "https://www.behance.net/gallery/253428839/Adyam-Branding?platform=direct",
-    coverImage: "/assets/adyam_cover.webp",
+    summary: "Maharashtrian dairy brand developed under Swapnapurti Food Pvt. Ltd. (Gadchandur), reviving traditional fresh-food values through the 'Old is Gold' philosophy, bespoke mascot design, packaging architecture, and digital delivery systems.",
+    behanceLink: "https://www.behance.net/gallery/253428839/Adyam-Branding-Visual-Identity",
+    coverImage: "/assets/adyam_hero_banner.jpg",
     accentColor: "#D97706",
-    tags: ["Branding", "Brand Identity", "Packaging", "Mascot Design"],
+    tags: ["Branding", "Brand Identity", "Packaging", "Mascot Design", "Publication Design"],
     metrics: [
-      { label: "Duration", value: "1 Month" },
-      { label: "Inspiration", value: "Old is Gold" },
-      { label: "Deliverables", value: "Identity, Packaging & Mascot" }
+      { label: "Parent Company", value: "Swapnapurti Food" },
+      { label: "Philosophy", value: "Old is Gold" },
+      { label: "Target Market", value: "MH & Telangana" },
+      { label: "Deliverables", value: "Identity, Mascot, Packaging & App" }
     ],
     details: {
-      abstract: "Adyam is a Maharashtrian-rooted fresh-food brand identity crafted around the philosophy of 'Old is Gold'. The project combines warm cultural heritage, bespoke packaging systems, typography hierarchies, and friendly mascot design celebrating pure traditional flavors.",
-      problemStatement: "Adyam required a distinctive, authentic visual language that honors traditional Maharashtrian dairy and fresh-food heritage while standing out on modern retail shelves and digital delivery apps.",
+      abstract: "Adyam is a Maharashtrian dairy brand developed under Swapnapurti Food Pvt. Ltd., Gadchandur, Maharashtra. The project explores how regional Maharashtrian heritage, dairy culture, and contemporary design come together to create a distinctive, emotionally resonant, and scalable brand identity. Rooted in the philosophy of 'Old is Gold,' Adyam brings back the purity, trust, and unadulterated freshness of traditional food practices for modern consumers across Maharashtra and Telangana.",
+      problemStatement: "Create a distinctive dairy identity and comprehensive packaging architecture that preserves Adyam's authentic Maharashtrian cultural roots while remaining contemporary, approachable, and scalable across diverse dairy categories (Fresh Milk, Masala Chaas, Flavored Lassi, Butter), retail store signage, and direct-to-consumer digital channels.",
       challenges: [
         {
           title: "Heritage vs Modern Shelf Appeal",
-          desc: "Balancing the nostalgia of 'Old is Gold' with crisp, contemporary packaging standards that appeal to modern families."
+          desc: "Distilling traditional Maharashtrian visual cues—such as Paithani textile borders, historical Wada arches, Warli folk storytelling, and authentic milkman iconography—into clean, contemporary graphic standards that appeal to modern families."
         },
         {
-          title: "Multi-SKU Packaging Consistency",
-          desc: "Creating packaging designs for Masala Chaas, Lassi variants, and dairy products that maintain distinct flavor cues under a unified brand umbrella."
+          title: "Category Differentiation & Emotional Warmth",
+          desc: "Standing out against regional dairy giants (Amul, Mother Dairy, Gowardhan, Chitale) where warmth and nostalgia are high entry stakes, by anchoring the brand in a bespoke, lovable mascot character and authentic storytelling."
         },
         {
-          title: "Mascot & Emotional Connection",
-          desc: "Designing an inviting brand character that communicates trust, warmth, and wholesome purity."
+          title: "Multi-SKU Packaging System & Architecture",
+          desc: "Designing a scalable visual hierarchy across varied formats—from everyday 500ml milk pouches and glass bottles to single-serve Chaas cups, Lassi tubs, delivery truck fleets, and a direct-to-consumer mobile subscription app."
         }
       ],
       solutions: [
         {
-          title: "1. 'Old is Gold' Visual Philosophy",
-          desc: "A rich color palette of turmeric golds, terracotta, and warm creams referencing traditional brass cookware and Maharashtrian kitchens."
+          title: "1. 'Old is Gold' Strategy & Visual Identity Prism",
+          desc: "Developed a brand strategy rooted in Purity, Trust, Freshness, and Care. The bespoke logo pairs bold typography with a rising sun element symbolizing daily fresh beginnings and green accents celebrating farm-fresh roots."
         },
         {
-          title: "2. Devanagari & Latin Typography Architecture",
-          desc: "Harmonious bilingual typography pairings that maintain legibility across packaging labels, posters, and digital ads."
+          title: "2. Bespoke Mascot Development & Narrative Art",
+          desc: "Crafted the cheerful Adyam milkman mascot—from hand-drawn pencil sketches to 3D character poses—embodying traditional warmth with a Gandhi topi, namaste greeting, and an emotional narrative illustration of hand-milking a cow with curious village children."
         },
         {
-          title: "3. Complete Packaging & Mascot Guidelines",
-          desc: "Full product line dielines, mascot poses, carousel campaigns, and print specification standards."
+          title: "3. Unified Packaging & Collateral Ecosystem",
+          desc: "Established comprehensive packaging guidelines featuring Paithani-inspired geometric borders, color-coded SKU hierarchies (turmeric gold, fresh terracotta, emerald green, and cream), fleet delivery truck branding, branded store signage, and an intuitive mobile delivery app interface."
         }
       ],
       gallery: [
-        { url: "/assets/adyam_cover.webp", caption: "Brand Book Cover & Logo Philosophy" },
-        { url: "/assets/7c5d375d7032457271dd1ac66438474a86d9d7b7.webp", caption: "Logo Anatomy & Grid Geometry" },
-        { url: "/assets/93909f8c978c07fc422b5d1af1a7f078ec433e41.webp", caption: "Color Palette & Contrast Guidelines" },
-        { url: "/assets/ea081aef420c63e9d61cff2a7bf3edecd58e07a9.webp", caption: "Typography Hierarchy & Editorial Usage" },
-        { url: "/assets/5159cdd47d8f571608a34ceb5f7bab9151c7f5b6.webp", caption: "Packaging Mockups & Application" }
+        { url: "/assets/adyam_hero_banner.jpg", caption: "Adyam Brand Identity — 'Trust in Freshness' Visual Identity Banner" },
+        { url: "/assets/adyam_research_context.jpg", caption: "Brand Context & Cultural Research — Paithani, Wada Architecture & Warli Folk Motifs" },
+        { url: "/assets/adyam_strategy_audit.jpg", caption: "Competitive Audit & Brand Strategy — 'Old is Gold' Philosophy & Brand Identity Prism" },
+        { url: "/assets/adyam_visual_dna_moodboard.jpg", caption: "Brand DNA & Visual Direction — Devanagari Lettering, Color Palette & Motif Extraction" },
+        { url: "/assets/adyam_mascot_development.jpg", caption: "Mascot Character Development — Hand-Drawn Explorations & 3D Character Poses" },
+        { url: "/assets/adyam_cow_milking_scene.jpg", caption: "Narrative Brand Illustration — Traditional Cow Milking Scene & Storytelling" },
+        { url: "/assets/adyam_logo_tagline_system.jpg", caption: "Logo Architecture & Tagline Development — 'Trust in Freshness' Typography System" },
+        { url: "/assets/adyam_packaging_milk_signage.jpg", caption: "Packaging & Retail Signage — Glass Milk Bottles, 500ml Pouch, Delivery Fleet & Signage" },
+        { url: "/assets/adyam_packaging_chaas_lassi.jpg", caption: "Dairy SKU Packaging — Sadgi Lassi, Vanilla Lassi & Masant Masala Chaas Cups" },
+        { url: "/assets/adyam_mobile_app_stationery.jpg", caption: "Digital Campaign, Mobile App UI & Brand Stationery Suite" },
+        { url: "/assets/adyam_alchemist_bonus.jpg", caption: "Featured Publication Design — 'The Alchemist' Book Cover Redesign Showcase" }
       ]
     }
   },
