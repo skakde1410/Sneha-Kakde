@@ -8,7 +8,7 @@ import mascotImg from '../assets/mascot.webp';
 const TYPEWRITER_PHRASES = [
   'Sneha Kakde',
   'a Visual Designer',
-  'a UX Designer',
+  'a Product Designer',
   'a Creative Storyteller',
   'Sneha Kakde'
 ];
@@ -106,7 +106,7 @@ export default function Hero({ onOpenContact }) {
           <h2 className="text-base sm:text-xl font-bold text-gray-700 mb-4 sm:mb-6 tracking-tight flex flex-wrap items-center gap-1.5 sm:gap-2">
             <span>Visual Designer</span>
             <span className="text-brand-pink">•</span>
-            <span>UX Researcher & Strategist</span>
+            <span>Product Designer</span>
           </h2>
 
           {/* Description */}

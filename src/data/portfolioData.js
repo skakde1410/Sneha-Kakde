@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Sneha Kakde",
   initials: "SK",
-  title: "Creative Visual Designer | UX Designer",
+  title: "Creative Visual Designer | Product Designer",
   institution: "IIT Guwahati",
   heroBio: "I’m curious about people, their stories, and the many ways we see the world. I connect, listen, question, and explore - turning human insights into meaningful ideas and using visual design and storytelling to bring them to life.",
   extendedBio: [
