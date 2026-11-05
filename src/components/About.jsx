@@ -311,19 +311,24 @@ export default function About({ onSelectCraft }) {
 
         </div>
 
-        {/* OFF THE GRID - 3D Coverflow Carousel Matching Reference */}
-        <div id="interests" className="scroll-mt-20">
-          <OffTheGridCoverflow />
-        </div>
+        {/* Philosophy & Off The Grid Section */}
+        <div id="philosophy" className="scroll-mt-20 space-y-6 pt-4 border-t border-gray-100/80">
+          <div className="space-y-2 sm:space-y-3 text-left">
+            <span className="text-xs sm:text-sm font-bold tracking-widest text-brand-pink uppercase">
+              Philosophy
+            </span>
+            <h3 className="text-xl sm:text-3xl font-extrabold text-brand-dark tracking-tight">
+              Different interests. One curious mind.
+            </h3>
+            <p className="text-xs sm:text-base text-neutral-700 leading-relaxed max-w-5xl">
+              {personalInfo.interestsPhilosophy}
+            </p>
+          </div>
 
-        {/* Narrative Paragraph: Different interests. One curious mind. (Matching Figma exactly) */}
-        <div className="space-y-2 sm:space-y-3 pt-2 text-left">
-          <h3 className="text-lg sm:text-2xl font-bold text-neutral-900 tracking-tight">
-            Different interests. One curious mind.
-          </h3>
-          <p className="text-xs sm:text-base text-neutral-700 leading-relaxed max-w-5xl">
-            {personalInfo.interestsPhilosophy}
-          </p>
+          {/* OFF THE GRID - 3D Coverflow Carousel Matching Reference */}
+          <div id="interests" className="scroll-mt-20">
+            <OffTheGridCoverflow />
+          </div>
         </div>
 
         {/* Typewriter Banner with Modern Rounded Corners */}

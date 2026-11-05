@@ -131,13 +131,13 @@ export default function NotFoundPage({ onBackToHome, onOpenContact, onNavigateTo
             onClick={() => {
               onBackToHome();
               setTimeout(() => {
-                const el = document.getElementById('interests');
+                const el = document.getElementById('studio');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }, 100);
             }} 
             className="font-semibold text-gray-700 hover:text-[#E6004C] transition-colors cursor-pointer"
           >
-            Philosophy
+            Studio
           </button>
         </motion.div>
 

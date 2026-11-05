@@ -29,7 +29,6 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Work', href: '#work' },
-    { name: 'Philosophy', href: '#interests' },
     { name: 'Studio', href: '#studio' },
     { name: 'Contact', href: '#contact' },
   ];
