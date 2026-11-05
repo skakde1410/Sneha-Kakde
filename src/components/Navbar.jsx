@@ -72,42 +72,45 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
-        {/* Logo */}
-        <a 
-          href="#" 
-          onClick={(e) => {
-            e.preventDefault();
-            if (currentView !== 'home') {
-              onNavigate('home');
-            } else {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-          }}
-          className="group flex items-center gap-1.5 sm:gap-2 focus:outline-none cursor-pointer"
-        >
-          <span className={`font-extrabold text-2xl sm:text-3xl tracking-tight transition-colors ${
-            isDarkNav ? 'text-white group-hover:text-brand-pink' : 'text-brand-dark group-hover:text-brand-pink'
-          }`}>
-            {personalInfo.initials}
-          </span>
-          <span className="w-2 h-2 rounded-full bg-brand-pink group-hover:scale-125 transition-transform" />
-        </a>
+        {/* Left Side: Logo & Navigation */}
+        <div className="flex items-center gap-8 lg:gap-12">
+          {/* Logo */}
+          <a 
+            href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              if (currentView !== 'home') {
+                onNavigate('home');
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+            className="group flex items-center gap-1.5 sm:gap-2 focus:outline-none cursor-pointer"
+          >
+            <span className={`font-extrabold text-2xl sm:text-3xl tracking-tight transition-colors ${
+              isDarkNav ? 'text-white group-hover:text-brand-pink' : 'text-brand-dark group-hover:text-brand-pink'
+            }`}>
+              {personalInfo.initials}
+            </span>
+            <span className="w-2 h-2 rounded-full bg-brand-pink group-hover:scale-125 transition-transform" />
+          </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => handleLinkClick(e, link.href)}
-              className={`text-sm font-medium transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-pink hover:after:w-full after:transition-all after:duration-300 cursor-pointer ${
-                isDarkNav ? 'text-white hover:text-brand-pink' : 'text-gray-700 hover:text-brand-pink'
-              }`}
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
+                className={`text-sm font-medium transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-pink hover:after:w-full after:transition-all after:duration-300 cursor-pointer ${
+                  isDarkNav ? 'text-white hover:text-brand-pink' : 'text-gray-700 hover:text-brand-pink'
+                }`}
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+        </div>
 
         {/* Action Buttons (Desktop) */}
         <div className="hidden md:flex items-center gap-3">
