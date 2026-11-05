@@ -72,31 +72,31 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
-        {/* Left Side: Logo & Navigation */}
-        <div className="flex items-center gap-8 lg:gap-12">
-          {/* Logo */}
-          <a 
-            href="#" 
-            onClick={(e) => {
-              e.preventDefault();
-              if (currentView !== 'home') {
-                onNavigate('home');
-              } else {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }
-            }}
-            className="group flex items-center gap-1.5 sm:gap-2 focus:outline-none cursor-pointer"
-          >
-            <span className={`font-extrabold text-2xl sm:text-3xl tracking-tight transition-colors ${
-              isDarkNav ? 'text-white group-hover:text-brand-pink' : 'text-brand-dark group-hover:text-brand-pink'
-            }`}>
-              {personalInfo.initials}
-            </span>
-            <span className="w-2 h-2 rounded-full bg-brand-pink group-hover:scale-125 transition-transform" />
-          </a>
+        {/* Logo */}
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            if (currentView !== 'home') {
+              onNavigate('home');
+            } else {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
+          className="group flex items-center gap-1.5 sm:gap-2 focus:outline-none cursor-pointer"
+        >
+          <span className={`font-extrabold text-2xl sm:text-3xl tracking-tight transition-colors ${
+            isDarkNav ? 'text-white group-hover:text-brand-pink' : 'text-brand-dark group-hover:text-brand-pink'
+          }`}>
+            {personalInfo.initials}
+          </span>
+          <span className="w-2 h-2 rounded-full bg-brand-pink group-hover:scale-125 transition-transform" />
+        </a>
 
+        {/* Right Side: Desktop Navigation & Action Buttons */}
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+          <nav className="flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -110,27 +110,27 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
               </a>
             ))}
           </nav>
-        </div>
 
-        {/* Action Buttons (Desktop) */}
-        <div className="hidden md:flex items-center gap-3">
-          {currentView === 'home' ? (
-            <button
-              onClick={() => onNavigate('archive')}
-              className="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-brand-dark hover:bg-black rounded-full transition-all hover:shadow-lg hover:scale-105 active:scale-95 group cursor-pointer"
-            >
-              <span>View 2025 Archive</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-gray-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </button>
-          ) : (
-            <button
-              onClick={() => onNavigate('home')}
-              className="inline-flex items-center gap-1.5 bg-black hover:bg-neutral-900 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-xl transition-all hover:scale-105 active:scale-95 group cursor-pointer border border-neutral-800 whitespace-nowrap"
-            >
-              <span>View New Portfolio</span>
-              <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-neutral-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </button>
-          )}
+          {/* Action Buttons (Desktop) */}
+          <div className="flex items-center gap-3">
+            {currentView === 'home' ? (
+              <button
+                onClick={() => onNavigate('archive')}
+                className="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-brand-dark hover:bg-black rounded-full transition-all hover:shadow-lg hover:scale-105 active:scale-95 group cursor-pointer"
+              >
+                <span>View 2025 Archive</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-gray-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </button>
+            ) : (
+              <button
+                onClick={() => onNavigate('home')}
+                className="inline-flex items-center gap-1.5 bg-black hover:bg-neutral-900 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-xl transition-all hover:scale-105 active:scale-95 group cursor-pointer border border-neutral-800 whitespace-nowrap"
+              >
+                <span>View New Portfolio</span>
+                <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-neutral-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Mobile Action Pill + Mobile Menu Button */}
