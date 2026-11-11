@@ -53,13 +53,6 @@ export default function Projects() {
                 <span className="font-bold text-sm sm:text-base tracking-tight">
                   {group.title}
                 </span>
-                <span
-                  className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ml-1 transition-colors ${
-                    isActive ? 'bg-white/20 text-white' : 'bg-neutral-100 text-neutral-600'
-                  }`}
-                >
-                  {group.projects.length}
-                </span>
               </button>
             );
           })}
