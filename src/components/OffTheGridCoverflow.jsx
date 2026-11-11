@@ -198,13 +198,13 @@ export default function OffTheGridCoverflow() {
     return () => document.removeEventListener('pointerdown', handlePointerDown);
   }, [isCardExpanded]);
 
-  // Automatic sliding timer (crisp, lively cadence)
+  // Automatic sliding timer (crisp, faster cadence)
   useEffect(() => {
     if (isCardExpanded || isInteracting || isCenterHovered) return;
 
     const timer = setInterval(() => {
       setVirtualIndex((prev) => prev + 1);
-    }, 2200);
+    }, 1400);
 
     return () => clearInterval(timer);
   }, [isCardExpanded, isInteracting, isCenterHovered, virtualIndex]);
@@ -393,12 +393,12 @@ export default function OffTheGridCoverflow() {
                 filter: `blur(${blurAmount}px)`
               }}
               transition={{
-                x: { type: "spring", stiffness: 320, damping: 28, mass: 0.7 },
-                y: { type: "spring", stiffness: 320, damping: 28, mass: 0.7 },
-                scale: { duration: 0.32, ease: [0.2, 0.8, 0.2, 1] },
-                rotateY: { duration: 0.32, ease: [0.2, 0.8, 0.2, 1] },
-                opacity: { duration: 0.25 },
-                filter: { duration: 0.25 }
+                x: { type: "spring", stiffness: 450, damping: 30, mass: 0.5 },
+                y: { type: "spring", stiffness: 450, damping: 30, mass: 0.5 },
+                scale: { duration: 0.22, ease: [0.2, 0.8, 0.2, 1] },
+                rotateY: { duration: 0.22, ease: [0.2, 0.8, 0.2, 1] },
+                opacity: { duration: 0.18 },
+                filter: { duration: 0.18 }
               }}
               drag={isActive ? 'x' : false}
               dragConstraints={{ left: 0, right: 0 }}
