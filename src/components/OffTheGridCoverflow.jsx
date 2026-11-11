@@ -204,7 +204,7 @@ export default function OffTheGridCoverflow() {
 
     const timer = setInterval(() => {
       setVirtualIndex((prev) => prev + 1);
-    }, 1400);
+    }, 1000);
 
     return () => clearInterval(timer);
   }, [isCardExpanded, isInteracting, isCenterHovered, virtualIndex]);
@@ -393,12 +393,12 @@ export default function OffTheGridCoverflow() {
                 filter: `blur(${blurAmount}px)`
               }}
               transition={{
-                x: { type: "spring", stiffness: 450, damping: 30, mass: 0.5 },
-                y: { type: "spring", stiffness: 450, damping: 30, mass: 0.5 },
-                scale: { duration: 0.22, ease: [0.2, 0.8, 0.2, 1] },
-                rotateY: { duration: 0.22, ease: [0.2, 0.8, 0.2, 1] },
-                opacity: { duration: 0.18 },
-                filter: { duration: 0.18 }
+                x: { type: "spring", stiffness: 550, damping: 32, mass: 0.4 },
+                y: { type: "spring", stiffness: 550, damping: 32, mass: 0.4 },
+                scale: { duration: 0.18, ease: [0.2, 0.8, 0.2, 1] },
+                rotateY: { duration: 0.18, ease: [0.2, 0.8, 0.2, 1] },
+                opacity: { duration: 0.15 },
+                filter: { duration: 0.15 }
               }}
               drag={isActive ? 'x' : false}
               dragConstraints={{ left: 0, right: 0 }}
