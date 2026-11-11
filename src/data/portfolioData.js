@@ -831,7 +831,7 @@ export const visualDesignProjects = [
 export const visualJournalProjects = [
   {
     id: "sketches",
-    title: "Sketches",
+    title: "Visual Journal 2026",
     tagline: "Observational Drawings, Anatomy & Character Studies",
     category: "Visual Journal",
     duration: "Archive",
@@ -872,52 +872,6 @@ export const visualJournalProjects = [
         { url: "/assets/sketch_study_detective_pipe.jpg", caption: "Detective Character Study — Micron Ink & Cross-hatching" },
         { url: "/assets/sketch_study_bearded_elders.jpg", caption: "Elderly Portraits & Facial Anatomy Studies" },
         { url: "/assets/sketch_study_elephant_kraft.jpg", caption: "Wildlife & Creature Gesture Study on Kraft Paper" }
-      ]
-    }
-  },
-  {
-    id: "photography",
-    title: "Photography",
-    tagline: "Visual Ethnography, Rural Light & Fleeting Moments",
-    category: "Visual Journal",
-    duration: "Ongoing",
-    summary: "Visual ethnography and street photography across rural Maharashtra and diverse Indian landscapes, focusing on natural light, fleeting human interactions, and architectural textures.",
-    behanceLink: "https://www.behance.net/gallery/256689743/Visual-Journal",
-    coverImage: "/assets/photo_ancient_stone_temple.jpg",
-    accentColor: "#059669",
-    tags: ["Visual Journal", "Photography", "Visual Ethnography", "Light & Shadow", "Documentary"],
-    metrics: [
-      { label: "Genre", value: "Visual Ethnography" },
-      { label: "Subject", value: "People, Light & Heritage" },
-      { label: "Approach", value: "Candid & Contextual" }
-    ],
-    details: {
-      abstract: "Photography trains my eye for visual hierarchy, lighting contrast, and human context. Through visual ethnography in rural villages, vibrant markets, and quiet ancient temples, I document the unscripted moments that remind us why human-centered design matters.",
-      problemStatement: "In a fast-paced world, designers often overlook the quiet, subtle nuances of how people genuinely interact with their environments, tools, and community rituals.",
-      challenges: [
-        {
-          title: "Unobtrusive Documentation",
-          desc: "Earning trust in rural spaces to photograph authentic candid moments without disrupting natural rhythm."
-        },
-        {
-          title: "Natural Light Mastery",
-          desc: "Harnessing dawn, dusk, and harsh afternoon contrast to create evocative visual narratives."
-        }
-      ],
-      solutions: [
-        {
-          title: "1. Contextual Inquiry Framing",
-          desc: "Photographing artisans, farmers, and daily laborers within their full physical context and tools."
-        },
-        {
-          title: "2. Light, Form & Texture Exploration",
-          desc: "Framing ancient temple stone, monsoon water surfaces, and village pathways with cinematic visual pacing."
-        }
-      ],
-      gallery: [
-        { url: "/assets/photo_ancient_stone_temple.jpg", caption: "Ancient Stone Temple — Light, Shadow & Sacred Geometry" },
-        { url: "/assets/photo_lake_fishermen_boat.jpg", caption: "Dawn on the Water — Fishermen in Fog" },
-        { url: "/assets/photo_sunset_cyclist_road.jpg", caption: "Golden Hour Rural Horizon — Cyclist at Dusk" }
       ]
     }
   }
