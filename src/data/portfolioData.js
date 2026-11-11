@@ -765,9 +765,9 @@ export const productDesignProjects = [
 export const visualDesignProjects = [
   {
     id: "adyam-branding",
-    title: "Adyam",
+    title: "Branding Projects",
     tagline: "Maharashtrian Dairy Brand Identity, Packaging & Mascot System",
-    category: "Visual Design",
+    category: "Branding Projects",
     duration: "1 month",
     summary: "Maharashtrian dairy brand developed under Swapnapurti Food Pvt. Ltd. (Gadchandur), reviving traditional fresh-food values through the 'Old is Gold' philosophy, bespoke mascot design, packaging architecture, and digital delivery systems.",
     behanceLink: "https://www.behance.net/gallery/253428839/Adyam-Branding-Visual-Identity",
@@ -885,9 +885,9 @@ export const projectGroups = [
     projects: productDesignProjects
   },
   {
-    id: "visual-design",
-    title: "Visual Design",
-    subtitle: "Regional brand identity, mascot systems & editorial publications",
+    id: "branding-projects",
+    title: "Branding Projects",
+    subtitle: "Regional brand identity, packaging architecture & mascot systems",
     projects: visualDesignProjects
   },
   {
