@@ -556,54 +556,46 @@ export const craftGallery = [
 
 export const productDesignProjects = [
   {
-    id: "cp-rehab-platform",
-    title: "CP Rehabilitation Monitoring Platform",
-    tagline: "UX/UI & Visual Design • Pediatric Healthcare Telemetry",
+    id: "vidarbh-lokdarpan",
+    title: "Vidarbh Lokdarpan",
+    tagline: "Regional Publication & Visual Cultural Documentation",
     category: "Product Design",
-    duration: "Ongoing",
-    summary: "Designing a multi-user digital platform for Cerebral Palsy rehabilitation to track AFO usage, movement and adherence, while developing accessible UX/UI, visual identity, and communication systems to improve collaboration between families and healthcare professionals.",
-    behanceLink: "https://www.behance.net/gallery/255106477/CP-Rehabilitation-Monitoring-Platform",
-    coverImage: "/assets/cp_rehab_cover.png",
-    accentColor: "#0284C7",
-    tags: ["Product Design", "Visual Design", "Accessibility", "Healthcare Tech", "AFO Tracking"],
+    duration: "Publication",
+    summary: "Documented cultural narratives, community milestones, and grassroots leadership through regional print editorial design and visual storytelling in Vidarbha, Maharashtra.",
+    behanceLink: "https://www.behance.net/gallery/258382769/Regional-Journalism-for-a-Digital-First-Future",
+    coverImage: "/assets/vidarbh_lokdarpan_cover.jpg",
+    accentColor: "#DC2626",
+    tags: ["Product Design", "Publication", "Editorial Design", "Visual Storytelling", "Cultural Heritage"],
     metrics: [
-      { label: "Status", value: "Ongoing" },
-      { label: "Focus", value: "Pediatric CP Rehab" },
-      { label: "Ecosystem", value: "Families & Clinicians" }
+      { label: "Medium", value: "Print & Editorial" },
+      { label: "Region", value: "Vidarbha, MH" },
+      { label: "Focus", value: "Community Stories" }
     ],
     details: {
-      abstract: "CP Rehabilitation Monitoring Platform is a multi-user digital health ecosystem designed for Cerebral Palsy rehabilitation. It tracks Ankle-Foot Orthosis (AFO) usage, physical movement, and therapy adherence while establishing an inclusive UX/UI, visual identity, and communication system to bridge the gap between families, caregivers, and multidisciplinary healthcare teams.",
-      problemStatement: "Children with Cerebral Palsy rely on Ankle-Foot Orthoses (AFOs) for gait correction and mobility, but adherence tracking is predominantly reliant on subjective recall. Families experience wear-schedule fatigue and lack clarity on progress, while clinicians have minimal visibility into real-world adherence between quarterly consultations.",
+      abstract: "Vidarbh Lokdarpan is an editorial publication and visual documentation initiative rooted in the cultural landscape of Vidarbha, Maharashtra. It captures local governance, grassroots artistic milestones, and community stories through authentic Marathi typography, layout architecture, and visual ethnography.",
+      problemStatement: "Regional news and cultural reporting often suffer from fragmented typographic hierarchies and visual clutter, diminishing the dignity of community achievements and grassroots narratives.",
       challenges: [
         {
-          title: "Wear-Time Compliance & Fatigue",
-          desc: "Sustaining daily recommended AFO wear hours is difficult for children and stressful for parents without motivating milestone tracking."
+          title: "Editorial Hierarchy & Marathi Typography",
+          desc: "Balancing dense bilingual headlines with authentic Devanagari editorial pacing and clarity."
         },
         {
-          title: "Fragmented Clinical Feedback Loop",
-          desc: "Clinicians, physiotherapists, and orthotists operate in silos without shared daily movement metrics or longitudinal adherence trends."
-        },
-        {
-          title: "Accessible Triad Interface",
-          desc: "The platform must accommodate disparate user personas: intuitive, low-stress tracking for busy caregivers alongside deep clinical data telemetry for specialists."
+          title: "Grassroots Photojournalism",
+          desc: "Highlighting regional personalities, artists, and community leaders with authentic documentary imagery."
         }
       ],
       solutions: [
         {
-          title: "1. Real-Time AFO Adherence Dashboard",
-          desc: "Automates wear-time tracking with clear daily progress rings, gait session logs, and active movement milestones."
+          title: "1. Clean Editorial Grid System",
+          desc: "Structured multi-column newsprint layout optimized for rapid readability across regional demographics."
         },
         {
-          title: "2. Triad Collaboration & Note Sharing",
-          desc: "Enables shared therapy logs, routine exercise videos, and direct asynchronous communication between parents and clinical specialists."
-        },
-        {
-          title: "3. Accessible & Compassionate Visual Identity",
-          desc: "Employs calm, high-contrast healthcare visual language, pediatric-friendly motivational badges, and stress-free notification systems."
+          title: "2. Cultural Storytelling Feature",
+          desc: "Special feature spreads honoring local creators, educators, and social contributors."
         }
       ],
       gallery: [
-        { url: "/assets/cp_rehab_cover.png", caption: "CP Rehabilitation Monitoring Platform — Pediatric UX/UI Dashboard & Mobile App" }
+        { url: "/assets/craft_frame130_16_50a9129d.webp", caption: "Vidarbh Lokdarpan — Editorial Feature & Community Felicitation" }
       ]
     }
   },
@@ -713,50 +705,6 @@ export const productDesignProjects = [
       gallery: [
         { url: "/assets/sway_cover.jpg", caption: "SWAY — Different Rhythm. One Home: Onboarding & Shared Home Board" },
         { url: "/assets/sway_screens.jpg", caption: "End-to-End User Flows — Chores, Expense Telemetry, Group Chat & AI Assistant" }
-      ]
-    }
-  },
-  {
-    id: "vidarbh-lokdarpan",
-    title: "Vidarbh Lokdarpan",
-    tagline: "Regional Publication & Visual Cultural Documentation",
-    category: "Product Design",
-    duration: "Publication",
-    summary: "Documented cultural narratives, community milestones, and grassroots leadership through regional print editorial design and visual storytelling in Vidarbha, Maharashtra.",
-    behanceLink: "https://www.behance.net/gallery/258382769/Regional-Journalism-for-a-Digital-First-Future",
-    coverImage: "/assets/vidarbh_lokdarpan_cover.jpg",
-    accentColor: "#DC2626",
-    tags: ["Product Design", "Publication", "Editorial Design", "Visual Storytelling", "Cultural Heritage"],
-    metrics: [
-      { label: "Medium", value: "Print & Editorial" },
-      { label: "Region", value: "Vidarbha, MH" },
-      { label: "Focus", value: "Community Stories" }
-    ],
-    details: {
-      abstract: "Vidarbh Lokdarpan is an editorial publication and visual documentation initiative rooted in the cultural landscape of Vidarbha, Maharashtra. It captures local governance, grassroots artistic milestones, and community stories through authentic Marathi typography, layout architecture, and visual ethnography.",
-      problemStatement: "Regional news and cultural reporting often suffer from fragmented typographic hierarchies and visual clutter, diminishing the dignity of community achievements and grassroots narratives.",
-      challenges: [
-        {
-          title: "Editorial Hierarchy & Marathi Typography",
-          desc: "Balancing dense bilingual headlines with authentic Devanagari editorial pacing and clarity."
-        },
-        {
-          title: "Grassroots Photojournalism",
-          desc: "Highlighting regional personalities, artists, and community leaders with authentic documentary imagery."
-        }
-      ],
-      solutions: [
-        {
-          title: "1. Clean Editorial Grid System",
-          desc: "Structured multi-column newsprint layout optimized for rapid readability across regional demographics."
-        },
-        {
-          title: "2. Cultural Storytelling Feature",
-          desc: "Special feature spreads honoring local creators, educators, and social contributors."
-        }
-      ],
-      gallery: [
-        { url: "/assets/craft_frame130_16_50a9129d.webp", caption: "Vidarbh Lokdarpan — Editorial Feature & Community Felicitation" }
       ]
     }
   }
