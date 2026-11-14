@@ -558,44 +558,44 @@ export const productDesignProjects = [
   {
     id: "vidarbh-lokdarpan",
     title: "Vidarbh Lokdarpan",
-    tagline: "Regional Publication & Visual Cultural Documentation",
+    tagline: "Regional Journalism for a Digital-First Future • News Media Portal",
     category: "Product Design",
-    duration: "Publication",
-    summary: "Documented cultural narratives, community milestones, and grassroots leadership through regional print editorial design and visual storytelling in Vidarbha, Maharashtra.",
+    duration: "News Media Portal",
+    summary: "Reels-first news media portal for Vidarbha: mobile app, responsive website, and tablet designed as one unified digital product system.",
     behanceLink: "https://www.behance.net/gallery/258382769/Regional-Journalism-for-a-Digital-First-Future",
     coverImage: "/assets/vidarbh_lokdarpan_cover.jpg",
     accentColor: "#DC2626",
-    tags: ["Product Design", "Publication", "Editorial Design", "Visual Storytelling", "Cultural Heritage"],
+    tags: ["Product Design", "News Media Portal", "UX/UI Design", "Visual Storytelling", "Digital News"],
     metrics: [
-      { label: "Medium", value: "Print & Editorial" },
-      { label: "Region", value: "Vidarbha, MH" },
-      { label: "Focus", value: "Community Stories" }
+      { label: "Platform", value: "News Media Portal" },
+      { label: "Ecosystem", value: "App, Web & Tablet" },
+      { label: "Focus", value: "Regional Journalism" }
     ],
     details: {
-      abstract: "Vidarbh Lokdarpan is an editorial publication and visual documentation initiative rooted in the cultural landscape of Vidarbha, Maharashtra. It captures local governance, grassroots artistic milestones, and community stories through authentic Marathi typography, layout architecture, and visual ethnography.",
-      problemStatement: "Regional news and cultural reporting often suffer from fragmented typographic hierarchies and visual clutter, diminishing the dignity of community achievements and grassroots narratives.",
+      abstract: "Vidarbh Lokdarpan is a digital-first news media portal designed for Vidarbha, Maharashtra. Built around a reels-first content architecture, it seamlessly connects a mobile app, responsive website, and tablet experience into one unified digital news ecosystem with authentic Marathi typography and storytelling.",
+      problemStatement: "Regional news consumption has shifted to short-form video and mobile interfaces, yet traditional news platforms remain cluttered, slow, and fragmented across disparate screen sizes.",
       challenges: [
         {
-          title: "Editorial Hierarchy & Marathi Typography",
-          desc: "Balancing dense bilingual headlines with authentic Devanagari editorial pacing and clarity."
+          title: "Multi-Screen Design Consistency",
+          desc: "Designing a cohesive experience across mobile app, responsive desktop website, and tablet layouts with synchronized user states."
         },
         {
-          title: "Grassroots Photojournalism",
-          desc: "Highlighting regional personalities, artists, and community leaders with authentic documentary imagery."
+          title: "Reels-First Visual Architecture",
+          desc: "Integrating vertical short-form video news feeds alongside long-form investigative journalism and Devanagari typography."
         }
       ],
       solutions: [
         {
-          title: "1. Clean Editorial Grid System",
-          desc: "Structured multi-column newsprint layout optimized for rapid readability across regional demographics."
+          title: "1. One Experience, Every Screen",
+          desc: "Harmonized typography, layout hierarchy, and navigation patterns tailored to mobile app (375px), tablet (834px), and desktop (1440px)."
         },
         {
-          title: "2. Cultural Storytelling Feature",
-          desc: "Special feature spreads honoring local creators, educators, and social contributors."
+          title: "2. Reels-First Regional Feed",
+          desc: "Engaging short-form video format tailored for hyper-local reporting, breaking updates, and community-centric video stories."
         }
       ],
       gallery: [
-        { url: "/assets/craft_frame130_16_50a9129d.webp", caption: "Vidarbh Lokdarpan — Editorial Feature & Community Felicitation" }
+        { url: "/assets/vidarbh_lokdarpan_cover.jpg", caption: "Vidarbh Lokdarpan — Reels-First News Media Portal across App, Web & Tablet" }
       ]
     }
   },
