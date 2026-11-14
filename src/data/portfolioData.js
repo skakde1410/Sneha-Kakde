@@ -773,21 +773,18 @@ export const visualDesignProjects = [
         { url: "/assets/adyam_alchemist_bonus.jpg", caption: "Featured Publication Design — 'The Alchemist' Book Cover Redesign Showcase" }
       ]
     }
-  }
-];
-
-export const visualJournalProjects = [
+  },
   {
     id: "sketches",
     title: "Visual Journal 2026",
     tagline: "Observational Drawings, Anatomy & Character Studies",
-    category: "Visual Journal",
+    category: "Visual Design & Branding",
     duration: "Archive",
     summary: "A curated visual archive exploring live anatomical studies, rapid ideation sketches, character drawings, and ink gestures capturing raw human expression.",
     behanceLink: "https://www.behance.net/gallery/256689743/Visual-Journal",
     coverImage: "/assets/sketch_study_detective_pipe.jpg",
     accentColor: "#E6004C",
-    tags: ["Visual Journal", "Observational Drawing", "Anatomy", "Character Art", "Ink Studies"],
+    tags: ["Visual Design", "Observational Drawing", "Anatomy", "Character Art", "Ink Studies"],
     metrics: [
       { label: "Medium", value: "Ink & Graphite" },
       { label: "Focus", value: "Anatomy & Emotion" },
@@ -825,6 +822,8 @@ export const visualJournalProjects = [
   }
 ];
 
+export const visualJournalProjects = [visualDesignProjects[1]];
+
 export const projectGroups = [
   {
     id: "product-design",
@@ -835,18 +834,12 @@ export const projectGroups = [
   {
     id: "visual-design-branding",
     title: "Visual Design & Branding",
-    subtitle: "Regional brand identity, packaging architecture & mascot systems",
+    subtitle: "Regional brand identity, packaging architecture & visual journals",
     projects: visualDesignProjects
-  },
-  {
-    id: "visual-journal",
-    title: "Visual Journal",
-    subtitle: "Observational drawing, anatomy studies & ethnographic photography",
-    projects: visualJournalProjects
   }
 ];
 
-export const visualJournalProject = visualJournalProjects[0];
+export const visualJournalProject = visualDesignProjects[1];
 export const rawProjects = visualJournalProjects;
 
 export const tritvaProject = {
@@ -905,8 +898,7 @@ export const tritvaProject = {
 
 export const featuredProjects = [
   ...productDesignProjects,
-  ...visualDesignProjects,
-  ...visualJournalProjects
+  ...visualDesignProjects
 ];
 
 export const archiveCategories = [
