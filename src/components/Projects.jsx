@@ -126,7 +126,7 @@ export default function Projects() {
     : null;
 
   return (
-    <section id="work" className="py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#F6F6F3] bg-graph-grid relative scroll-mt-20">
+    <section id="work" className="py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#F6F6F3] bg-dot-grid relative scroll-mt-20">
       <div className="max-w-[1360px] mx-auto">
         
         {/* Hero Section Header: Title */}
