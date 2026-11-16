@@ -1009,13 +1009,12 @@ export const archiveCategories = [
 
 export const figmaProjectsData = {
   chips: [
-    { id: 'all', label: 'All', count: 15 },
+    { id: 'all', label: 'All', count: 13 },
     { id: 'hybrid-product-design', label: 'Hybrid product design', count: 8, dotColor: '#A9DCF2', markerColor: 'rgba(169, 220, 242, 0.65)', tapeColor: 'rgba(169, 220, 242, 0.85)' },
     { id: 'motion-animation', label: 'Motion & animation', count: 1, dotColor: '#F7C9A6', markerColor: 'rgba(247, 201, 166, 0.65)', tapeColor: 'rgba(247, 201, 166, 0.85)' },
     { id: 'visual-design-illustration', label: 'Visual design & illustration', count: 2, dotColor: '#F3B7C9', markerColor: 'rgba(243, 183, 201, 0.65)', tapeColor: 'rgba(243, 183, 201, 0.85)' },
     { id: 'visual-journal', label: 'Visual journal', count: 1, dotColor: '#C9E7B4', markerColor: 'rgba(201, 231, 180, 0.65)', tapeColor: 'rgba(201, 231, 180, 0.85)' },
-    { id: '3d-modelling', label: '3D modelling', count: 1, dotColor: '#D6C8F5', markerColor: 'rgba(214, 200, 245, 0.65)', tapeColor: 'rgba(214, 200, 245, 0.85)' },
-    { id: 'raw', label: 'Raw', count: 2, dotColor: '#F2E29A', markerColor: 'rgba(242, 226, 154, 0.65)', tapeColor: 'rgba(242, 226, 154, 0.85)' }
+    { id: '3d-modelling', label: '3D modelling', count: 1, dotColor: '#D6C8F5', markerColor: 'rgba(214, 200, 245, 0.65)', tapeColor: 'rgba(214, 200, 245, 0.85)' }
   ],
   sections: [
     {
@@ -1144,31 +1143,6 @@ export const figmaProjectsData = {
           ],
           behanceLink: 'https://www.behance.net/gallery/256689743/Visual-Journal',
           tapeRotation: 1.2
-        }
-      ]
-    },
-    {
-      id: 'raw',
-      title: 'Raw',
-      subtitle: null,
-      markerColor: 'rgba(242, 226, 154, 0.65)',
-      tapeColor: 'rgba(242, 226, 154, 0.85)',
-      projects: [
-        {
-          id: 'ui-practice',
-          title: 'UI Design Practice',
-          caption: 'bootcamp drills, unfiltered',
-          image: '/assets/craft_frame130_09_64ff3721.webp',
-          behanceLink: 'https://www.behance.net/kakdesneha',
-          tapeRotation: -1.1
-        },
-        {
-          id: 'portfolio-2025',
-          title: 'Portfolio 2025',
-          caption: 'the 2025 book, start to end',
-          image: '/assets/craft_sketch_book.webp',
-          behanceLink: 'https://www.behance.net/kakdesneha',
-          tapeRotation: 1.4
         }
       ]
     }

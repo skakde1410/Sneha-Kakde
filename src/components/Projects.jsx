@@ -100,7 +100,6 @@ export default function Projects() {
   const motionSection = sections.find((s) => s.id === 'motion-animation');
   const modellingSection = sections.find((s) => s.id === '3d-modelling');
   const visualJournalSection = sections.find((s) => s.id === 'visual-journal');
-  const rawSection = sections.find((s) => s.id === 'raw');
 
   // Filtered single section when not 'all'
   const currentFilteredSection = activeFilter !== 'all'
@@ -273,23 +272,6 @@ export default function Projects() {
                   </div>
                 )}
               </div>
-
-              {/* 4. Raw Section - Bootcamp Project & Portfolio 2025 directly beside each other */}
-              {rawSection && (
-                <div className="space-y-6 sm:space-y-8">
-                  <SectionHead section={rawSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
-                  <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
-                    {rawSection.projects.map((project, idx) => (
-                      <PolaroidCard
-                        key={project.id}
-                        project={project}
-                        section={rawSection}
-                        index={idx}
-                      />
-                    ))}
-                  </div>
-                </div>
-              )}
             </motion.div>
           )}
         </AnimatePresence>
