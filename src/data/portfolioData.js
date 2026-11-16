@@ -6,7 +6,7 @@ export const personalInfo = {
   heroBio: "I’m curious about people, their stories, and the many ways we see the world. I connect, listen, question, and explore - turning human insights into meaningful ideas and using visual design and storytelling to bring them to life.",
   extendedBio: [
     "I believe ideas can be anything. They can take any form, cross disciplines and evolve into something unexpected. For me, creativity is not about fitting into one category; it's about exploring possibilities.",
-    "With a background in Applied Art and an interest in the intersection of art, design and technology, my practice moves across visual communication, digital experiences, research, animation, motion and 3D exploration.",
+    "With a background in Communication Design and an interest in the intersection of art, design and technology, my practice moves across visual communication, digital experiences, research, animation, motion and 3D exploration.",
     "I'm driven by passion and inspired by the world around me. I love observing, questioning, experimenting and turning thoughts into tangible expressions.",
     "Ideas can be anything. So can I.",
     "A little bit of everything, a lot of passion."
