@@ -55,7 +55,7 @@ function PolaroidCard({ project, section, index }) {
         )}
 
         {/* Handwritten Caption in Caveat Bold */}
-        <p className="font-caveat font-bold text-[25px] sm:text-[27px] leading-[1.15] text-[#1B1A17] pt-2 px-0.5 truncate group-hover:text-black" title={project.caption}>
+        <p className="font-caveat font-bold text-[23px] sm:text-[25px] leading-[1.15] text-[#1B1A17] pt-2 px-0.5 truncate group-hover:text-black" title={project.caption}>
           {project.caption}
         </p>
 
@@ -237,10 +237,11 @@ export default function Projects() {
               </div>
 
               {/* 3. 3D Modelling (1 card) + Visual Journal (1 card) + Raw (2 cards) - Balanced full row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-10 lg:gap-8 xl:gap-10 items-start">
+              {/* 3. 3D Modelling (1 card) + Visual Journal (1 card) - Natural paired row */}
+              <div className="flex flex-wrap gap-10 lg:gap-14 items-start">
                 {/* 3D Modelling - 1 card */}
                 {modellingSection && (
-                  <div className="xl:col-span-3 space-y-6 sm:space-y-8">
+                  <div className="space-y-6 sm:space-y-8">
                     <SectionHead section={modellingSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
                     <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
                       {modellingSection.projects.map((project, idx) => (
@@ -257,7 +258,7 @@ export default function Projects() {
 
                 {/* Visual Journal - 1 diptych card */}
                 {visualJournalSection && (
-                  <div className="xl:col-span-3 space-y-6 sm:space-y-8">
+                  <div className="space-y-6 sm:space-y-8">
                     <SectionHead section={visualJournalSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
                     <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
                       {visualJournalSection.projects.map((project, idx) => (
@@ -271,24 +272,24 @@ export default function Projects() {
                     </div>
                   </div>
                 )}
-
-                {/* Raw - 2 cards */}
-                {rawSection && (
-                  <div className="md:col-span-2 xl:col-span-6 space-y-6 sm:space-y-8">
-                    <SectionHead section={rawSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
-                    <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
-                      {rawSection.projects.map((project, idx) => (
-                        <PolaroidCard
-                          key={project.id}
-                          project={project}
-                          section={rawSection}
-                          index={idx}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
+
+              {/* 4. Raw Section - Bootcamp Project & Portfolio 2025 directly beside each other */}
+              {rawSection && (
+                <div className="space-y-6 sm:space-y-8">
+                  <SectionHead section={rawSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
+                  <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                    {rawSection.projects.map((project, idx) => (
+                      <PolaroidCard
+                        key={project.id}
+                        project={project}
+                        section={rawSection}
+                        index={idx}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
