@@ -1055,7 +1055,7 @@ export const figmaProjectsData = {
           id: 'kyoorius',
           title: 'Kyoorius Young Blood Awards 2023-24',
           caption: 'Lotus Embrace - product concept',
-          image: '/assets/lotus_embrace_cover.jpg',
+          image: '/assets/figma_kyoorius.png',
           behanceLink: 'https://www.behance.net/gallery/198237481/KYOORIUS-YOUNG-BLOOD-AWARDS-2023-2024',
           cardRotation: -1.6,
           tapeRotation: 1.2
@@ -1091,7 +1091,7 @@ export const figmaProjectsData = {
           id: 'photoshop-campaign',
           title: 'Main Campaign Brand : Adobe Photoshop',
           caption: 'whole worlds in Photoshop',
-          image: '/assets/archive_storybook_1.webp',
+          image: '/assets/figma_photoshop_campaign.png',
           behanceLink: 'https://www.behance.net/kakdesneha',
           cardRotation: -1.4,
           tapeRotation: -1.0
@@ -1127,7 +1127,7 @@ export const figmaProjectsData = {
           id: '3d-character',
           title: '3d Character Design',
           caption: 'a character, sculpted in 3D',
-          image: '/assets/zoro_cover.jpg',
+          image: '/assets/figma_3d_character.png',
           behanceLink: 'https://www.behance.net/gallery/197936143/3d-Character-Design',
           cardRotation: -1.3,
           tapeRotation: -1.5
@@ -1147,8 +1147,8 @@ export const figmaProjectsData = {
           caption: 'ink & postercolour, always',
           isDiptych: true,
           images: [
-            '/assets/sketch_study_detective_pipe.jpg',
-            '/assets/figma_watercolour.jpg'
+            '/assets/figma_journal_a.png',
+            '/assets/figma_journal_b.png'
           ],
           behanceLink: 'https://www.behance.net/gallery/256689743/Visual-Journal',
           cardRotation: 1.4,
