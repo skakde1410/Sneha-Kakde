@@ -254,14 +254,14 @@ export default function About({ onSelectCraft }) {
 
       <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
         
-        {/* Section Heading (Matching Figma "A little about me") */}
+        {/* Section Heading */}
         <div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-brand-dark tracking-tight">
-            A little about me
+            About Me
           </h2>
         </div>
 
-        {/* Top Split: Photo & Personal Narrative (Matching Figma frame 12:333) */}
+        {/* Top Split: Photo & Personal Narrative */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-start">
           
           {/* Sneha's Portrait */}
@@ -284,7 +284,7 @@ export default function About({ onSelectCraft }) {
             </div>
           </motion.div>
 
-          {/* Narrative Bio (Exact Figma Text) */}
+          {/* Narrative Bio */}
           <motion.div 
             initial={{ opacity: 0, x: 25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -292,21 +292,30 @@ export default function About({ onSelectCraft }) {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="lg:col-span-7 space-y-4 sm:space-y-5 text-left"
           >
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-brand-dark">
-              Hi, I’m <span className="text-brand-pink">Sneha</span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-brand-dark leading-snug">
+              I’m <span className="text-brand-pink">Sneha</span> — a multidisciplinary designer, visual artist and passionate creator.
             </h3>
 
-            <p className="text-sm sm:text-lg text-gray-900 leading-relaxed font-bold">
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
               {personalInfo.extendedBio[0]}
             </p>
 
-            <p className="text-xs sm:text-base text-gray-700 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
               {personalInfo.extendedBio[1]}
             </p>
 
-            <p className="text-xs sm:text-base text-gray-700 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-normal">
               {personalInfo.extendedBio[2]}
             </p>
+
+            <div className="pt-2 space-y-1">
+              <p className="text-sm sm:text-base font-bold text-brand-dark tracking-tight">
+                {personalInfo.extendedBio[3]}
+              </p>
+              <p className="text-sm sm:text-base font-semibold text-brand-pink tracking-wide">
+                {personalInfo.extendedBio[4]}
+              </p>
+            </div>
           </motion.div>
 
         </div>

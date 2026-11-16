@@ -5,9 +5,11 @@ export const personalInfo = {
   institution: "IIT Guwahati",
   heroBio: "I’m curious about people, their stories, and the many ways we see the world. I connect, listen, question, and explore - turning human insights into meaningful ideas and using visual design and storytelling to bring them to life.",
   extendedBio: [
-    "A multidisciplinary designer crafting experiences across visual design, UX, storytelling, and creative exploration.",
-    "Beyond the screen, I explore, document, question, and immerse myself in the richness of human behavior. I'm captivated by the discipline, composure, resilience, leadership, and sense of duty embodied by pilots and officers in the Army, Navy, and Air Force — qualities that shape how I think about responsibility, teamwork, and decision-making.",
-    "I'm equally fascinated by the stories people carry — their beliefs, cultures, values, struggles, and lived experiences. I enjoy observing behaviors, uncovering motivations, interpreting contexts, and asking one question: Why do people do, what they do? This passion naturally draws me toward anthropology, visual ethnography, and contextual inquiry, where empathy begins with observation."
+    "I believe ideas can be anything. They can take any form, cross disciplines and evolve into something unexpected. For me, creativity is not about fitting into one category; it's about exploring possibilities.",
+    "With a background in Applied Art and an interest in the intersection of art, design and technology, my practice moves across visual communication, digital experiences, research, animation, motion and 3D exploration.",
+    "I'm driven by passion and inspired by the world around me. I love observing, questioning, experimenting and turning thoughts into tangible expressions.",
+    "Ideas can be anything. So can I.",
+    "A little bit of everything, a lot of passion."
   ],
   interestsPhilosophy: "Whether I’m designing an interface, writing poems or articles, sketching a character, photographing a moment, cooking a new recipe, or watching a film, I’m essentially doing the same thing: observing, experimenting, imagining, creating. I believe these seemingly unrelated interests make me a better designer. They teach me to notice details, understand emotions, explore possibilities, embrace imperfections, and stay curious.",
   quoteBadge: {
