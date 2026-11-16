@@ -4,6 +4,10 @@ import { figmaProjectsData } from '../data/portfolioData';
 import ImageWithSkeleton from './ImageWithSkeleton';
 
 function PolaroidCard({ project, section, index }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const cardRotation = project.cardRotation ?? (index % 2 === 0 ? -1.6 : 1.4);
+  const tapeRotation = project.tapeRotation ?? 0;
+
   return (
     <motion.div
       layout
@@ -11,24 +15,34 @@ function PolaroidCard({ project, section, index }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.35, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-      className="relative w-full max-w-[340px] sm:w-[332px] flex-shrink-0 pt-3"
+      className="relative w-full max-w-[340px] sm:w-[332px] flex-shrink-0 pt-4"
     >
-      {/* Washi Tape Strip with subtle angle & translucent look */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 z-20 w-[106px] h-[36px] pointer-events-none rounded-[1px] shadow-[0_1px_3px_rgba(0,0,0,0.12)] border-y border-white/40"
-        style={{
-          backgroundColor: section.tapeColor || 'rgba(169, 220, 242, 0.85)',
-          transform: `translateX(-50%) rotate(${project.tapeRotation || 0}deg)`,
-        }}
-      />
-
-      {/* Polaroid Card Link */}
+      {/* Polaroid Card Link with natural tilt & straighten on hover */}
       <a
         href={project.behanceLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="group block w-full bg-[#FFFEFB] p-3 pb-3.5 rounded-[2px] shadow-[2px_8px_18px_rgba(0,0,0,0.14)] hover:shadow-[2px_14px_28px_rgba(0,0,0,0.22)] hover:-translate-y-1.5 transition-all duration-300 ease-out no-underline cursor-pointer border border-[#EFEFEA]/80 text-inherit"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="group relative block w-full bg-[#FFFEFB] p-3 pb-3.5 rounded-[2px] border border-[#EFEFEA]/80 text-inherit no-underline cursor-pointer"
+        style={{
+          transform: isHovered ? 'rotate(0deg) translateY(-8px)' : `rotate(${cardRotation}deg)`,
+          boxShadow: isHovered
+            ? '2px 18px 36px 0px rgba(0, 0, 0, 0.22)'
+            : '2px 8px 18px 0px rgba(0, 0, 0, 0.14)',
+          transition: 'transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease',
+          zIndex: isHovered ? 30 : 1,
+        }}
       >
+        {/* Washi Tape Strip pinned to the top of the card */}
+        <div
+          className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 w-[106px] h-[36px] pointer-events-none rounded-[1px] shadow-[0_1px_3px_rgba(0,0,0,0.12)] border-y border-white/40"
+          style={{
+            backgroundColor: section.tapeColor || 'rgba(169, 220, 242, 0.85)',
+            transform: `translateX(-50%) rotate(${tapeRotation}deg)`,
+          }}
+        />
+
         {/* Photo container (Single Photo or Diptych) */}
         {project.isDiptych ? (
           <div className="flex gap-1.5 w-full h-[245px]">

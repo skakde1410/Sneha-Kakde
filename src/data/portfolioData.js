@@ -1030,7 +1030,8 @@ export const figmaProjectsData = {
           caption: 'fintech UX - in your language',
           image: '/assets/figma_paisa_path.png',
           behanceLink: 'https://www.behance.net/gallery/255106477/CP-Rehabilitation-Monitoring-Platform',
-          tapeRotation: -1.4
+          cardRotation: -1.8,
+          tapeRotation: -0.8
         },
         {
           id: 'vidarbha',
@@ -1038,7 +1039,8 @@ export const figmaProjectsData = {
           caption: 'news app - every screen',
           image: '/assets/figma_vidarbha.png',
           behanceLink: 'https://www.behance.net/gallery/258382769/Regional-Journalism-for-a-Digital-First-Future',
-          tapeRotation: 1.2
+          cardRotation: 1.5,
+          tapeRotation: 1.0
         },
         {
           id: 'lattice-lantern',
@@ -1046,7 +1048,8 @@ export const figmaProjectsData = {
           caption: '3D product · Lattice lantern',
           image: '/assets/figma_lattice_lantern.png',
           behanceLink: 'https://www.behance.net/gallery/247294495/Lattice-Octa-Lantern',
-          tapeRotation: -0.9
+          cardRotation: -1.2,
+          tapeRotation: -1.4
         },
         {
           id: 'kyoorius',
@@ -1054,7 +1057,8 @@ export const figmaProjectsData = {
           caption: 'Lotus Embrace - product concept',
           image: '/assets/lotus_embrace_cover.jpg',
           behanceLink: 'https://www.behance.net/kakdesneha',
-          tapeRotation: 1.5
+          cardRotation: -1.6,
+          tapeRotation: 1.2
         },
         {
           id: 'sway',
@@ -1062,7 +1066,8 @@ export const figmaProjectsData = {
           caption: 'SWAY - app branding & UI',
           image: '/assets/figma_sway.png',
           behanceLink: 'https://www.behance.net/gallery/257406273/SWAY-Different-Rhythm-One-Home',
-          tapeRotation: -1.2
+          cardRotation: 1.5,
+          tapeRotation: -0.9
         }
       ]
     },
@@ -1079,7 +1084,8 @@ export const figmaProjectsData = {
           caption: 'brand + mascot illustration',
           image: '/assets/figma_branding_adyam.png',
           behanceLink: 'https://www.behance.net/gallery/253428839/Adyam-Branding-Visual-Identity',
-          tapeRotation: 1.1
+          cardRotation: 1.3,
+          tapeRotation: 0.8
         },
         {
           id: 'photoshop-campaign',
@@ -1087,6 +1093,7 @@ export const figmaProjectsData = {
           caption: 'whole worlds in Photoshop',
           image: '/assets/archive_storybook_1.webp',
           behanceLink: 'https://www.behance.net/kakdesneha',
+          cardRotation: -1.4,
           tapeRotation: -1.0
         }
       ]
@@ -1104,7 +1111,8 @@ export const figmaProjectsData = {
           caption: 'a phone, introduced in motion',
           image: '/assets/illustration_movies.jpg',
           behanceLink: 'https://www.behance.net/kakdesneha',
-          tapeRotation: 0.8
+          cardRotation: 1.5,
+          tapeRotation: 1.1
         }
       ]
     },
@@ -1121,7 +1129,8 @@ export const figmaProjectsData = {
           caption: 'a character, sculpted in 3D',
           image: '/assets/zoro_cover.jpg',
           behanceLink: 'https://www.behance.net/kakdesneha',
-          tapeRotation: -1.3
+          cardRotation: -1.3,
+          tapeRotation: -1.5
         }
       ]
     },
@@ -1142,7 +1151,8 @@ export const figmaProjectsData = {
             '/assets/figma_watercolour.jpg'
           ],
           behanceLink: 'https://www.behance.net/gallery/256689743/Visual-Journal',
-          tapeRotation: 1.2
+          cardRotation: 1.4,
+          tapeRotation: 0.9
         }
       ]
     }
