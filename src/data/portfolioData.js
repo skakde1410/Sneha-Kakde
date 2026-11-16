@@ -1112,7 +1112,7 @@ export const figmaProjectsData = {
     {
       id: '3d-modelling',
       title: '3D modelling',
-      subtitle: 'Characters built in three dimensions · 1 project',
+      subtitle: null,
       markerColor: 'rgba(214, 200, 245, 0.65)',
       tapeColor: 'rgba(214, 200, 245, 0.85)',
       projects: [
@@ -1150,7 +1150,7 @@ export const figmaProjectsData = {
     {
       id: 'raw',
       title: 'Raw',
-      subtitle: 'Practice, process and the unpolished bits · 2 projects',
+      subtitle: null,
       markerColor: 'rgba(242, 226, 154, 0.65)',
       tapeColor: 'rgba(242, 226, 154, 0.85)',
       projects: [

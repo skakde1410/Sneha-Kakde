@@ -75,7 +75,7 @@ function PolaroidCard({ project, section, index }) {
 
 function SectionHead({ section, className = '' }) {
   return (
-    <div className={`flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 mb-8 sm:mb-10 ${className}`}>
+    <div className={`flex items-baseline mb-8 sm:mb-10 ${className}`}>
       <div className="relative inline-flex items-baseline w-fit">
         {/* Pastel highlighter marker bar strictly matching text width */}
         <span
@@ -86,11 +86,6 @@ function SectionHead({ section, className = '' }) {
           {section.title}
         </h3>
       </div>
-      {section.subtitle && (
-        <p className="font-archivo text-sm sm:text-[15px] text-[#5D5D58] font-normal sm:ml-2">
-          {section.subtitle}
-        </p>
-      )}
     </div>
   );
 }
@@ -241,12 +236,13 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* 3. 3D Modelling + Visual Journal (Side-by-side row on desktop) */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
+              {/* 3. 3D Modelling (1 card) + Visual Journal (1 card) + Raw (2 cards) - Balanced full row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-10 lg:gap-8 xl:gap-10 items-start">
+                {/* 3D Modelling - 1 card */}
                 {modellingSection && (
-                  <div className="lg:col-span-6 space-y-6 sm:space-y-8">
+                  <div className="xl:col-span-3 space-y-6 sm:space-y-8">
                     <SectionHead section={modellingSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
-                    <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                    <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
                       {modellingSection.projects.map((project, idx) => (
                         <PolaroidCard
                           key={project.id}
@@ -259,10 +255,11 @@ export default function Projects() {
                   </div>
                 )}
 
+                {/* Visual Journal - 1 diptych card */}
                 {visualJournalSection && (
-                  <div className="lg:col-span-6 space-y-6 sm:space-y-8">
+                  <div className="xl:col-span-3 space-y-6 sm:space-y-8">
                     <SectionHead section={visualJournalSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
-                    <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                    <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
                       {visualJournalSection.projects.map((project, idx) => (
                         <PolaroidCard
                           key={project.id}
@@ -274,24 +271,24 @@ export default function Projects() {
                     </div>
                   </div>
                 )}
-              </div>
 
-              {/* 4. Raw Section */}
-              {rawSection && (
-                <div className="space-y-6 sm:space-y-8">
-                  <SectionHead section={rawSection} />
-                  <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
-                    {rawSection.projects.map((project, idx) => (
-                      <PolaroidCard
-                        key={project.id}
-                        project={project}
-                        section={rawSection}
-                        index={idx}
-                      />
-                    ))}
+                {/* Raw - 2 cards */}
+                {rawSection && (
+                  <div className="md:col-span-2 xl:col-span-6 space-y-6 sm:space-y-8">
+                    <SectionHead section={rawSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
+                    <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
+                      {rawSection.projects.map((project, idx) => (
+                        <PolaroidCard
+                          key={project.id}
+                          project={project}
+                          section={rawSection}
+                          index={idx}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
