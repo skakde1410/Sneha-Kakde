@@ -1006,3 +1006,171 @@ export const archiveCategories = [
     tag: "Category 07"
   }
 ];
+
+export const figmaProjectsData = {
+  chips: [
+    { id: 'all', label: 'All', count: 15 },
+    { id: 'hybrid-product-design', label: 'Hybrid product design', count: 8, dotColor: '#A9DCF2', markerColor: 'rgba(169, 220, 242, 0.65)', tapeColor: 'rgba(169, 220, 242, 0.85)' },
+    { id: 'motion-animation', label: 'Motion & animation', count: 1, dotColor: '#F7C9A6', markerColor: 'rgba(247, 201, 166, 0.65)', tapeColor: 'rgba(247, 201, 166, 0.85)' },
+    { id: 'visual-design-illustration', label: 'Visual design & illustration', count: 2, dotColor: '#F3B7C9', markerColor: 'rgba(243, 183, 201, 0.65)', tapeColor: 'rgba(243, 183, 201, 0.85)' },
+    { id: 'visual-journal', label: 'Visual journal', count: 1, dotColor: '#C9E7B4', markerColor: 'rgba(201, 231, 180, 0.65)', tapeColor: 'rgba(201, 231, 180, 0.85)' },
+    { id: '3d-modelling', label: '3D modelling', count: 1, dotColor: '#D6C8F5', markerColor: 'rgba(214, 200, 245, 0.65)', tapeColor: 'rgba(214, 200, 245, 0.85)' },
+    { id: 'raw', label: 'Raw', count: 2, dotColor: '#F2E29A', markerColor: 'rgba(242, 226, 154, 0.65)', tapeColor: 'rgba(242, 226, 154, 0.85)' }
+  ],
+  sections: [
+    {
+      id: 'hybrid-product-design',
+      title: 'Hybrid product design',
+      subtitle: null,
+      markerColor: 'rgba(169, 220, 242, 0.65)',
+      tapeColor: 'rgba(169, 220, 242, 0.85)',
+      projects: [
+        {
+          id: 'paisa-path',
+          title: 'Your money companion, in your language',
+          caption: 'fintech UX - in your language',
+          image: '/assets/figma_paisa_path.png',
+          behanceLink: 'https://www.behance.net/gallery/255106477/CP-Rehabilitation-Monitoring-Platform',
+          tapeRotation: -1.4
+        },
+        {
+          id: 'vidarbha',
+          title: 'Regional Journalism for a Digital-First Future',
+          caption: 'news app - every screen',
+          image: '/assets/figma_vidarbha.png',
+          behanceLink: 'https://www.behance.net/gallery/258382769/Regional-Journalism-for-a-Digital-First-Future',
+          tapeRotation: 1.2
+        },
+        {
+          id: 'lattice-lantern',
+          title: 'Lattice Octa Lantern',
+          caption: '3D product · Lattice lantern',
+          image: '/assets/figma_lattice_lantern.png',
+          behanceLink: 'https://www.behance.net/gallery/247294495/Lattice-Octa-Lantern',
+          tapeRotation: -0.9
+        },
+        {
+          id: 'kyoorius',
+          title: 'Kyoorius Young Blood Awards 2023-24',
+          caption: 'Lotus Embrace - product concept',
+          image: '/assets/lotus_embrace_cover.jpg',
+          behanceLink: 'https://www.behance.net/kakdesneha',
+          tapeRotation: 1.5
+        },
+        {
+          id: 'sway',
+          title: 'SWAY - Different Rhythm. One Home.',
+          caption: 'SWAY - app branding & UI',
+          image: '/assets/figma_sway.png',
+          behanceLink: 'https://www.behance.net/gallery/257406273/SWAY-Different-Rhythm-One-Home',
+          tapeRotation: -1.2
+        }
+      ]
+    },
+    {
+      id: 'visual-design-illustration',
+      title: 'Visual design & illustration',
+      subtitle: null,
+      markerColor: 'rgba(243, 183, 201, 0.65)',
+      tapeColor: 'rgba(243, 183, 201, 0.85)',
+      projects: [
+        {
+          id: 'branding',
+          title: 'Branding & Visual Identity - 3 Projects',
+          caption: 'brand + mascot illustration',
+          image: '/assets/figma_branding_adyam.png',
+          behanceLink: 'https://www.behance.net/gallery/253428839/Adyam-Branding-Visual-Identity',
+          tapeRotation: 1.1
+        },
+        {
+          id: 'photoshop-campaign',
+          title: 'Main Campaign Brand : Adobe Photoshop',
+          caption: 'whole worlds in Photoshop',
+          image: '/assets/archive_storybook_1.webp',
+          behanceLink: 'https://www.behance.net/kakdesneha',
+          tapeRotation: -1.0
+        }
+      ]
+    },
+    {
+      id: 'motion-animation',
+      title: 'Motion & animation',
+      subtitle: null,
+      markerColor: 'rgba(247, 201, 166, 0.65)',
+      tapeColor: 'rgba(247, 201, 166, 0.85)',
+      projects: [
+        {
+          id: 'animation',
+          title: 'Animation',
+          caption: 'a phone, introduced in motion',
+          image: '/assets/illustration_movies.jpg',
+          behanceLink: 'https://www.behance.net/kakdesneha',
+          tapeRotation: 0.8
+        }
+      ]
+    },
+    {
+      id: '3d-modelling',
+      title: '3D modelling',
+      subtitle: 'Characters built in three dimensions · 1 project',
+      markerColor: 'rgba(214, 200, 245, 0.65)',
+      tapeColor: 'rgba(214, 200, 245, 0.85)',
+      projects: [
+        {
+          id: '3d-character',
+          title: '3d Character Design',
+          caption: 'a character, sculpted in 3D',
+          image: '/assets/zoro_cover.jpg',
+          behanceLink: 'https://www.behance.net/kakdesneha',
+          tapeRotation: -1.3
+        }
+      ]
+    },
+    {
+      id: 'visual-journal',
+      title: 'Visual journal',
+      subtitle: null,
+      markerColor: 'rgba(201, 231, 180, 0.65)',
+      tapeColor: 'rgba(201, 231, 180, 0.85)',
+      projects: [
+        {
+          id: 'visual-journal-diptych',
+          title: 'Visual Journal 2026-27 + Visual Exploration 2025',
+          caption: 'ink & postercolour, always',
+          isDiptych: true,
+          images: [
+            '/assets/sketch_study_detective_pipe.jpg',
+            '/assets/figma_watercolour.jpg'
+          ],
+          behanceLink: 'https://www.behance.net/gallery/256689743/Visual-Journal',
+          tapeRotation: 1.2
+        }
+      ]
+    },
+    {
+      id: 'raw',
+      title: 'Raw',
+      subtitle: 'Practice, process and the unpolished bits · 2 projects',
+      markerColor: 'rgba(242, 226, 154, 0.65)',
+      tapeColor: 'rgba(242, 226, 154, 0.85)',
+      projects: [
+        {
+          id: 'ui-practice',
+          title: 'UI Design Practice',
+          caption: 'bootcamp drills, unfiltered',
+          image: '/assets/craft_frame130_09_64ff3721.webp',
+          behanceLink: 'https://www.behance.net/kakdesneha',
+          tapeRotation: -1.1
+        },
+        {
+          id: 'portfolio-2025',
+          title: 'Portfolio 2025',
+          caption: 'the 2025 book, start to end',
+          image: '/assets/craft_sketch_book.webp',
+          behanceLink: 'https://www.behance.net/kakdesneha',
+          tapeRotation: 1.4
+        }
+      ]
+    }
+  ]
+};

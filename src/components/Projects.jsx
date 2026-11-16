@@ -1,134 +1,299 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { projectGroups, personalInfo } from '../data/portfolioData';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { figmaProjectsData } from '../data/portfolioData';
 import ImageWithSkeleton from './ImageWithSkeleton';
 
+function PolaroidCard({ project, section, index }) {
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.35, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
+      className="relative w-full max-w-[340px] sm:w-[332px] flex-shrink-0 pt-3"
+    >
+      {/* Washi Tape Strip with subtle angle & translucent look */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 z-20 w-[106px] h-[36px] pointer-events-none rounded-[1px] shadow-[0_1px_3px_rgba(0,0,0,0.12)] border-y border-white/40"
+        style={{
+          backgroundColor: section.tapeColor || 'rgba(169, 220, 242, 0.85)',
+          transform: `translateX(-50%) rotate(${project.tapeRotation || 0}deg)`,
+        }}
+      />
+
+      {/* Polaroid Card Link */}
+      <a
+        href={project.behanceLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group block w-full bg-[#FFFEFB] p-3 pb-3.5 rounded-[2px] shadow-[2px_8px_18px_rgba(0,0,0,0.14)] hover:shadow-[2px_14px_28px_rgba(0,0,0,0.22)] hover:-translate-y-1.5 transition-all duration-300 ease-out no-underline cursor-pointer border border-[#EFEFEA]/80 text-inherit"
+      >
+        {/* Photo container (Single Photo or Diptych) */}
+        {project.isDiptych ? (
+          <div className="flex gap-1.5 w-full h-[245px]">
+            {project.images.map((imgSrc, imgIdx) => (
+              <div key={imgIdx} className="relative flex-1 h-full bg-[#E9E9E4] rounded-[2px] overflow-hidden">
+                <ImageWithSkeleton
+                  src={imgSrc}
+                  alt={`${project.title} - view ${imgIdx + 1}`}
+                  containerClassName="w-full h-full"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="relative w-full h-[245px] bg-[#E9E9E4] rounded-[2px] overflow-hidden">
+            <ImageWithSkeleton
+              src={project.image}
+              alt={project.title}
+              containerClassName="w-full h-full"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+            />
+          </div>
+        )}
+
+        {/* Handwritten Caption in Caveat Bold */}
+        <p className="font-caveat font-bold text-[26px] sm:text-[27px] leading-[1.12] text-[#1B1A17] pt-2 px-0.5 line-clamp-1 group-hover:text-black">
+          {project.caption}
+        </p>
+
+        {/* Metadata Row: Project Title & Behance Link */}
+        <div className="flex items-center justify-between gap-2 pt-1 px-0.5 text-[13px] font-archivo">
+          <span className="text-[#333333] font-medium truncate flex-1" title={project.title}>
+            {project.title}
+          </span>
+          <span className="text-[#6A6A66] group-hover:text-[#141414] transition-colors font-normal flex-shrink-0 flex items-center gap-0.5">
+            Behance ↗
+          </span>
+        </div>
+      </a>
+    </motion.div>
+  );
+}
+
+function SectionHead({ section }) {
+  return (
+    <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 mb-8 sm:mb-10">
+      <div className="relative inline-block w-fit">
+        {/* Pastel highlighter marker bar behind title */}
+        <span
+          className="absolute bottom-1 left-0 right-0 h-4 sm:h-5 rounded-[3px] pointer-events-none -z-0 opacity-80"
+          style={{ backgroundColor: section.markerColor }}
+        />
+        <h3 className="relative z-10 font-caveat font-bold text-3xl sm:text-[42px] lg:text-[46px] text-[#141414] leading-tight px-1">
+          {section.title}
+        </h3>
+      </div>
+      {section.subtitle && (
+        <p className="font-archivo text-sm sm:text-[15px] text-[#5D5D58] font-normal">
+          {section.subtitle}
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default function Projects() {
-  // Category state - defaults to 'product-design' so image cards are immediately visible
-  const [activeCategory, setActiveCategory] = useState('product-design');
+  const [activeFilter, setActiveFilter] = useState('all');
 
-  const toggleCategory = (categoryId) => {
-    setActiveCategory((prev) => (prev === categoryId ? null : categoryId));
-  };
+  const { chips, sections } = figmaProjectsData;
 
-  const activeGroup = projectGroups.find((g) => g.id === activeCategory);
-  const displayProjects = activeGroup ? activeGroup.projects : projectGroups.flatMap((g) => g.projects);
+  const hybridSection = sections.find((s) => s.id === 'hybrid-product-design');
+  const visualDesignSection = sections.find((s) => s.id === 'visual-design-illustration');
+  const motionSection = sections.find((s) => s.id === 'motion-animation');
+  const modellingSection = sections.find((s) => s.id === '3d-modelling');
+  const visualJournalSection = sections.find((s) => s.id === 'visual-journal');
+  const rawSection = sections.find((s) => s.id === 'raw');
+
+  // Filtered single section when not 'all'
+  const currentFilteredSection = activeFilter !== 'all'
+    ? sections.find((s) => s.id === activeFilter)
+    : null;
 
   return (
-    <section id="work" className="py-16 sm:py-24 px-4 sm:px-8 bg-[#FBFBFC] relative scroll-mt-20">
-      <div className="max-w-7xl mx-auto">
+    <section id="work" className="py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#F6F6F3] relative scroll-mt-20">
+      <div className="max-w-[1360px] mx-auto">
         
-        {/* Section Header: "• Projects" matching handwritten diagram */}
-        <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-12">
-          <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-brand-pink flex-shrink-0" />
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-brand-dark tracking-tight">
+        {/* Hero Section Header: Title */}
+        <div className="mb-4 sm:mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-[56px] font-archivo font-extrabold text-[#141414] tracking-[-0.02em] leading-tight">
             Projects
           </h2>
         </div>
 
-        {/* Single Row of Category Buttons without arrows */}
-        <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-10 sm:mb-14">
-          {projectGroups.map((group) => {
-            const isActive = activeCategory === group.id;
+        {/* Interactive Category Filter Chips */}
+        <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 mb-14 sm:mb-20">
+          {chips.map((chip) => {
+            const isActive = activeFilter === chip.id;
 
             return (
               <button
-                key={group.id}
+                key={chip.id}
                 type="button"
-                onClick={() => toggleCategory(group.id)}
-                className={`group cursor-pointer inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-2xl border-2 transition-all duration-300 shadow-sm focus:outline-none active:scale-[0.98] ${
+                onClick={() => setActiveFilter(chip.id)}
+                className={`group cursor-pointer inline-flex items-center gap-2 px-4 py-2 sm:px-4 sm:py-2.5 rounded-full border text-[14px] sm:text-[15px] font-archivo font-medium transition-all duration-200 focus:outline-none active:scale-[0.98] ${
                   isActive
-                    ? 'bg-neutral-900 text-white border-neutral-900 shadow-md scale-[1.02]'
-                    : 'bg-white text-neutral-900 border-neutral-900 hover:border-brand-pink hover:shadow-md'
+                    ? 'bg-[#141414] text-white border-[#141414] shadow-sm scale-[1.02]'
+                    : 'bg-white text-[#141414] border-[#D9D8D1] hover:border-[#999995] hover:bg-[#FAF9F5]'
                 }`}
-                aria-expanded={isActive}
-                title={isActive ? `Click to view all projects` : `Click to view ${group.title} projects`}
+                aria-pressed={isActive}
               >
-                <span
-                  className={`w-2.5 h-2.5 rounded-full flex-shrink-0 transition-colors ${
-                    isActive ? 'bg-brand-pink animate-pulse' : 'bg-brand-pink'
-                  }`}
-                />
-                <span className="font-bold text-sm sm:text-base tracking-tight">
-                  {group.title}
+                {chip.dotColor && (
+                  <span
+                    className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: chip.dotColor }}
+                  />
+                )}
+                <span>{chip.label}</span>
+                <span className={`text-[12px] sm:text-[13px] ${isActive ? 'text-[#BBBBBB]' : 'text-[#6A6A66]'}`}>
+                  {chip.count}
                 </span>
               </button>
             );
           })}
         </div>
 
-        {/* Project Image Cards Grid (2-column responsive grid) */}
+        {/* Content Area */}
         <AnimatePresence mode="wait">
-          <motion.div
-            key={activeCategory || 'all'}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10"
-          >
-            {displayProjects.map((project, pIdx) => (
-              <motion.a
-                key={project.id}
-                href={project.behanceLink || personalInfo.links.behance}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: pIdx * 0.05 }}
-                className="group cursor-pointer flex flex-col no-underline text-inherit bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-neutral-200/90 hover:border-neutral-400/80 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300"
-              >
-                {/* Card Thumbnail Container */}
-                <div className="relative w-full aspect-[16/10] bg-[#E2E4E8] overflow-hidden">
-                  <ImageWithSkeleton
-                    src={project.coverImage}
-                    alt={project.title}
-                    loading={pIdx < 2 ? 'eager' : 'lazy'}
-                    containerClassName="w-full h-full"
-                    className={`w-full h-full object-cover ${project.objectPosition || 'object-center'} group-hover:scale-105 transition-transform duration-700 ease-out`}
+          {activeFilter !== 'all' && currentFilteredSection ? (
+            /* Filtered Single Section View */
+            <motion.div
+              key={currentFilteredSection.id}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="space-y-6 sm:space-y-8"
+            >
+              <SectionHead section={currentFilteredSection} />
+              <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                {currentFilteredSection.projects.map((project, idx) => (
+                  <PolaroidCard
+                    key={project.id}
+                    project={project}
+                    section={currentFilteredSection}
+                    index={idx}
                   />
-
-                  {/* Gradient Overlay for Text Legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-
-                  {/* Top Badges (Duration & Category) */}
-                  <div className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 z-10 flex items-center gap-1.5 sm:gap-2">
-                    {project.duration && (
-                      <span className="px-2.5 sm:px-3 py-1 rounded-full bg-black/65 backdrop-blur-md text-[10px] sm:text-xs font-semibold text-white/95 shadow-md border border-white/15 inline-flex items-center gap-1.5">
-                        {project.duration.toLowerCase() === 'ongoing' && (
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        )}
-                        <span>{project.duration}</span>
-                      </span>
-                    )}
-                    <span className="px-2.5 sm:px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[10px] sm:text-xs font-bold text-neutral-800 shadow-md">
-                      {project.category}
-                    </span>
+                ))}
+              </div>
+            </motion.div>
+          ) : (
+            /* 'All' View — Faithful reproduction of the Figma desktop & responsive layout */
+            <motion.div
+              key="all-sections"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="space-y-16 sm:space-y-20 lg:space-y-24"
+            >
+              {/* 1. Hybrid Product Design Section */}
+              {hybridSection && (
+                <div className="space-y-6 sm:space-y-8">
+                  <SectionHead section={hybridSection} />
+                  <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                    {hybridSection.projects.map((project, idx) => (
+                      <PolaroidCard
+                        key={project.id}
+                        project={project}
+                        section={hybridSection}
+                        index={idx}
+                      />
+                    ))}
                   </div>
+                </div>
+              )}
 
-                  {/* Bottom Overlay Title & Bold Arrow */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 z-10 flex items-end justify-between gap-3">
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white tracking-tight flex items-center justify-between gap-2 group-hover:text-pink-300 transition-colors">
-                        <span className="truncate">{project.title}</span>
-                        <ArrowUpRight className="w-5 h-5 text-brand-pink group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 flex-shrink-0" />
-                      </h3>
+              {/* 2. Visual Design & Illustration + Motion & Animation (Side-by-side row on desktop) */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+                {visualDesignSection && (
+                  <div className="lg:col-span-8 space-y-6 sm:space-y-8">
+                    <SectionHead section={visualDesignSection} />
+                    <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                      {visualDesignSection.projects.map((project, idx) => (
+                        <PolaroidCard
+                          key={project.id}
+                          project={project}
+                          section={visualDesignSection}
+                          index={idx}
+                        />
+                      ))}
                     </div>
                   </div>
-                </div>
+                )}
 
-                {/* Card Footer: Just keep View Project button */}
-                <div className="p-4 sm:p-5 flex items-center justify-end bg-white border-t border-neutral-100">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-50 border border-neutral-200 text-xs sm:text-sm font-semibold text-neutral-800 group-hover:bg-brand-pink group-hover:text-white group-hover:border-brand-pink transition-all duration-300 shadow-2xs">
-                    <span>View Project</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </div>
+                {motionSection && (
+                  <div className="lg:col-span-4 space-y-6 sm:space-y-8">
+                    <SectionHead section={motionSection} />
+                    <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                      {motionSection.projects.map((project, idx) => (
+                        <PolaroidCard
+                          key={project.id}
+                          project={project}
+                          section={motionSection}
+                          index={idx}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
 
-              </motion.a>
-            ))}
-          </motion.div>
+              {/* 3. 3D Modelling + Visual Journal (Side-by-side row on desktop) */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+                {modellingSection && (
+                  <div className="lg:col-span-6 space-y-6 sm:space-y-8">
+                    <SectionHead section={modellingSection} />
+                    <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                      {modellingSection.projects.map((project, idx) => (
+                        <PolaroidCard
+                          key={project.id}
+                          project={project}
+                          section={modellingSection}
+                          index={idx}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {visualJournalSection && (
+                  <div className="lg:col-span-6 space-y-6 sm:space-y-8">
+                    <SectionHead section={visualJournalSection} />
+                    <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                      {visualJournalSection.projects.map((project, idx) => (
+                        <PolaroidCard
+                          key={project.id}
+                          project={project}
+                          section={visualJournalSection}
+                          index={idx}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* 4. Raw Section */}
+              {rawSection && (
+                <div className="space-y-6 sm:space-y-8">
+                  <SectionHead section={rawSection} />
+                  <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                    {rawSection.projects.map((project, idx) => (
+                      <PolaroidCard
+                        key={project.id}
+                        project={project}
+                        section={rawSection}
+                        index={idx}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          )}
         </AnimatePresence>
 
       </div>

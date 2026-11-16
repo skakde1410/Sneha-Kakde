@@ -22,7 +22,9 @@ export default {
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['"Outfit"', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif']
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        archivo: ['"Archivo"', 'sans-serif'],
+        caveat: ['"Caveat"', 'cursive']
       },
       boxShadow: {
         'card': '0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02)',
