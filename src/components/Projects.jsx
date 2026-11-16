@@ -89,7 +89,7 @@ function PolaroidCard({ project, section, index }) {
 
 function SectionHead({ section, className = '' }) {
   return (
-    <div className={`flex flex-wrap items-baseline gap-3 sm:gap-4 mb-8 sm:mb-10 ${className}`}>
+    <div className={`flex items-baseline mb-8 sm:mb-10 ${className}`}>
       <div className="relative inline-flex items-baseline w-fit">
         {/* Pastel highlighter marker bar strictly matching text width */}
         <span
@@ -100,11 +100,6 @@ function SectionHead({ section, className = '' }) {
           {section.title}
         </h3>
       </div>
-      {section.subtitle && (
-        <span className="text-[14px] sm:text-[15px] font-archivo text-[#6A6A66] font-normal">
-          {section.subtitle}
-        </span>
-      )}
     </div>
   );
 }

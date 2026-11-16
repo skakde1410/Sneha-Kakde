@@ -1101,7 +1101,7 @@ export const figmaProjectsData = {
     {
       id: 'motion-animation',
       title: 'Motion & animation',
-      subtitle: 'Things that move · 1 project',
+      subtitle: null,
       markerColor: 'rgba(247, 201, 166, 0.65)',
       tapeColor: 'rgba(247, 201, 166, 0.85)',
       projects: [
@@ -1119,7 +1119,7 @@ export const figmaProjectsData = {
     {
       id: '3d-modelling',
       title: '3D modelling',
-      subtitle: 'Characters built in three dimensions · 1 project',
+      subtitle: null,
       markerColor: 'rgba(214, 200, 245, 0.65)',
       tapeColor: 'rgba(214, 200, 245, 0.85)',
       projects: [
