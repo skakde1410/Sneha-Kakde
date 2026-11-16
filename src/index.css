@@ -124,6 +124,15 @@
   background-size: 24px 24px;
 }
 
+/* Notebook / Graph paper grid background */
+.bg-graph-grid {
+  background-color: #F6F6F3;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
 /* Glass effect */
 .glass-nav {
   background: rgba(255, 255, 255, 0.9);
