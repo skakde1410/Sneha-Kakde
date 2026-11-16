@@ -55,7 +55,7 @@ function PolaroidCard({ project, section, index }) {
         )}
 
         {/* Handwritten Caption in Caveat Bold */}
-        <p className="font-caveat font-bold text-[26px] sm:text-[27px] leading-[1.12] text-[#1B1A17] pt-2 px-0.5 line-clamp-1 group-hover:text-black">
+        <p className="font-caveat font-bold text-[25px] sm:text-[27px] leading-[1.15] text-[#1B1A17] pt-2 px-0.5 truncate group-hover:text-black" title={project.caption}>
           {project.caption}
         </p>
 
@@ -73,21 +73,21 @@ function PolaroidCard({ project, section, index }) {
   );
 }
 
-function SectionHead({ section }) {
+function SectionHead({ section, className = '' }) {
   return (
-    <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 mb-8 sm:mb-10">
-      <div className="relative inline-block w-fit">
-        {/* Pastel highlighter marker bar behind title */}
+    <div className={`flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 mb-8 sm:mb-10 ${className}`}>
+      <div className="relative inline-flex items-baseline w-fit">
+        {/* Pastel highlighter marker bar strictly matching text width */}
         <span
-          className="absolute bottom-1 left-0 right-0 h-4 sm:h-5 rounded-[3px] pointer-events-none -z-0 opacity-80"
+          className="absolute bottom-1 inset-x-0 h-4 sm:h-5 rounded-[3px] pointer-events-none -z-0 opacity-80"
           style={{ backgroundColor: section.markerColor }}
         />
-        <h3 className="relative z-10 font-caveat font-bold text-3xl sm:text-[42px] lg:text-[46px] text-[#141414] leading-tight px-1">
+        <h3 className="relative z-10 font-caveat font-bold text-3xl sm:text-[40px] lg:text-[44px] text-[#141414] leading-tight px-1 whitespace-nowrap">
           {section.title}
         </h3>
       </div>
       {section.subtitle && (
-        <p className="font-archivo text-sm sm:text-[15px] text-[#5D5D58] font-normal">
+        <p className="font-archivo text-sm sm:text-[15px] text-[#5D5D58] font-normal sm:ml-2">
           {section.subtitle}
         </p>
       )}
@@ -207,10 +207,10 @@ export default function Projects() {
               )}
 
               {/* 2. Visual Design & Illustration + Motion & Animation (Side-by-side row on desktop) */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
                 {visualDesignSection && (
-                  <div className="lg:col-span-8 space-y-6 sm:space-y-8">
-                    <SectionHead section={visualDesignSection} />
+                  <div className="lg:col-span-7 xl:col-span-8 space-y-6 sm:space-y-8">
+                    <SectionHead section={visualDesignSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
                     <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
                       {visualDesignSection.projects.map((project, idx) => (
                         <PolaroidCard
@@ -225,8 +225,8 @@ export default function Projects() {
                 )}
 
                 {motionSection && (
-                  <div className="lg:col-span-4 space-y-6 sm:space-y-8">
-                    <SectionHead section={motionSection} />
+                  <div className="lg:col-span-5 xl:col-span-4 space-y-6 sm:space-y-8">
+                    <SectionHead section={motionSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
                     <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
                       {motionSection.projects.map((project, idx) => (
                         <PolaroidCard
@@ -242,10 +242,10 @@ export default function Projects() {
               </div>
 
               {/* 3. 3D Modelling + Visual Journal (Side-by-side row on desktop) */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
                 {modellingSection && (
                   <div className="lg:col-span-6 space-y-6 sm:space-y-8">
-                    <SectionHead section={modellingSection} />
+                    <SectionHead section={modellingSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
                     <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
                       {modellingSection.projects.map((project, idx) => (
                         <PolaroidCard
@@ -261,7 +261,7 @@ export default function Projects() {
 
                 {visualJournalSection && (
                   <div className="lg:col-span-6 space-y-6 sm:space-y-8">
-                    <SectionHead section={visualJournalSection} />
+                    <SectionHead section={visualJournalSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
                     <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
                       {visualJournalSection.projects.map((project, idx) => (
                         <PolaroidCard
