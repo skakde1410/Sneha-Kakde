@@ -1056,7 +1056,7 @@ export const figmaProjectsData = {
           title: 'Kyoorius Young Blood Awards 2023-24',
           caption: 'Lotus Embrace - product concept',
           image: '/assets/lotus_embrace_cover.jpg',
-          behanceLink: 'https://www.behance.net/kakdesneha',
+          behanceLink: 'https://www.behance.net/gallery/198237481/KYOORIUS-YOUNG-BLOOD-AWARDS-2023-2024',
           cardRotation: -1.6,
           tapeRotation: 1.2
         },
@@ -1109,8 +1109,8 @@ export const figmaProjectsData = {
           id: 'animation',
           title: 'Animation',
           caption: 'a phone, introduced in motion',
-          image: '/assets/illustration_movies.jpg',
-          behanceLink: 'https://www.behance.net/kakdesneha',
+          image: '/assets/figma_animation.png',
+          behanceLink: 'https://www.behance.net/gallery/197843953/Animation',
           cardRotation: 1.5,
           tapeRotation: 1.1
         }
@@ -1128,7 +1128,7 @@ export const figmaProjectsData = {
           title: '3d Character Design',
           caption: 'a character, sculpted in 3D',
           image: '/assets/zoro_cover.jpg',
-          behanceLink: 'https://www.behance.net/kakdesneha',
+          behanceLink: 'https://www.behance.net/gallery/197936143/3d-Character-Design',
           cardRotation: -1.3,
           tapeRotation: -1.5
         }
