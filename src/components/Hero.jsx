@@ -93,7 +93,7 @@ export default function Hero({ onOpenContact }) {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         >
           {/* Main Headline with Typewriter Effect */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-3 sm:mb-4 min-h-[3em] sm:min-h-[2.4em]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-6 min-h-[3em] sm:min-h-[2.4em]">
             Hi,<br />
             I’m{' '}
             <span className="text-brand-pink inline-block relative font-black">
@@ -101,13 +101,6 @@ export default function Hero({ onOpenContact }) {
               <span className="inline-block w-[3px] sm:w-[4px] h-[0.82em] bg-brand-pink ml-1.5 animate-cursor rounded-full align-baseline shadow-sm" />
             </span>
           </h1>
-
-          {/* Role Subtitle */}
-          <h2 className="text-base sm:text-xl font-bold text-gray-700 mb-4 sm:mb-6 tracking-tight flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <span>Visual Designer</span>
-            <span className="text-brand-pink">•</span>
-            <span>Product Designer</span>
-          </h2>
 
           {/* Description */}
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-xl mb-8 sm:mb-10 font-normal">
