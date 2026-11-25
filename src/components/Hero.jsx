@@ -9,8 +9,28 @@ const TYPEWRITER_PHRASES = [
   'Sneha Kakde',
   'a Visual Designer',
   'a Product Designer',
+  'a Multidisciplinary Designer',
   'a Creative Storyteller',
   'Sneha Kakde'
+];
+
+const CHARACTER_ANNOTATIONS = [
+  // Left side annotations
+  { text: 'CALLIGRAPHY', dotColor: '#EC4899', pos: 'top-6 -left-3 sm:-left-6 lg:-left-10 xl:-left-14', rotate: -5, delay: 0.1 },
+  { text: 'VISUAL DESIGN', dotColor: '#E6004C', pos: 'top-24 -left-6 sm:-left-10 lg:-left-16 xl:-left-20', rotate: 2.5, delay: 0.25 },
+  { text: 'ILLUSTRATION', dotColor: '#10B981', pos: 'top-44 -left-8 sm:-left-12 lg:-left-18 xl:-left-24', rotate: -3.5, delay: 0.4 },
+  { text: 'SKETCHING', dotColor: '#F97316', pos: 'top-64 -left-5 sm:-left-8 lg:-left-14 xl:-left-16', rotate: 3, delay: 0.55 },
+  { text: 'ART', dotColor: '#F59E0B', pos: 'bottom-20 -left-2 sm:-left-4 lg:-left-8 xl:-left-10', rotate: -2, delay: 0.7 },
+  
+  // Top Center
+  { text: 'SCULPTING', dotColor: '#EAB308', pos: '-top-6 left-1/4 -translate-x-1/2', rotate: -2, delay: 0.2 },
+
+  // Right side annotations
+  { text: 'UI/UX', dotColor: '#0EA5E9', pos: 'top-4 -right-2 sm:-right-4 lg:-right-8 xl:-right-10', rotate: -2.5, delay: 0.15 },
+  { text: 'PRODUCT DESIGN', dotColor: '#E6004C', pos: 'top-24 -right-6 sm:-right-8 lg:-right-14 xl:-right-18', rotate: 3, delay: 0.3 },
+  { text: '3D CHARACTER DESIGN', dotColor: '#8B5CF6', pos: 'top-44 -right-8 sm:-right-10 lg:-right-18 xl:-right-22', rotate: -3, delay: 0.45 },
+  { text: 'ANIMATION', dotColor: '#A855F7', pos: 'top-64 -right-6 sm:-right-8 lg:-right-12 xl:-right-16', rotate: 2, delay: 0.6 },
+  { text: 'VISUALIZATION', dotColor: '#14B8A6', pos: 'bottom-20 -right-2 sm:-right-4 lg:-right-8 xl:-right-10', rotate: -3, delay: 0.75 }
 ];
 
 export default function Hero({ onOpenContact }) {
@@ -57,16 +77,60 @@ export default function Hero({ onOpenContact }) {
 
       <div className="max-w-[1360px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
         
-        {/* Left Column: Prominent Large Mascot Illustration (Matching exact Figma frame 88:981) */}
+        {/* Left Column: Character Mascot with Floating Annotations */}
         <motion.div 
-          className="lg:col-span-6 flex justify-center items-center relative order-1"
+          className="lg:col-span-6 flex flex-col justify-center items-center relative order-1"
           initial={{ opacity: 0, scale: 0.94, x: -30 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <div className="relative w-full max-w-[280px] sm:max-w-md lg:max-w-xl xl:max-w-2xl flex justify-center items-center">
             
-            {/* Mascot Image with Gentle Floating Animation */}
+            {/* Hand-drawn style "(that's me! 👋)" sticker badge with arrow */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.7, rotate: -6 }}
+              animate={{ opacity: 1, scale: 1, rotate: -5 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="absolute -top-3 sm:-top-5 right-2 sm:right-6 lg:-right-1 z-30 flex flex-col items-center pointer-events-none select-none"
+            >
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1B1A17] text-white shadow-xl border border-white/30 backdrop-blur-sm">
+                <span className="font-caveat font-bold text-lg sm:text-xl text-[#FFFEFB] tracking-wide">
+                  that's me!
+                </span>
+                <span className="text-base animate-pulse">👋</span>
+              </div>
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-[#1B1A17] -mt-1 mr-3 transform rotate-12 drop-shadow-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <path d="M6 3c2 5 3 9 7 13m0 0l-4-1m4 1l-1-4" />
+              </svg>
+            </motion.div>
+
+            {/* Floating Desktop Annotations around character */}
+            {CHARACTER_ANNOTATIONS.map((item, index) => (
+              <motion.div
+                key={item.text}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ 
+                  opacity: 1, 
+                  scale: 1,
+                  y: [0, -6, 0]
+                }}
+                transition={{
+                  opacity: { duration: 0.5, delay: item.delay },
+                  scale: { duration: 0.5, delay: item.delay },
+                  y: { repeat: Infinity, duration: 3.6 + (index % 3) * 0.7, ease: "easeInOut", delay: item.delay }
+                }}
+                whileHover={{ scale: 1.1, rotate: 0, zIndex: 40 }}
+                className={`hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-200/90 shadow-[0_4px_16px_rgba(0,0,0,0.08)] cursor-default select-none pointer-events-auto z-20 absolute ${item.pos}`}
+                style={{ transform: `rotate(${item.rotate}deg)` }}
+              >
+                <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: item.dotColor }} />
+                <span className="font-archivo font-bold text-[11px] xl:text-[12px] tracking-wider text-[#1F2937] whitespace-nowrap">
+                  {item.text}
+                </span>
+              </motion.div>
+            ))}
+
+            {/* Mascot Image with Gentle Floating Animation & Die-Cut Sticker Style */}
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
@@ -74,7 +138,7 @@ export default function Hero({ onOpenContact }) {
             >
               <ImageWithSkeleton
                 src={mascotImg}
-                alt="Sneha Kakde Character Mascot"
+                alt="Sneha Kakde - Multidisciplinary Designer"
                 loading="eager"
                 draggable={false}
                 containerClassName="w-full flex justify-center items-center overflow-visible"
@@ -82,6 +146,20 @@ export default function Hero({ onOpenContact }) {
               />
             </motion.div>
 
+          </div>
+
+          {/* Mobile Annotation Chips Cloud (under character on small screens) */}
+          <div className="lg:hidden flex flex-wrap justify-center items-center gap-2 pt-4 px-1 max-w-lg mx-auto select-none">
+            {CHARACTER_ANNOTATIONS.map((item) => (
+              <span
+                key={item.text}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 border border-gray-200/90 shadow-xs text-[11px] sm:text-xs font-archivo font-bold text-[#1F2937]"
+                style={{ transform: `rotate(${item.rotate * 0.6}deg)` }}
+              >
+                <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: item.dotColor }} />
+                {item.text}
+              </span>
+            ))}
           </div>
         </motion.div>
 
@@ -93,7 +171,7 @@ export default function Hero({ onOpenContact }) {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         >
           {/* Main Headline with Typewriter Effect */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-6 min-h-[3em] sm:min-h-[2.4em]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-5 min-h-[3em] sm:min-h-[2.4em]">
             Hi,<br />
             I’m{' '}
             <span className="text-brand-pink inline-block relative font-black">
@@ -101,6 +179,12 @@ export default function Hero({ onOpenContact }) {
               <span className="inline-block w-[3px] sm:w-[4px] h-[0.82em] bg-brand-pink ml-1.5 animate-cursor rounded-full align-baseline shadow-sm" />
             </span>
           </h1>
+
+          {/* Multidisciplinary Designer Statement */}
+          <p className="text-base sm:text-xl font-bold text-gray-900 tracking-tight mb-3 sm:mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-brand-pink flex-shrink-0 animate-ping" />
+            <span>I’m a multidisciplinary designer based in Maharashtra.</span>
+          </p>
 
           {/* Description */}
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-xl mb-8 sm:mb-10 font-normal">
