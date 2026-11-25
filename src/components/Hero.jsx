@@ -16,21 +16,21 @@ const TYPEWRITER_PHRASES = [
 
 const CHARACTER_ANNOTATIONS = [
   // Left side annotations
-  { text: 'CALLIGRAPHY', dotColor: '#EC4899', pos: 'top-6 -left-3 sm:-left-6 lg:-left-10 xl:-left-14', rotate: -5, delay: 0.1 },
-  { text: 'VISUAL DESIGN', dotColor: '#E6004C', pos: 'top-24 -left-6 sm:-left-10 lg:-left-16 xl:-left-20', rotate: 2.5, delay: 0.25 },
-  { text: 'ILLUSTRATION', dotColor: '#10B981', pos: 'top-44 -left-8 sm:-left-12 lg:-left-18 xl:-left-24', rotate: -3.5, delay: 0.4 },
-  { text: 'SKETCHING', dotColor: '#F97316', pos: 'top-64 -left-5 sm:-left-8 lg:-left-14 xl:-left-16', rotate: 3, delay: 0.55 },
-  { text: 'ART', dotColor: '#F59E0B', pos: 'bottom-20 -left-2 sm:-left-4 lg:-left-8 xl:-left-10', rotate: -2, delay: 0.7 },
+  { text: 'CALLIGRAPHY', dotColor: '#EC4899', pos: 'top-4 -left-2 sm:-left-4 lg:-left-6', rotate: -5, delay: 0.1 },
+  { text: 'VISUAL DESIGN', dotColor: '#E6004C', pos: 'top-22 -left-4 sm:-left-6 lg:-left-8', rotate: 2.5, delay: 0.25 },
+  { text: 'ILLUSTRATION', dotColor: '#10B981', pos: 'top-42 -left-5 sm:-left-7 lg:-left-9', rotate: -3.5, delay: 0.4 },
+  { text: 'SKETCHING', dotColor: '#F97316', pos: 'top-62 -left-3 sm:-left-5 lg:-left-7', rotate: 3, delay: 0.55 },
+  { text: 'ART', dotColor: '#F59E0B', pos: 'bottom-16 -left-1 sm:-left-3 lg:-left-5', rotate: -2, delay: 0.7 },
   
   // Top Center
-  { text: 'SCULPTING', dotColor: '#EAB308', pos: '-top-6 left-1/4 -translate-x-1/2', rotate: -2, delay: 0.2 },
+  { text: 'SCULPTING', dotColor: '#EAB308', pos: '-top-5 left-1/4 -translate-x-1/2', rotate: -2, delay: 0.2 },
 
-  // Right side annotations
-  { text: 'UI/UX', dotColor: '#0EA5E9', pos: 'top-4 -right-2 sm:-right-4 lg:-right-8 xl:-right-10', rotate: -2.5, delay: 0.15 },
-  { text: 'PRODUCT DESIGN', dotColor: '#E6004C', pos: 'top-24 -right-6 sm:-right-8 lg:-right-14 xl:-right-18', rotate: 3, delay: 0.3 },
-  { text: '3D CHARACTER DESIGN', dotColor: '#8B5CF6', pos: 'top-44 -right-8 sm:-right-10 lg:-right-18 xl:-right-22', rotate: -3, delay: 0.45 },
-  { text: 'ANIMATION', dotColor: '#A855F7', pos: 'top-64 -right-6 sm:-right-8 lg:-right-12 xl:-right-16', rotate: 2, delay: 0.6 },
-  { text: 'VISUALIZATION', dotColor: '#14B8A6', pos: 'bottom-20 -right-2 sm:-right-4 lg:-right-8 xl:-right-10', rotate: -3, delay: 0.75 }
+  // Right side annotations - strictly contained inside left column
+  { text: 'UI/UX', dotColor: '#0EA5E9', pos: 'top-3 right-0 sm:right-2 lg:right-3', rotate: -2.5, delay: 0.15 },
+  { text: 'PRODUCT DESIGN', dotColor: '#E6004C', pos: 'top-22 right-0 sm:right-1 lg:right-2', rotate: 3, delay: 0.3 },
+  { text: '3D CHARACTER DESIGN', dotColor: '#8B5CF6', pos: 'top-42 right-0 sm:right-1 lg:right-2', rotate: -3, delay: 0.45 },
+  { text: 'ANIMATION', dotColor: '#A855F7', pos: 'top-62 right-0 sm:right-2 lg:right-3', rotate: 2, delay: 0.6 },
+  { text: 'VISUALIZATION', dotColor: '#14B8A6', pos: 'bottom-16 right-1 sm:right-3 lg:right-4', rotate: -3, delay: 0.75 }
 ];
 
 export default function Hero({ onOpenContact }) {
@@ -171,7 +171,7 @@ export default function Hero({ onOpenContact }) {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         >
           {/* Main Headline with Typewriter Effect */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-5 min-h-[3em] sm:min-h-[2.4em]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-6 min-h-[3em] sm:min-h-[2.4em]">
             Hi,<br />
             I’m{' '}
             <span className="text-brand-pink inline-block relative font-black">
@@ -179,12 +179,6 @@ export default function Hero({ onOpenContact }) {
               <span className="inline-block w-[3px] sm:w-[4px] h-[0.82em] bg-brand-pink ml-1.5 animate-cursor rounded-full align-baseline shadow-sm" />
             </span>
           </h1>
-
-          {/* Multidisciplinary Designer Statement */}
-          <p className="text-base sm:text-xl font-bold text-gray-900 tracking-tight mb-3 sm:mb-4 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-brand-pink flex-shrink-0 animate-ping" />
-            <span>I’m a multidisciplinary designer based in Maharashtra.</span>
-          </p>
 
           {/* Description */}
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-xl mb-8 sm:mb-10 font-normal">
