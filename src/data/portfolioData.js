@@ -1042,12 +1042,21 @@ export const figmaProjectsData = {
           tapeRotation: 1.0
         },
         {
+          id: 'sway',
+          title: 'SWAY - Different Rhythm. One Home.',
+          caption: 'SWAY - Different Rhythm. One Home.',
+          image: '/assets/figma_sway.png',
+          behanceLink: 'https://www.behance.net/gallery/257406273/SWAY-Different-Rhythm-One-Home',
+          cardRotation: -1.3,
+          tapeRotation: -0.9
+        },
+        {
           id: 'lattice-lantern',
           title: 'Lattice Octa Lantern',
           caption: 'Lattice Octa Lantern',
           image: '/assets/figma_lattice_lantern.png',
           behanceLink: 'https://www.behance.net/gallery/247294495/Lattice-Octa-Lantern',
-          cardRotation: -1.2,
+          cardRotation: 1.4,
           tapeRotation: -1.4
         },
         {
@@ -1058,15 +1067,6 @@ export const figmaProjectsData = {
           behanceLink: 'https://www.behance.net/gallery/198237481/KYOORIUS-YOUNG-BLOOD-AWARDS-2023-2024',
           cardRotation: -1.6,
           tapeRotation: 1.2
-        },
-        {
-          id: 'sway',
-          title: 'SWAY - Different Rhythm. One Home.',
-          caption: 'SWAY - Different Rhythm. One Home.',
-          image: '/assets/figma_sway.png',
-          behanceLink: 'https://www.behance.net/gallery/257406273/SWAY-Different-Rhythm-One-Home',
-          cardRotation: 1.5,
-          tapeRotation: -0.9
         }
       ]
     },
