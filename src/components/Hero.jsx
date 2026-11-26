@@ -78,17 +78,12 @@ export default function Hero({ onOpenContact }) {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         >
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-3 sm:mb-4">
-            Hi, I’m <span className="text-brand-pink font-black">Sneha Kakde</span>,
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-6">
+            Hi, I’m <span className="text-brand-pink font-black">Sneha Kakde</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 tracking-tight leading-snug mb-5 sm:mb-6">
-            a multidisciplinary designer based in Maharashtra
-          </p>
-
           {/* Looping Discipline Tab */}
-          <div className="mb-6 sm:mb-8 flex items-center">
+          <div className="mb-5 sm:mb-6 flex items-center">
             <div 
               onClick={() => setDisciplineIndex((prev) => (prev + 1) % DISCIPLINES.length)}
               onMouseEnter={() => setIsPaused(true)}
@@ -120,9 +115,9 @@ export default function Hero({ onOpenContact }) {
             </div>
           </div>
 
-          {/* Description */}
-          <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-xl mb-8 sm:mb-10 font-normal">
-            {personalInfo.heroBio}
+          {/* Multidisciplinary Designer Subtitle */}
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 font-semibold tracking-tight leading-snug max-w-xl mb-8 sm:mb-10">
+            a multidisciplinary designer based in Maharashtra
           </p>
 
           {/* CTA Buttons */}
