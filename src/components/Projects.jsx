@@ -75,9 +75,13 @@ function PolaroidCard({ project, section, index }) {
 
         {/* Metadata Row: Project Title & Behance Link */}
         <div className="flex items-center justify-between gap-2 pt-1 px-0.5 text-[13px] font-inter">
-          <span className="text-[#333333] font-medium truncate flex-1" title={project.title}>
-            {project.title}
-          </span>
+          {project.title && project.title.toLowerCase() !== project.caption?.toLowerCase() ? (
+            <span className="text-[#333333] font-medium truncate flex-1" title={project.title}>
+              {project.title}
+            </span>
+          ) : (
+            <span className="flex-1" />
+          )}
           <span className="text-[#6A6A66] group-hover:text-[#141414] transition-colors font-normal flex-shrink-0 flex items-center gap-0.5">
             Behance ↗
           </span>

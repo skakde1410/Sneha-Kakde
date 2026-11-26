@@ -1099,7 +1099,7 @@ export const figmaProjectsData = {
         {
           id: 'animation',
           title: 'Animation',
-          caption: 'a phone, introduced in motion',
+          caption: 'Animation',
           image: '/assets/figma_animation.png',
           behanceLink: 'https://www.behance.net/gallery/197843953/Animation',
           cardRotation: 1.5,
