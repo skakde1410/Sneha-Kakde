@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
-import { ArrowUpRight, ArrowDown, RotateCw } from 'lucide-react';
+import { ArrowUpRight, ArrowDown } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 import mascotImg from '../assets/mascot.webp';
 
@@ -103,7 +103,7 @@ export default function Hero({ onOpenContact }) {
               />
 
               {/* Looping Tab Text */}
-              <div className="h-6 flex items-center overflow-hidden min-w-[130px] sm:min-w-[195px]">
+              <div className="h-6 flex items-center overflow-hidden min-w-[120px] sm:min-w-[175px]">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={DISCIPLINES[disciplineIndex].label}
@@ -116,14 +116,6 @@ export default function Hero({ onOpenContact }) {
                     {DISCIPLINES[disciplineIndex].label}
                   </motion.span>
                 </AnimatePresence>
-              </div>
-
-              {/* Counter & Mini Loop Icon */}
-              <div className="flex items-center gap-1.5 pl-2 sm:pl-2.5 border-l border-gray-100 text-gray-400 group-hover:text-brand-pink transition-colors">
-                <span className="text-[10px] font-bold tracking-wider">
-                  {disciplineIndex + 1}/{DISCIPLINES.length}
-                </span>
-                <RotateCw className="w-2.5 h-2.5 group-hover:rotate-180 transition-transform duration-500" />
               </div>
             </div>
           </div>
