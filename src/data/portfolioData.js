@@ -1080,8 +1080,8 @@ export const figmaProjectsData = {
       projects: [
         {
           id: 'branding',
-          title: 'Adyam Branding & UI',
-          caption: 'brand + mascot illustration',
+          title: 'Branding & Visual Identity - 3 Projects',
+          caption: 'Adyam Branding & UI',
           image: '/assets/figma_branding_adyam.png',
           behanceLink: 'https://www.behance.net/gallery/253428839/Adyam-Branding-Visual-Identity',
           cardRotation: 1.3,
