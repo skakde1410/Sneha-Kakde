@@ -19,10 +19,40 @@ const DISCIPLINES = [
   { label: 'ANIMATION', color: '#14B8A6' }
 ];
 
+const NAME_TEXT = 'Sneha Kakde';
+
 export default function Hero({ onOpenContact }) {
+  const [typedName, setTypedName] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(110);
   const [disciplineIndex, setDisciplineIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
+  // Typewriter effect for "Sneha Kakde"
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        setTypedName(NAME_TEXT.substring(0, typedName.length + 1));
+        setTypingSpeed(110);
+
+        if (typedName.length + 1 === NAME_TEXT.length) {
+          setTimeout(() => setIsDeleting(true), 2500);
+        }
+      } else {
+        setTypedName(NAME_TEXT.substring(0, typedName.length - 1));
+        setTypingSpeed(60);
+
+        if (typedName.length === 0) {
+          setIsDeleting(false);
+          setTypingSpeed(400);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [typedName, isDeleting, typingSpeed]);
+
+  // Discipline tab auto-loop
   useEffect(() => {
     if (isPaused) return;
 
@@ -77,9 +107,13 @@ export default function Hero({ onOpenContact }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         >
-          {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-6">
-            Hi, I’m <span className="text-brand-pink font-black">Sneha Kakde</span>
+          {/* Main Headline with Typewriter Effect */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-6 min-h-[1.3em]">
+            Hi, I’m{' '}
+            <span className="text-brand-pink inline-block relative font-black">
+              {typedName}
+              <span className="inline-block w-[3px] sm:w-[4px] h-[0.82em] bg-brand-pink ml-1.5 animate-cursor rounded-full align-baseline shadow-sm" />
+            </span>
           </h1>
 
           {/* Looping Discipline Tab */}
