@@ -20,38 +20,47 @@ const DISCIPLINES = [
   { label: 'ANIMATION', color: '#14B8A6' }
 ];
 
-const NAME_TEXT = 'Sneha Kakde';
+const FULL_TEXT = "Hi, I’m Sneha Kakde";
+const PREFIX_LENGTH = 8; // length of "Hi, I’m "
 
 export default function Hero({ onOpenContact }) {
-  const [typedName, setTypedName] = useState('');
+  const [typedLength, setTypedLength] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(110);
   const [disciplineIndex, setDisciplineIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Typewriter effect for "Sneha Kakde"
+  // Typewriter effect for full headline "Hi, I’m Sneha Kakde"
   useEffect(() => {
+    let delay = 95;
+    if (!isDeleting && typedLength === FULL_TEXT.length) {
+      delay = 2500;
+    } else if (isDeleting && typedLength === 0) {
+      delay = 500;
+    } else if (isDeleting) {
+      delay = 45;
+    }
+
     const timer = setTimeout(() => {
       if (!isDeleting) {
-        setTypedName(NAME_TEXT.substring(0, typedName.length + 1));
-        setTypingSpeed(110);
-
-        if (typedName.length + 1 === NAME_TEXT.length) {
-          setTimeout(() => setIsDeleting(true), 2500);
+        if (typedLength < FULL_TEXT.length) {
+          setTypedLength((prev) => prev + 1);
+        } else {
+          setIsDeleting(true);
         }
       } else {
-        setTypedName(NAME_TEXT.substring(0, typedName.length - 1));
-        setTypingSpeed(60);
-
-        if (typedName.length === 0) {
+        if (typedLength > 0) {
+          setTypedLength((prev) => prev - 1);
+        } else {
           setIsDeleting(false);
-          setTypingSpeed(400);
         }
       }
-    }, typingSpeed);
+    }, delay);
 
     return () => clearTimeout(timer);
-  }, [typedName, isDeleting, typingSpeed]);
+  }, [typedLength, isDeleting]);
+
+  const prefixTyped = FULL_TEXT.slice(0, Math.min(typedLength, PREFIX_LENGTH));
+  const nameTyped = typedLength > PREFIX_LENGTH ? FULL_TEXT.slice(PREFIX_LENGTH, typedLength) : '';
 
   // Discipline tab auto-loop
   useEffect(() => {
@@ -110,13 +119,15 @@ export default function Hero({ onOpenContact }) {
         >
           {/* Main Content: Headline, Subtitle, CTA buttons — vertically centered with the mascot */}
           <div className="flex-1 flex flex-col justify-center my-auto py-4 sm:py-6">
-            {/* Main Headline with Typewriter Effect */}
+            {/* Main Headline with Typewriter Effect on all text */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-3 sm:mb-4 min-h-[1.3em]">
-              Hi, I’m{' '}
-              <span className="text-brand-pink inline-block relative font-black">
-                {typedName}
-                <span className="inline-block w-[3px] sm:w-[4px] h-[0.82em] bg-brand-pink ml-1.5 animate-cursor rounded-full align-baseline shadow-sm" />
-              </span>
+              <span>{'\u200B'}{prefixTyped}</span>
+              {nameTyped && (
+                <span className="text-brand-pink font-black">
+                  {nameTyped}
+                </span>
+              )}
+              <span className="inline-block w-[3px] sm:w-[4px] h-[0.82em] bg-brand-pink ml-1.5 animate-cursor rounded-full align-baseline shadow-sm" />
             </h1>
 
             {/* Multidisciplinary Designer Subtitle */}
