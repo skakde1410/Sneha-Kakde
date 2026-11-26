@@ -715,7 +715,7 @@ export const productDesignProjects = [
 export const visualDesignProjects = [
   {
     id: "adyam-branding",
-    title: "Adyam",
+    title: "Adyam Branding & UI",
     tagline: "Maharashtrian Dairy Brand Identity, Packaging & Mascot System",
     category: "Visual Design & Branding",
     duration: "1 month",
@@ -1080,7 +1080,7 @@ export const figmaProjectsData = {
       projects: [
         {
           id: 'branding',
-          title: 'Branding & Visual Identity - 3 Projects',
+          title: 'Adyam Branding & UI',
           caption: 'brand + mascot illustration',
           image: '/assets/figma_branding_adyam.png',
           behanceLink: 'https://www.behance.net/gallery/253428839/Adyam-Branding-Visual-Identity',
