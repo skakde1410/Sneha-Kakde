@@ -1134,8 +1134,8 @@ export const figmaProjectsData = {
       projects: [
         {
           id: 'visual-journal-diptych',
-          title: 'Visual Journal 2026-27 + Visual Exploration 2025',
-          caption: 'ink & postercolour, always',
+          title: 'Visual Journal',
+          caption: 'Visual Journal',
           isDiptych: true,
           images: [
             '/assets/figma_journal_a.png',
