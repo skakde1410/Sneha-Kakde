@@ -97,36 +97,6 @@ export default function Hero({ onOpenContact }) {
               />
             </motion.div>
 
-            {/* Scrolling Discipline Trail Ticker Ribbon */}
-            <div className="w-full max-w-[280px] sm:max-w-md lg:max-w-lg mt-3 sm:mt-4 z-20 marquee-container overflow-hidden relative [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-              <div className="animate-marquee-disciplines py-1">
-                {/* Track 1 */}
-                <div className="flex items-center gap-2 sm:gap-2.5 pr-2 sm:pr-2.5">
-                  {DISCIPLINES.map((d) => (
-                    <span
-                      key={d.label}
-                      className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 border border-gray-200/90 shadow-xs text-[11px] sm:text-xs font-archivo font-extrabold text-gray-800 tracking-wider uppercase whitespace-nowrap hover:scale-105 transition-transform select-none"
-                    >
-                      <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: d.color }} />
-                      {d.label}
-                    </span>
-                  ))}
-                </div>
-                {/* Track 2 (Duplicate for seamless loop) */}
-                <div className="flex items-center gap-2 sm:gap-2.5 pr-2 sm:pr-2.5" aria-hidden="true">
-                  {DISCIPLINES.map((d, i) => (
-                    <span
-                      key={`${d.label}-dup-${i}`}
-                      className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 border border-gray-200/90 shadow-xs text-[11px] sm:text-xs font-archivo font-extrabold text-gray-800 tracking-wider uppercase whitespace-nowrap hover:scale-105 transition-transform select-none"
-                    >
-                      <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: d.color }} />
-                      {d.label}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
           </div>
         </motion.div>
 
