@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import About from './components/About';
 import Footer from './components/Footer';
-import DisciplineTrail from './components/DisciplineTrail';
 import ArchivePage from './pages/ArchivePage';
 import NotFoundPage from './pages/NotFoundPage';
 import ProductDesignPage from './pages/ProductDesignPage';
@@ -90,9 +89,6 @@ export default function App() {
             <About 
               onSelectCraft={(craft) => setSelectedCraft(craft)} 
             />
-
-            {/* Discipline Marquee Trail at the bottom of the landing page */}
-            <DisciplineTrail />
           </>
         )}
         {currentView === 'product-design' && (

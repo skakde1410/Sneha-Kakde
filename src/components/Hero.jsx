@@ -4,6 +4,7 @@ import { personalInfo } from '../data/portfolioData';
 import { ArrowUpRight } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 import mascotImg from '../assets/mascot.webp';
+import DisciplineTrail from './DisciplineTrail';
 
 const DISCIPLINES = [
   { label: 'UI/UX', color: '#0066FF' },
@@ -64,13 +65,13 @@ export default function Hero({ onOpenContact }) {
   }, [isPaused]);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-8 lg:px-12 bg-gradient-to-b from-white via-[#FAFAFC] to-white overflow-hidden">
+    <section className="relative min-h-[90vh] flex flex-col justify-between pt-20 sm:pt-24 pb-0 bg-gradient-to-b from-white via-[#FAFAFC] to-white overflow-hidden">
       
       {/* Background Subtle Ambient Glows */}
       <div className="absolute top-1/4 left-5 w-72 sm:w-[450px] h-72 sm:h-[450px] bg-pink-100/60 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-subtle" />
       <div className="absolute bottom-10 right-10 w-64 sm:w-96 h-64 sm:h-96 bg-orange-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
 
-      <div className="max-w-[1360px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+      <div className="max-w-[1360px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center px-4 sm:px-8 lg:px-12 my-auto py-6 sm:py-10">
         
         {/* Left Column: Prominent Large Mascot Illustration (Matching exact Figma frame 88:981) */}
         <motion.div 
@@ -205,6 +206,11 @@ export default function Hero({ onOpenContact }) {
 
         </motion.div>
 
+      </div>
+
+      {/* Discipline Marquee Trail at the bottom of this landing page */}
+      <div className="w-full mt-auto">
+        <DisciplineTrail />
       </div>
     </section>
   );
