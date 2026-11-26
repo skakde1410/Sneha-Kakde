@@ -783,7 +783,7 @@ export const visualDesignProjects = [
     category: "Visual Design & Branding",
     duration: "Archive",
     summary: "A curated visual archive exploring live anatomical studies, rapid ideation sketches, character drawings, and ink gestures capturing raw human expression.",
-    behanceLink: "https://www.behance.net/gallery/256689743/Visual-Journal",
+    behanceLink: "https://www.behance.net/gallery/256689743/Visual-Journal?platform=direct",
     coverImage: "/assets/sketch_study_detective_pipe.jpg",
     accentColor: "#E6004C",
     tags: ["Visual Design", "Observational Drawing", "Anatomy", "Character Art", "Ink Studies"],
@@ -1150,7 +1150,7 @@ export const figmaProjectsData = {
             '/assets/figma_journal_a.png',
             '/assets/figma_journal_b.png'
           ],
-          behanceLink: 'https://www.behance.net/gallery/256689743/Visual-Journal',
+          behanceLink: 'https://www.behance.net/gallery/256689743/Visual-Journal?platform=direct',
           cardRotation: 1.4,
           tapeRotation: 0.9
         }
