@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
-import { ArrowUpRight, ArrowDown } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 import mascotImg from '../assets/mascot.webp';
 
@@ -165,24 +165,6 @@ export default function Hero({ onOpenContact }) {
             >
               <span>Curriculum Vitae</span>
               <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </a>
-
-            {/* Explore Work */}
-            <a
-              href="#work"
-              onClick={(e) => {
-                e.preventDefault();
-                const elem = document.getElementById('work');
-                if (elem) {
-                  const navOffset = 80;
-                  const pos = elem.getBoundingClientRect().top + window.pageYOffset - navOffset;
-                  window.scrollTo({ top: pos, behavior: 'smooth' });
-                }
-              }}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 rounded-full bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 text-sm sm:text-base font-semibold transition-all hover:shadow-md hover:border-gray-300 cursor-pointer text-center"
-            >
-              <span>Explore Selected Work</span>
-              <ArrowDown className="w-4 h-4 text-brand-pink" />
             </a>
           </div>
 
