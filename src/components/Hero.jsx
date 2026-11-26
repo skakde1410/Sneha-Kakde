@@ -108,7 +108,7 @@ export default function Hero({ onOpenContact }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         >
-          {/* Main Content: Headline, Subtitle, CTA buttons */}
+          {/* Main Content: Headline & Subtitle */}
           <div className="flex flex-col justify-center my-auto pt-2 sm:pt-4">
             {/* Main Headline with Typewriter Effect */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-6 min-h-[1.3em]">
@@ -120,12 +120,15 @@ export default function Hero({ onOpenContact }) {
             </h1>
 
             {/* Multidisciplinary Designer Subtitle */}
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 font-semibold tracking-tight leading-snug max-w-xl mb-8 sm:mb-10">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 font-semibold tracking-tight leading-snug max-w-xl">
               a multidisciplinary designer based in Maharashtra
             </p>
+          </div>
 
-            {/* CTA Row: Curriculum Vitae & Looping Discipline Tab */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+          {/* Bottom Area: Call-To-Actions & Social Links Bar */}
+          <div className="mt-8 sm:mt-auto pt-6 sm:pt-8 flex flex-col">
+            {/* CTA Row: Curriculum Vitae & Looping Discipline Tab at the bottom */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto mb-6 sm:mb-8">
               {/* CV Button (Exact Figma Black Pill) */}
               <a
                 href={personalInfo.links.cv}
@@ -168,43 +171,43 @@ export default function Hero({ onOpenContact }) {
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Quick Social Links Bar - Aligned to bottom of mascot */}
-          <div className="mt-8 sm:mt-auto pt-6 sm:pt-8 border-t border-gray-100 flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-500 font-medium">
-            <span className="text-[11px] uppercase tracking-wider text-gray-400 font-bold">Connect:</span>
-            <a 
-              href={personalInfo.links.linkedin} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-brand-pink transition-colors"
-            >
-              LinkedIn ↗
-            </a>
-            <a 
-              href={personalInfo.links.behance} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-brand-pink transition-colors"
-            >
-              Behance ↗
-            </a>
-            <a 
-              href={personalInfo.links.instagram} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-brand-pink transition-colors"
-            >
-              Instagram ↗
-            </a>
-            <a 
-              href={personalInfo.links.notion} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-brand-pink transition-colors"
-            >
-              Notion ↗
-            </a>
+            {/* Quick Social Links Bar - Aligned to bottom of mascot */}
+            <div className="pt-6 sm:pt-8 border-t border-gray-100 flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-500 font-medium">
+              <span className="text-[11px] uppercase tracking-wider text-gray-400 font-bold">Connect:</span>
+              <a 
+                href={personalInfo.links.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-brand-pink transition-colors"
+              >
+                LinkedIn ↗
+              </a>
+              <a 
+                href={personalInfo.links.behance} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-brand-pink transition-colors"
+              >
+                Behance ↗
+              </a>
+              <a 
+                href={personalInfo.links.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-brand-pink transition-colors"
+              >
+                Instagram ↗
+              </a>
+              <a 
+                href={personalInfo.links.notion} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-brand-pink transition-colors"
+              >
+                Notion ↗
+              </a>
+            </div>
           </div>
 
         </motion.div>
