@@ -158,9 +158,6 @@ export default function Projects() {
                   />
                 )}
                 <span>{chip.label}</span>
-                <span className={`text-[12px] sm:text-[13px] ${isActive ? 'text-[#BBBBBB]' : 'text-[#6A6A66]'}`}>
-                  {chip.count}
-                </span>
               </button>
             );
           })}
