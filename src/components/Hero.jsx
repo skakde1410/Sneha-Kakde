@@ -1,52 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
-import { ArrowUpRight, ArrowDown } from 'lucide-react';
+import { ArrowUpRight, ArrowDown, RotateCw } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 import mascotImg from '../assets/mascot.webp';
 
-const TYPEWRITER_PHRASES = [
-  'Sneha Kakde',
-  'a Visual Designer',
-  'a Product Designer',
-  'a Creative Storyteller',
-  'Sneha Kakde'
+const DISCIPLINES = [
+  { label: 'UI/UX', color: '#0066FF' },
+  { label: 'PRODUCT DESIGN', color: '#8A2BE2' },
+  { label: 'SCULPTING', color: '#E65100' },
+  { label: '3D CHARACTER DESIGN', color: '#00B4D8' },
+  { label: 'CALLIGRAPHY', color: '#10B981' },
+  { label: 'VISUAL DESIGN', color: '#E6004C' },
+  { label: 'ILLUSTRATION', color: '#F59E0B' },
+  { label: 'SKETCHING', color: '#4B5563' },
+  { label: 'ART', color: '#EC4899' },
+  { label: 'VISUALIZATION', color: '#3B82F6' },
+  { label: 'ANIMATION', color: '#14B8A6' }
 ];
 
 export default function Hero({ onOpenContact }) {
-  const [text, setText] = useState('');
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(110);
+  const [disciplineIndex, setDisciplineIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    const currentPhrase = TYPEWRITER_PHRASES[phraseIndex];
+    if (isPaused) return;
 
-    const timer = setTimeout(() => {
-      if (!isDeleting) {
-        // Typing forward
-        setText(currentPhrase.substring(0, text.length + 1));
-        setTypingSpeed(100);
+    const timer = setInterval(() => {
+      setDisciplineIndex((prev) => (prev + 1) % DISCIPLINES.length);
+    }, 2200);
 
-        if (text.length + 1 === currentPhrase.length) {
-          // Pause when word is completely typed
-          setTimeout(() => setIsDeleting(true), 2400);
-        }
-      } else {
-        // Deleting backwards
-        setText(currentPhrase.substring(0, text.length - 1));
-        setTypingSpeed(50);
-
-        if (text.length === 0) {
-          setIsDeleting(false);
-          setPhraseIndex((prev) => (prev + 1) % TYPEWRITER_PHRASES.length);
-          setTypingSpeed(300);
-        }
-      }
-    }, typingSpeed);
-
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, phraseIndex, typingSpeed]);
+    return () => clearInterval(timer);
+  }, [isPaused]);
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-8 lg:px-12 bg-gradient-to-b from-white via-[#FAFAFC] to-white overflow-hidden">
@@ -92,15 +77,56 @@ export default function Hero({ onOpenContact }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         >
-          {/* Main Headline with Typewriter Effect */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-4 sm:mb-6 min-h-[3em] sm:min-h-[2.4em]">
-            Hi,<br />
-            I’m{' '}
-            <span className="text-brand-pink inline-block relative font-black">
-              {text}
-              <span className="inline-block w-[3px] sm:w-[4px] h-[0.82em] bg-brand-pink ml-1.5 animate-cursor rounded-full align-baseline shadow-sm" />
-            </span>
+          {/* Main Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark tracking-tight leading-[1.15] mb-3 sm:mb-4">
+            Hi, I’m <span className="text-brand-pink font-black">Sneha Kakde</span>,
           </h1>
+
+          {/* Subtitle */}
+          <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 tracking-tight leading-snug mb-5 sm:mb-6">
+            a multidisciplinary designer based in Maharashtra
+          </p>
+
+          {/* Looping Discipline Tab */}
+          <div className="mb-6 sm:mb-8 flex items-center">
+            <div 
+              onClick={() => setDisciplineIndex((prev) => (prev + 1) % DISCIPLINES.length)}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              className="inline-flex items-center gap-2.5 sm:gap-3 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white border border-gray-200/90 shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer select-none group"
+              title="Click to view next discipline"
+            >
+              {/* Pulsing Accent Dot */}
+              <span 
+                className="w-2.5 h-2.5 rounded-full flex-shrink-0 transition-colors duration-300 shadow-xs"
+                style={{ backgroundColor: DISCIPLINES[disciplineIndex].color }}
+              />
+
+              {/* Looping Tab Text */}
+              <div className="h-6 flex items-center overflow-hidden min-w-[130px] sm:min-w-[195px]">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={DISCIPLINES[disciplineIndex].label}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3, ease: 'easeOut' }}
+                    className="text-xs sm:text-sm font-archivo font-extrabold tracking-wider text-gray-900 uppercase block whitespace-nowrap text-left"
+                  >
+                    {DISCIPLINES[disciplineIndex].label}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
+
+              {/* Counter & Mini Loop Icon */}
+              <div className="flex items-center gap-1.5 pl-2 sm:pl-2.5 border-l border-gray-100 text-gray-400 group-hover:text-brand-pink transition-colors">
+                <span className="text-[10px] font-bold tracking-wider">
+                  {disciplineIndex + 1}/{DISCIPLINES.length}
+                </span>
+                <RotateCw className="w-2.5 h-2.5 group-hover:rotate-180 transition-transform duration-500" />
+              </div>
+            </div>
+          </div>
 
           {/* Description */}
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-xl mb-8 sm:mb-10 font-normal">
