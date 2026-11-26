@@ -1009,10 +1009,10 @@ export const archiveCategories = [
 
 export const figmaProjectsData = {
   chips: [
-    { id: 'all', label: 'All', count: 13 },
+    { id: 'all', label: 'All', count: 12 },
     { id: 'hybrid-product-design', label: 'Hybrid product design', count: 8, dotColor: '#A9DCF2', markerColor: 'rgba(169, 220, 242, 0.65)', tapeColor: 'rgba(169, 220, 242, 0.85)' },
     { id: 'motion-animation', label: 'Motion & animation', count: 1, dotColor: '#F7C9A6', markerColor: 'rgba(247, 201, 166, 0.65)', tapeColor: 'rgba(247, 201, 166, 0.85)' },
-    { id: 'visual-design-illustration', label: 'Visual design & illustration', count: 2, dotColor: '#F3B7C9', markerColor: 'rgba(243, 183, 201, 0.65)', tapeColor: 'rgba(243, 183, 201, 0.85)' },
+    { id: 'visual-design-illustration', label: 'Visual design & illustration', count: 1, dotColor: '#F3B7C9', markerColor: 'rgba(243, 183, 201, 0.65)', tapeColor: 'rgba(243, 183, 201, 0.85)' },
     { id: 'visual-journal', label: 'Visual journal', count: 1, dotColor: '#C9E7B4', markerColor: 'rgba(201, 231, 180, 0.65)', tapeColor: 'rgba(201, 231, 180, 0.85)' },
     { id: '3d-modelling', label: '3D modelling', count: 1, dotColor: '#D6C8F5', markerColor: 'rgba(214, 200, 245, 0.65)', tapeColor: 'rgba(214, 200, 245, 0.85)' }
   ],
@@ -1086,15 +1086,6 @@ export const figmaProjectsData = {
           behanceLink: 'https://www.behance.net/gallery/253428839/Adyam-Branding-Visual-Identity',
           cardRotation: 1.3,
           tapeRotation: 0.8
-        },
-        {
-          id: 'photoshop-campaign',
-          title: 'Main Campaign Brand : Adobe Photoshop',
-          caption: 'whole worlds in Photoshop',
-          image: '/assets/figma_photoshop_campaign.png',
-          behanceLink: 'https://www.behance.net/kakdesneha',
-          cardRotation: -1.4,
-          tapeRotation: -1.0
         }
       ]
     },
