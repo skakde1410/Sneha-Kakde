@@ -197,7 +197,7 @@ export default function Projects() {
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               className="space-y-16 sm:space-y-20 lg:space-y-24"
             >
-              {/* 1. Hybrid Product Design Section */}
+              {/* 1. Hybrid Product Design Section + Visual Design & Illustration beside SWAY */}
               {hybridSection && (
                 <div className="space-y-6 sm:space-y-8">
                   <SectionHead section={hybridSection} />
@@ -210,32 +210,32 @@ export default function Projects() {
                         index={idx}
                       />
                     ))}
+
+                    {/* Visual Design & Illustration section beside SWAY */}
+                    {visualDesignSection && (
+                      <div className="w-full max-w-[340px] sm:w-[332px] flex-shrink-0 space-y-4">
+                        <SectionHead section={visualDesignSection} className="!mb-0 min-h-[48px] sm:min-h-[54px] flex items-baseline" />
+                        {visualDesignSection.projects.map((project, idx) => (
+                          <PolaroidCard
+                            key={project.id}
+                            project={project}
+                            section={visualDesignSection}
+                            index={idx + 5}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
 
-              {/* 2. Visual Design & Illustration + Motion & Animation (Side-by-side row on desktop) */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-start">
-                {visualDesignSection && (
-                  <div className="lg:col-span-7 xl:col-span-8 space-y-6 sm:space-y-8">
-                    <SectionHead section={visualDesignSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
-                    <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
-                      {visualDesignSection.projects.map((project, idx) => (
-                        <PolaroidCard
-                          key={project.id}
-                          project={project}
-                          section={visualDesignSection}
-                          index={idx}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
-
+              {/* 2. Motion & Animation + 3D Modelling + Visual Journal (3 side-by-side columns on desktop) */}
+              <div className="flex flex-wrap gap-10 lg:gap-12 xl:gap-14 items-start">
+                {/* Motion & Animation - 1 card */}
                 {motionSection && (
-                  <div className="lg:col-span-5 xl:col-span-4 space-y-6 sm:space-y-8">
+                  <div className="space-y-6 sm:space-y-8">
                     <SectionHead section={motionSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
-                    <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                    <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
                       {motionSection.projects.map((project, idx) => (
                         <PolaroidCard
                           key={project.id}
@@ -247,11 +247,7 @@ export default function Projects() {
                     </div>
                   </div>
                 )}
-              </div>
 
-              {/* 3. 3D Modelling (1 card) + Visual Journal (1 card) + Raw (2 cards) - Balanced full row */}
-              {/* 3. 3D Modelling (1 card) + Visual Journal (1 card) - Natural paired row */}
-              <div className="flex flex-wrap gap-10 lg:gap-14 items-start">
                 {/* 3D Modelling - 1 card */}
                 {modellingSection && (
                   <div className="space-y-6 sm:space-y-8">
