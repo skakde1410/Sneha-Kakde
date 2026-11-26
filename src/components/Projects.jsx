@@ -229,25 +229,8 @@ export default function Projects() {
                 </div>
               )}
 
-              {/* 2. Motion & Animation + 3D Modelling + Visual Journal (3 side-by-side columns on desktop) */}
+              {/* 2. 3D Modelling & Visual Journal + Motion & Animation */}
               <div className="flex flex-wrap gap-10 lg:gap-12 xl:gap-14 items-start">
-                {/* Motion & Animation - 1 card */}
-                {motionSection && (
-                  <div className="space-y-6 sm:space-y-8">
-                    <SectionHead section={motionSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
-                    <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
-                      {motionSection.projects.map((project, idx) => (
-                        <PolaroidCard
-                          key={project.id}
-                          project={project}
-                          section={motionSection}
-                          index={idx}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
-
                 {/* 3D Modelling - 1 card */}
                 {modellingSection && (
                   <div className="space-y-6 sm:space-y-8">
@@ -275,6 +258,23 @@ export default function Projects() {
                           key={project.id}
                           project={project}
                           section={visualJournalSection}
+                          index={idx}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Motion & Animation - 1 card */}
+                {motionSection && (
+                  <div className="space-y-6 sm:space-y-8">
+                    <SectionHead section={motionSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
+                    <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
+                      {motionSection.projects.map((project, idx) => (
+                        <PolaroidCard
+                          key={project.id}
+                          project={project}
+                          section={motionSection}
                           index={idx}
                         />
                       ))}
