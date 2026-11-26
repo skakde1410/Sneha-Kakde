@@ -113,15 +113,7 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
 
           {/* Action Buttons (Desktop) */}
           <div className="flex items-center gap-3">
-            {currentView === 'home' ? (
-              <button
-                onClick={() => onNavigate('archive')}
-                className="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-brand-dark hover:bg-black rounded-full transition-all hover:shadow-lg hover:scale-105 active:scale-95 group cursor-pointer"
-              >
-                <span>View 2025 Archive</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-gray-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </button>
-            ) : (
+            {currentView !== 'home' && (
               <button
                 onClick={() => onNavigate('home')}
                 className="inline-flex items-center gap-1.5 bg-black hover:bg-neutral-900 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-xl transition-all hover:scale-105 active:scale-95 group cursor-pointer border border-neutral-800 whitespace-nowrap"
@@ -135,14 +127,7 @@ export default function Navbar({ currentView, onNavigate, onOpenContact }) {
 
         {/* Mobile Action Pill + Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-2">
-          {currentView === 'home' ? (
-            <button
-              onClick={() => onNavigate('archive')}
-              className="flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-white bg-brand-dark rounded-full cursor-pointer"
-            >
-              <span>2025 Archive</span>
-            </button>
-          ) : (
+          {currentView !== 'home' && (
             <button
               onClick={() => onNavigate('home')}
               className="flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-white bg-black rounded-full cursor-pointer border border-neutral-800"
