@@ -68,13 +68,13 @@ function PolaroidCard({ project, section, index }) {
           </div>
         )}
 
-        {/* Handwritten Caption in Caveat Bold */}
-        <p className="font-caveat font-bold text-[23px] sm:text-[25px] leading-[1.15] text-[#1B1A17] pt-2 px-0.5 truncate group-hover:text-black" title={project.caption}>
+        {/* Caption in Inter Bold */}
+        <p className="font-inter font-bold text-[18px] sm:text-[20px] leading-snug text-[#1B1A17] pt-2 px-0.5 truncate group-hover:text-black tracking-tight" title={project.caption}>
           {project.caption}
         </p>
 
         {/* Metadata Row: Project Title & Behance Link */}
-        <div className="flex items-center justify-between gap-2 pt-1 px-0.5 text-[13px] font-archivo">
+        <div className="flex items-center justify-between gap-2 pt-1 px-0.5 text-[13px] font-inter">
           <span className="text-[#333333] font-medium truncate flex-1" title={project.title}>
             {project.title}
           </span>
@@ -93,10 +93,10 @@ function SectionHead({ section, className = '' }) {
       <div className="relative inline-flex items-baseline w-fit">
         {/* Pastel highlighter marker bar strictly matching text width */}
         <span
-          className="absolute bottom-1 inset-x-0 h-4 sm:h-5 rounded-[3px] pointer-events-none -z-0 opacity-80"
+          className="absolute bottom-1 inset-x-0 h-3.5 sm:h-4 rounded-[3px] pointer-events-none -z-0 opacity-80"
           style={{ backgroundColor: section.markerColor }}
         />
-        <h3 className="relative z-10 font-caveat font-bold text-3xl sm:text-[40px] lg:text-[44px] text-[#141414] leading-tight px-1 whitespace-nowrap">
+        <h3 className="relative z-10 font-inter font-extrabold text-2xl sm:text-3xl lg:text-[34px] text-[#141414] tracking-tight leading-tight px-1 whitespace-nowrap">
           {section.title}
         </h3>
       </div>
@@ -121,12 +121,12 @@ export default function Projects() {
     : null;
 
   return (
-    <section id="work" className="py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#F6F6F3] bg-dot-grid relative scroll-mt-20">
+    <section id="work" className="py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#F6F6F3] bg-dot-grid relative scroll-mt-20 font-inter">
       <div className="max-w-[1360px] mx-auto">
         
         {/* Hero Section Header: Title */}
         <div className="mb-4 sm:mb-6">
-          <h2 className="text-4xl sm:text-5xl lg:text-[56px] font-archivo font-extrabold text-[#141414] tracking-[-0.02em] leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-[56px] font-inter font-extrabold text-[#141414] tracking-[-0.02em] leading-tight">
             Projects
           </h2>
         </div>
@@ -141,7 +141,7 @@ export default function Projects() {
                 key={chip.id}
                 type="button"
                 onClick={() => setActiveFilter(chip.id)}
-                className={`group cursor-pointer inline-flex items-center gap-2 px-4 py-2 sm:px-4 sm:py-2.5 rounded-full border text-[14px] sm:text-[15px] font-archivo font-medium transition-all duration-200 focus:outline-none active:scale-[0.98] ${
+                className={`group cursor-pointer inline-flex items-center gap-2 px-4 py-2 sm:px-4 sm:py-2.5 rounded-full border text-[14px] sm:text-[15px] font-inter font-medium transition-all duration-200 focus:outline-none active:scale-[0.98] ${
                   isActive
                     ? 'bg-[#141414] text-white border-[#141414] shadow-sm scale-[1.02]'
                     : 'bg-white text-[#141414] border-[#D9D8D1] hover:border-[#999995] hover:bg-[#FAF9F5]'

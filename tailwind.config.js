@@ -21,6 +21,7 @@ export default {
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+        inter: ['"Inter"', 'sans-serif'],
         display: ['"Outfit"', 'sans-serif'],
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         archivo: ['"Archivo"', 'sans-serif'],
