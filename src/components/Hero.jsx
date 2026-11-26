@@ -116,13 +116,30 @@ export default function Hero({ onOpenContact }) {
             </span>
           </h1>
 
-          {/* Looping Discipline Tab */}
-          <div className="mb-5 sm:mb-6 flex items-center">
+          {/* Multidisciplinary Designer Subtitle */}
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 font-semibold tracking-tight leading-snug max-w-xl mb-8 sm:mb-10">
+            a multidisciplinary designer based in Maharashtra
+          </p>
+
+          {/* CTA Row: Curriculum Vitae & Looping Discipline Tab */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+            {/* CV Button (Exact Figma Black Pill) */}
+            <a
+              href={personalInfo.links.cv}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-brand-dark hover:bg-black text-white text-sm sm:text-base font-semibold transition-all hover:shadow-xl hover:scale-105 active:scale-95 group text-center"
+            >
+              <span>Curriculum Vitae</span>
+              <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </a>
+
+            {/* Looping Discipline Tab Beside CV */}
             <div 
               onClick={() => setDisciplineIndex((prev) => (prev + 1) % DISCIPLINES.length)}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
-              className="inline-flex items-center gap-2.5 sm:gap-3 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white border border-gray-200/90 shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer select-none group"
+              className="inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 py-3.5 sm:py-4 rounded-full bg-white hover:bg-gray-50 text-gray-800 border border-gray-200/90 shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer select-none group"
               title="Click to view next discipline"
             >
               {/* Pulsing Accent Dot */}
@@ -147,25 +164,6 @@ export default function Hero({ onOpenContact }) {
                 </AnimatePresence>
               </div>
             </div>
-          </div>
-
-          {/* Multidisciplinary Designer Subtitle */}
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 font-semibold tracking-tight leading-snug max-w-xl mb-8 sm:mb-10">
-            a multidisciplinary designer based in Maharashtra
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
-            {/* CV Button (Exact Figma Black Pill) */}
-            <a
-              href={personalInfo.links.cv}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-brand-dark hover:bg-black text-white text-sm sm:text-base font-semibold transition-all hover:shadow-xl hover:scale-105 active:scale-95 group text-center"
-            >
-              <span>Curriculum Vitae</span>
-              <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </a>
           </div>
 
           {/* Quick Social Links Bar */}
