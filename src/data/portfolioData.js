@@ -1029,7 +1029,7 @@ export const figmaProjectsData = {
           title: 'Your money companion, in your language',
           caption: 'fintech UX - in your language',
           image: '/assets/figma_paisa_path.png',
-          behanceLink: 'https://www.behance.net/gallery/255106477/CP-Rehabilitation-Monitoring-Platform',
+          behanceLink: 'https://www.behance.net/gallery/258579623/Your-money-companion-in-your-language',
           cardRotation: -1.8,
           tapeRotation: -0.8
         },
