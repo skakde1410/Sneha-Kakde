@@ -117,7 +117,6 @@ export default function Projects() {
   const visualDesignSection = sections.find((s) => s.id === 'visual-design-illustration');
   const motionSection = sections.find((s) => s.id === 'motion-animation');
   const modellingSection = sections.find((s) => s.id === '3d-modelling');
-  const visualJournalSection = sections.find((s) => s.id === 'visual-journal');
 
   // Filtered single section when not 'all'
   const currentFilteredSection = activeFilter !== 'all'
@@ -201,7 +200,7 @@ export default function Projects() {
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               className="space-y-16 sm:space-y-20 lg:space-y-24"
             >
-              {/* 1. Hybrid Product Design Section + Visual Design & Illustration beside SWAY */}
+              {/* 1. Hybrid Product Design Section */}
               {hybridSection && (
                 <div className="space-y-6 sm:space-y-8">
                   <SectionHead section={hybridSection} />
@@ -214,26 +213,28 @@ export default function Projects() {
                         index={idx}
                       />
                     ))}
-
-                    {/* Visual Design & Illustration section beside SWAY */}
-                    {visualDesignSection && (
-                      <div className="w-full max-w-[340px] sm:w-[332px] flex-shrink-0 space-y-4">
-                        <SectionHead section={visualDesignSection} className="!mb-0 min-h-[48px] sm:min-h-[54px] flex items-baseline" />
-                        {visualDesignSection.projects.map((project, idx) => (
-                          <PolaroidCard
-                            key={project.id}
-                            project={project}
-                            section={visualDesignSection}
-                            index={idx + 5}
-                          />
-                        ))}
-                      </div>
-                    )}
                   </div>
                 </div>
               )}
 
-              {/* 2. 3D Modelling & Visual Journal + Motion & Animation */}
+              {/* 2. Visual Design & Illustration Section */}
+              {visualDesignSection && (
+                <div className="space-y-6 sm:space-y-8">
+                  <SectionHead section={visualDesignSection} />
+                  <div className="flex flex-wrap gap-7 sm:gap-8 lg:gap-10 items-start">
+                    {visualDesignSection.projects.map((project, idx) => (
+                      <PolaroidCard
+                        key={project.id}
+                        project={project}
+                        section={visualDesignSection}
+                        index={idx}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* 3. 3D Modelling & Motion & Animation */}
               <div className="flex flex-wrap gap-10 lg:gap-12 xl:gap-14 items-start">
                 {/* 3D Modelling - 1 card */}
                 {modellingSection && (
@@ -245,23 +246,6 @@ export default function Projects() {
                           key={project.id}
                           project={project}
                           section={modellingSection}
-                          index={idx}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Visual Journal - 1 diptych card */}
-                {visualJournalSection && (
-                  <div className="space-y-6 sm:space-y-8">
-                    <SectionHead section={visualJournalSection} className="min-h-[48px] sm:min-h-[54px] flex items-baseline" />
-                    <div className="flex flex-wrap gap-7 sm:gap-8 items-start">
-                      {visualJournalSection.projects.map((project, idx) => (
-                        <PolaroidCard
-                          key={project.id}
-                          project={project}
-                          section={visualJournalSection}
                           index={idx}
                         />
                       ))}

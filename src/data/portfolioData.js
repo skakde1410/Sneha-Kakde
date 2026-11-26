@@ -1009,12 +1009,11 @@ export const archiveCategories = [
 
 export const figmaProjectsData = {
   chips: [
-    { id: 'all', label: 'All', count: 12 },
-    { id: 'hybrid-product-design', label: 'Hybrid product design', count: 8, dotColor: '#A9DCF2', markerColor: 'rgba(169, 220, 242, 0.65)', tapeColor: 'rgba(169, 220, 242, 0.85)' },
-    { id: 'motion-animation', label: 'Motion & animation', count: 1, dotColor: '#F7C9A6', markerColor: 'rgba(247, 201, 166, 0.65)', tapeColor: 'rgba(247, 201, 166, 0.85)' },
-    { id: 'visual-design-illustration', label: 'Visual design & illustration', count: 1, dotColor: '#F3B7C9', markerColor: 'rgba(243, 183, 201, 0.65)', tapeColor: 'rgba(243, 183, 201, 0.85)' },
-    { id: 'visual-journal', label: 'Visual journal', count: 1, dotColor: '#C9E7B4', markerColor: 'rgba(201, 231, 180, 0.65)', tapeColor: 'rgba(201, 231, 180, 0.85)' },
-    { id: '3d-modelling', label: '3D modelling', count: 1, dotColor: '#D6C8F5', markerColor: 'rgba(214, 200, 245, 0.65)', tapeColor: 'rgba(214, 200, 245, 0.85)' }
+    { id: 'all', label: 'All', count: 9 },
+    { id: 'hybrid-product-design', label: 'Hybrid product design', count: 5, dotColor: '#A9DCF2', markerColor: 'rgba(169, 220, 242, 0.65)', tapeColor: 'rgba(169, 220, 242, 0.85)' },
+    { id: 'visual-design-illustration', label: 'Visual design & illustration', count: 2, dotColor: '#F3B7C9', markerColor: 'rgba(243, 183, 201, 0.65)', tapeColor: 'rgba(243, 183, 201, 0.85)' },
+    { id: '3d-modelling', label: '3D modelling', count: 1, dotColor: '#D6C8F5', markerColor: 'rgba(214, 200, 245, 0.65)', tapeColor: 'rgba(214, 200, 245, 0.85)' },
+    { id: 'motion-animation', label: 'Motion & animation', count: 1, dotColor: '#F7C9A6', markerColor: 'rgba(247, 201, 166, 0.65)', tapeColor: 'rgba(247, 201, 166, 0.85)' }
   ],
   sections: [
     {
@@ -1027,7 +1026,7 @@ export const figmaProjectsData = {
         {
           id: 'paisa-path',
           title: 'Your money companion, in your language',
-          caption: 'fintech UX - in your language',
+          caption: 'Your money companion, in your language',
           image: '/assets/figma_paisa_path.png',
           behanceLink: 'https://www.behance.net/gallery/258579623/Your-money-companion-in-your-language',
           cardRotation: -1.8,
@@ -1036,7 +1035,7 @@ export const figmaProjectsData = {
         {
           id: 'vidarbha',
           title: 'Regional Journalism for a Digital-First Future',
-          caption: 'news app - every screen',
+          caption: 'Regional Journalism for a Digital-First Future',
           image: '/assets/figma_vidarbha.png',
           behanceLink: 'https://www.behance.net/gallery/258382769/Regional-Journalism-for-a-Digital-First-Future',
           cardRotation: 1.5,
@@ -1045,7 +1044,7 @@ export const figmaProjectsData = {
         {
           id: 'lattice-lantern',
           title: 'Lattice Octa Lantern',
-          caption: '3D product · Lattice lantern',
+          caption: 'Lattice Octa Lantern',
           image: '/assets/figma_lattice_lantern.png',
           behanceLink: 'https://www.behance.net/gallery/247294495/Lattice-Octa-Lantern',
           cardRotation: -1.2,
@@ -1054,7 +1053,7 @@ export const figmaProjectsData = {
         {
           id: 'kyoorius',
           title: 'Kyoorius Young Blood Awards 2023-24',
-          caption: 'Lotus Embrace - product concept',
+          caption: 'Kyoorius Young Blood Awards 2023-24',
           image: '/assets/figma_kyoorius.png',
           behanceLink: 'https://www.behance.net/gallery/198237481/KYOORIUS-YOUNG-BLOOD-AWARDS-2023-2024',
           cardRotation: -1.6,
@@ -1063,7 +1062,7 @@ export const figmaProjectsData = {
         {
           id: 'sway',
           title: 'SWAY - Different Rhythm. One Home.',
-          caption: 'SWAY - app branding & UI',
+          caption: 'SWAY - Different Rhythm. One Home.',
           image: '/assets/figma_sway.png',
           behanceLink: 'https://www.behance.net/gallery/257406273/SWAY-Different-Rhythm-One-Home',
           cardRotation: 1.5,
@@ -1080,12 +1079,25 @@ export const figmaProjectsData = {
       projects: [
         {
           id: 'branding',
-          title: 'Branding & Visual Identity - 3 Projects',
+          title: 'Adyam Branding & UI',
           caption: 'Adyam Branding & UI',
           image: '/assets/figma_branding_adyam.png',
           behanceLink: 'https://www.behance.net/gallery/253428839/Adyam-Branding-Visual-Identity',
           cardRotation: 1.3,
           tapeRotation: 0.8
+        },
+        {
+          id: 'visual-journal-diptych',
+          title: 'Visual Journal',
+          caption: 'Visual Journal',
+          isDiptych: true,
+          images: [
+            '/assets/figma_journal_a.png',
+            '/assets/figma_journal_b.png'
+          ],
+          behanceLink: 'https://www.behance.net/gallery/256689743/Visual-Journal?platform=direct',
+          cardRotation: 1.4,
+          tapeRotation: 0.9
         }
       ]
     },
@@ -1117,33 +1129,11 @@ export const figmaProjectsData = {
         {
           id: '3d-character',
           title: '3d Character Design',
-          caption: 'a character, sculpted in 3D',
+          caption: '3d Character Design',
           image: '/assets/figma_3d_character.png',
           behanceLink: 'https://www.behance.net/gallery/197936143/3d-Character-Design',
           cardRotation: -1.3,
           tapeRotation: -1.5
-        }
-      ]
-    },
-    {
-      id: 'visual-journal',
-      title: 'Visual journal',
-      subtitle: null,
-      markerColor: 'rgba(201, 231, 180, 0.65)',
-      tapeColor: 'rgba(201, 231, 180, 0.85)',
-      projects: [
-        {
-          id: 'visual-journal-diptych',
-          title: 'Visual Journal',
-          caption: 'Visual Journal',
-          isDiptych: true,
-          images: [
-            '/assets/figma_journal_a.png',
-            '/assets/figma_journal_b.png'
-          ],
-          behanceLink: 'https://www.behance.net/gallery/256689743/Visual-Journal?platform=direct',
-          cardRotation: 1.4,
-          tapeRotation: 0.9
         }
       ]
     }
