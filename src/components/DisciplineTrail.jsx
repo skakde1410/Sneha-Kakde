@@ -9,7 +9,6 @@ export const DISCIPLINES = [
   { label: 'ILLUSTRATION', color: '#F59E0B' },
   { label: 'INFOGRAPHICS', color: '#06B6D4' },
   { label: 'DATA VISUALIZATION', color: '#3B82F6' },
-  { label: 'CANVA', color: '#00C4CC' },
   { label: 'PACKAGING', color: '#10B981' },
   { label: 'EDITORIAL DESIGN', color: '#8B5CF6' },
   { label: 'MASCOT & CHARACTER DESIGN', color: '#EC4899' },
@@ -50,15 +49,10 @@ export const TOOLS = [
   { label: 'MARMOSET TOOLBAG', color: '#2C7BE5' }
 ];
 
-export const ALL_TRAIL_ITEMS = [
-  ...DISCIPLINES,
-  ...TOOLS.filter(t => !DISCIPLINES.some(d => d.label === t.label))
-];
-
 export default function DisciplineTrail() {
   return (
     <section 
-      aria-label="Disciplines & Tools Trail" 
+      aria-label="Disciplines Trail" 
       className="w-full bg-[#FAFAFC] border-y border-gray-200/80 py-4 sm:py-5 overflow-hidden relative marquee-container select-none"
     >
       {/* Edge Soft Fades */}
@@ -69,7 +63,7 @@ export default function DisciplineTrail() {
       <div className="animate-marquee-disciplines">
         {/* Track 1 */}
         <div className="flex items-center gap-3 sm:gap-4 pr-3 sm:pr-4">
-          {ALL_TRAIL_ITEMS.map((d) => (
+          {DISCIPLINES.map((d) => (
             <span
               key={d.label}
               className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white border border-gray-200/90 shadow-xs text-xs sm:text-sm font-archivo font-extrabold text-gray-800 tracking-wider uppercase whitespace-nowrap hover:scale-105 transition-transform"
@@ -81,7 +75,7 @@ export default function DisciplineTrail() {
         </div>
         {/* Track 2 (Duplicate for seamless continuous loop) */}
         <div className="flex items-center gap-3 sm:gap-4 pr-3 sm:pr-4" aria-hidden="true">
-          {ALL_TRAIL_ITEMS.map((d, i) => (
+          {DISCIPLINES.map((d, i) => (
             <span
               key={`${d.label}-dup-${i}`}
               className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white border border-gray-200/90 shadow-xs text-xs sm:text-sm font-archivo font-extrabold text-gray-800 tracking-wider uppercase whitespace-nowrap hover:scale-105 transition-transform"
