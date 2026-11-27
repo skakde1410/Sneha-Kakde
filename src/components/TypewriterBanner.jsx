@@ -2,12 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const segments = [
+  { text: "Art", highlight: true },
+  { text: " is where I began. ", highlight: false },
   { text: "Design", highlight: true },
-  { text: " is what I do. ", highlight: false },
-  { text: "Creating", highlight: true },
-  { text: " is how I think. ", highlight: false },
-  { text: "Curiosity", highlight: true },
-  { text: " is what keeps me going.", highlight: false },
+  { text: " is where I found my purpose.", highlight: false },
 ];
 
 const totalLength = segments.reduce((sum, seg) => sum + seg.text.length, 0);

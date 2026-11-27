@@ -13,12 +13,10 @@ export const personalInfo = {
   ],
   interestsPhilosophy: "Whether I’m designing an interface, writing poems or articles, sketching a character, photographing a moment, cooking a new recipe, or watching a film, I’m essentially doing the same thing: observing, experimenting, imagining, creating. I believe these seemingly unrelated interests make me a better designer. They teach me to notice details, understand emotions, explore possibilities, embrace imperfections, and stay curious.",
   quoteBadge: {
-    part1: "Design",
-    middle1: " is what I do. ",
-    part2: "Creating",
-    middle2: " is how I think. ",
-    part3: "Curiosity",
-    ending: " is what keeps me going."
+    part1: "Art",
+    middle1: " is where I began. ",
+    part2: "Design",
+    ending: " is where I found my purpose."
   },
   contact: {
     email: "kakdesneha1410@gmail.com",
