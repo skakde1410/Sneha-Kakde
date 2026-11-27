@@ -4,21 +4,7 @@ import { personalInfo } from '../data/portfolioData';
 import { ArrowUpRight } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 import mascotImg from '../assets/mascot.webp';
-import DisciplineTrail from './DisciplineTrail';
-
-const DISCIPLINES = [
-  { label: 'UI/UX', color: '#0066FF' },
-  { label: 'PRODUCT DESIGN', color: '#8A2BE2' },
-  { label: 'SCULPTING', color: '#E65100' },
-  { label: '3D CHARACTER DESIGN', color: '#00B4D8' },
-  { label: 'CALLIGRAPHY', color: '#10B981' },
-  { label: 'VISUAL DESIGN', color: '#E6004C' },
-  { label: 'ILLUSTRATION', color: '#F59E0B' },
-  { label: 'SKETCHING', color: '#4B5563' },
-  { label: 'ART', color: '#EC4899' },
-  { label: 'VISUALIZATION', color: '#3B82F6' },
-  { label: 'ANIMATION', color: '#14B8A6' }
-];
+import DisciplineTrail, { DISCIPLINES } from './DisciplineTrail';
 
 const FULL_TEXT = "Hi, I’m Sneha Kakde";
 const PREFIX_LENGTH = 8; // length of "Hi, I’m "
