@@ -201,7 +201,7 @@
 .animate-marquee-disciplines {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 65s linear infinite;
+  animation: marquee-scroll 90s linear infinite;
   will-change: transform;
 }
 

@@ -33,10 +33,32 @@ export const DISCIPLINES = [
   { label: 'ART', color: '#DB2777' }
 ];
 
+export const TOOLS = [
+  { label: 'PHOTOSHOP', color: '#31A8FF' },
+  { label: 'ILLUSTRATOR', color: '#FF9A00' },
+  { label: 'INDESIGN', color: '#FF3366' },
+  { label: 'AFTER EFFECTS', color: '#9999FF' },
+  { label: 'CORELDRAW', color: '#00A651' },
+  { label: 'CANVA', color: '#00C4CC' },
+  { label: 'FIGMA', color: '#F24E1E' },
+  { label: 'FIGJAM', color: '#A259FF' },
+  { label: 'MIRO', color: '#FFD02F' },
+  { label: 'NOTION', color: '#000000' },
+  { label: 'BLENDER', color: '#E87D0D' },
+  { label: 'ZBRUSH', color: '#4D7C0F' },
+  { label: 'SUBSTANCE PAINTER', color: '#E6242B' },
+  { label: 'MARMOSET TOOLBAG', color: '#2C7BE5' }
+];
+
+export const ALL_TRAIL_ITEMS = [
+  ...DISCIPLINES,
+  ...TOOLS.filter(t => !DISCIPLINES.some(d => d.label === t.label))
+];
+
 export default function DisciplineTrail() {
   return (
     <section 
-      aria-label="Disciplines Trail" 
+      aria-label="Disciplines & Tools Trail" 
       className="w-full bg-[#FAFAFC] border-y border-gray-200/80 py-4 sm:py-5 overflow-hidden relative marquee-container select-none"
     >
       {/* Edge Soft Fades */}
@@ -47,7 +69,7 @@ export default function DisciplineTrail() {
       <div className="animate-marquee-disciplines">
         {/* Track 1 */}
         <div className="flex items-center gap-3 sm:gap-4 pr-3 sm:pr-4">
-          {DISCIPLINES.map((d) => (
+          {ALL_TRAIL_ITEMS.map((d) => (
             <span
               key={d.label}
               className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white border border-gray-200/90 shadow-xs text-xs sm:text-sm font-archivo font-extrabold text-gray-800 tracking-wider uppercase whitespace-nowrap hover:scale-105 transition-transform"
@@ -59,7 +81,7 @@ export default function DisciplineTrail() {
         </div>
         {/* Track 2 (Duplicate for seamless continuous loop) */}
         <div className="flex items-center gap-3 sm:gap-4 pr-3 sm:pr-4" aria-hidden="true">
-          {DISCIPLINES.map((d, i) => (
+          {ALL_TRAIL_ITEMS.map((d, i) => (
             <span
               key={`${d.label}-dup-${i}`}
               className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white border border-gray-200/90 shadow-xs text-xs sm:text-sm font-archivo font-extrabold text-gray-800 tracking-wider uppercase whitespace-nowrap hover:scale-105 transition-transform"

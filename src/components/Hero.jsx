@@ -4,7 +4,7 @@ import { personalInfo } from '../data/portfolioData';
 import { ArrowUpRight } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
 import mascotImg from '../assets/mascot.webp';
-import DisciplineTrail, { DISCIPLINES } from './DisciplineTrail';
+import DisciplineTrail, { TOOLS } from './DisciplineTrail';
 
 const FULL_TEXT = "Hi, I’m Sneha Kakde";
 const PREFIX_LENGTH = 8; // length of "Hi, I’m "
@@ -12,7 +12,7 @@ const PREFIX_LENGTH = 8; // length of "Hi, I’m "
 export default function Hero({ onOpenContact }) {
   const [typedLength, setTypedLength] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [disciplineIndex, setDisciplineIndex] = useState(0);
+  const [toolIndex, setToolIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
   // Typewriter effect for full headline "Hi, I’m Sneha Kakde"
@@ -48,12 +48,12 @@ export default function Hero({ onOpenContact }) {
   const prefixTyped = FULL_TEXT.slice(0, Math.min(typedLength, PREFIX_LENGTH));
   const nameTyped = typedLength > PREFIX_LENGTH ? FULL_TEXT.slice(PREFIX_LENGTH, typedLength) : '';
 
-  // Discipline tab auto-loop
+  // Tool tab auto-loop beside CV button
   useEffect(() => {
     if (isPaused) return;
 
     const timer = setInterval(() => {
-      setDisciplineIndex((prev) => (prev + 1) % DISCIPLINES.length);
+      setToolIndex((prev) => (prev + 1) % TOOLS.length);
     }, 2200);
 
     return () => clearInterval(timer);
@@ -134,32 +134,32 @@ export default function Hero({ onOpenContact }) {
                 <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </a>
 
-              {/* Looping Discipline Tab Beside CV */}
+              {/* Looping Tool Tab Beside CV */}
               <div 
-                onClick={() => setDisciplineIndex((prev) => (prev + 1) % DISCIPLINES.length)}
+                onClick={() => setToolIndex((prev) => (prev + 1) % TOOLS.length)}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
-                className="inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 py-3.5 sm:py-4 rounded-full bg-white hover:bg-gray-50 text-gray-800 border border-gray-200/90 shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer select-none group"
-                title="Click to view next discipline"
+                className="inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 py-3.5 sm:py-4 rounded-full bg-white hover:bg-gray-50 text-gray-800 border border-gray-200/90 shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer select-none group w-fit"
+                title="Click to view next tool"
               >
                 {/* Pulsing Accent Dot */}
                 <span 
                   className="w-2.5 h-2.5 rounded-full flex-shrink-0 transition-colors duration-300 shadow-xs"
-                  style={{ backgroundColor: DISCIPLINES[disciplineIndex].color }}
+                  style={{ backgroundColor: TOOLS[toolIndex].color }}
                 />
 
                 {/* Looping Tab Text */}
-                <div className="h-6 flex items-center overflow-hidden min-w-[120px] sm:min-w-[175px]">
+                <div className="h-6 flex items-center overflow-hidden min-w-[130px] sm:min-w-[185px]">
                   <AnimatePresence mode="wait">
                     <motion.span
-                      key={DISCIPLINES[disciplineIndex].label}
+                      key={TOOLS[toolIndex].label}
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.3, ease: 'easeOut' }}
                       className="text-xs sm:text-sm font-archivo font-extrabold tracking-wider text-gray-900 uppercase block whitespace-nowrap text-left"
                     >
-                      {DISCIPLINES[disciplineIndex].label}
+                      {TOOLS[toolIndex].label}
                     </motion.span>
                   </AnimatePresence>
                 </div>
